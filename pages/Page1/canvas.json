@@ -549,190 +549,71 @@
                       "schema": {
                         "__root_schema__": {
                           "children": {
-                            "creele": {
+                            "_odata_context": {
                               "children": {},
                               "dataType": "string",
-                              "defaultValue": "{{((sourceData, formData, fieldState) => (moment(sourceData.creele, \"DD/MM/YYYY\").format(\"YYYY-MM-DDTHH:mm:ss.sssZ\")))(ClientInfosForm.sourceData, ClientInfosForm.formData, ClientInfosForm.fieldState)}}",
-                              "fieldType": "Datepicker",
+                              "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData[\"@odata.context\"]))(ClientInfosForm.sourceData, ClientInfosForm.formData, ClientInfosForm.fieldState)}}",
+                              "fieldType": "Text Input",
+                              "sourceData": "https://org3ef8cf42.crm2.dynamics.com/api/data/v9.2/$metadata#cr2b8_clientsunifie_2s(cr2b8_CLIENTSUNIFIE_2_cr2b8_CLIENTSUNIFIE())",
                               "isCustomField": false,
-                              "accessor": "creele",
-                              "identifier": "creele",
+                              "accessor": "@odata.context",
+                              "identifier": "_odata_context",
                               "position": 0,
-                              "originalIdentifier": "creele",
+                              "originalIdentifier": "@odata.context",
                               "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(ClientInfosForm.sourceData, ClientInfosForm.formData, ClientInfosForm.fieldState)}}",
                               "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(ClientInfosForm.sourceData, ClientInfosForm.formData, ClientInfosForm.fieldState)}}",
                               "boxShadow": "none",
-                              "closeOnSelection": false,
-                              "convertToISO": false,
-                              "dateFormat": "DD/MM/YYYY",
-                              "isDisabled": true,
+                              "iconAlign": "left",
+                              "isDisabled": false,
                               "isRequired": false,
+                              "isSpellCheck": false,
                               "isVisible": true,
-                              "label": "Creele",
-                              "maxDate": "2121-12-31T18:29:00.000Z",
-                              "minDate": "1920-12-31T18:30:00.000Z",
-                              "shortcuts": false,
-                              "timePrecision": "minute",
-                              "labelTextSize": "0.875rem"
+                              "labelTextSize": "0.875rem",
+                              "label": "Odata Context"
                             },
-                            "plafond": {
+                            "value": {
                               "children": {},
-                              "dataType": "string",
-                              "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.plafond))(ClientInfosForm.sourceData, ClientInfosForm.formData, ClientInfosForm.fieldState)}}",
-                              "fieldType": "Text Input",
-                              "sourceData": "0,000000",
+                              "dataType": "array",
+                              "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.value))(ClientInfosForm.sourceData, ClientInfosForm.formData, ClientInfosForm.fieldState)}}",
+                              "fieldType": "Multiselect",
+                              "sourceData": [],
                               "isCustomField": false,
-                              "accessor": "plafond",
-                              "identifier": "plafond",
+                              "accessor": "value",
+                              "identifier": "value",
                               "position": 1,
-                              "originalIdentifier": "plafond",
+                              "originalIdentifier": "value",
                               "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(ClientInfosForm.sourceData, ClientInfosForm.formData, ClientInfosForm.fieldState)}}",
                               "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(ClientInfosForm.sourceData, ClientInfosForm.formData, ClientInfosForm.fieldState)}}",
                               "boxShadow": "none",
-                              "iconAlign": "left",
-                              "isDisabled": true,
+                              "isDisabled": false,
+                              "isFilterable": false,
                               "isRequired": false,
-                              "isSpellCheck": false,
                               "isVisible": true,
+                              "label": "Value",
                               "labelTextSize": "0.875rem",
-                              "label": "Plafond"
-                            },
-                            "ville": {
-                              "children": {},
-                              "dataType": "string",
-                              "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.ville))(ClientInfosForm.sourceData, ClientInfosForm.formData, ClientInfosForm.fieldState)}}",
-                              "fieldType": "Text Input",
-                              "isCustomField": false,
-                              "accessor": "ville",
-                              "identifier": "ville",
-                              "position": 2,
-                              "originalIdentifier": "ville",
-                              "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(ClientInfosForm.sourceData, ClientInfosForm.formData, ClientInfosForm.fieldState)}}",
-                              "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(ClientInfosForm.sourceData, ClientInfosForm.formData, ClientInfosForm.fieldState)}}",
-                              "boxShadow": "none",
-                              "iconAlign": "left",
-                              "isDisabled": true,
-                              "isRequired": false,
-                              "isSpellCheck": false,
-                              "isVisible": true,
-                              "labelTextSize": "0.875rem",
-                              "label": "Ville"
-                            },
-                            "codeclient": {
-                              "children": {},
-                              "dataType": "string",
-                              "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.codeclient))(ClientInfosForm.sourceData, ClientInfosForm.formData, ClientInfosForm.fieldState)}}",
-                              "fieldType": "Text Input",
-                              "sourceData": "CHABAS",
-                              "isCustomField": false,
-                              "accessor": "codeclient",
-                              "identifier": "codeclient",
-                              "position": 3,
-                              "originalIdentifier": "codeclient",
-                              "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(ClientInfosForm.sourceData, ClientInfosForm.formData, ClientInfosForm.fieldState)}}",
-                              "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(ClientInfosForm.sourceData, ClientInfosForm.formData, ClientInfosForm.fieldState)}}",
-                              "boxShadow": "none",
-                              "iconAlign": "left",
-                              "isDisabled": true,
-                              "isRequired": false,
-                              "isSpellCheck": false,
-                              "isVisible": true,
-                              "labelTextSize": "0.875rem",
-                              "label": "Codeclient"
-                            },
-                            "raisonsocialeclient": {
-                              "children": {},
-                              "dataType": "string",
-                              "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.raisonsocialeclient))(ClientInfosForm.sourceData, ClientInfosForm.formData, ClientInfosForm.fieldState)}}",
-                              "fieldType": "Text Input",
-                              "sourceData": "CHABAS AVOIR",
-                              "isCustomField": false,
-                              "accessor": "raisonsocialeclient",
-                              "identifier": "raisonsocialeclient",
-                              "position": 4,
-                              "originalIdentifier": "raisonsocialeclient",
-                              "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(ClientInfosForm.sourceData, ClientInfosForm.formData, ClientInfosForm.fieldState)}}",
-                              "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(ClientInfosForm.sourceData, ClientInfosForm.formData, ClientInfosForm.fieldState)}}",
-                              "boxShadow": "none",
-                              "iconAlign": "left",
-                              "isDisabled": true,
-                              "isRequired": false,
-                              "isSpellCheck": false,
-                              "isVisible": true,
-                              "labelTextSize": "0.875rem",
-                              "label": "Raisonsocialeclient"
-                            },
-                            "sret": {
-                              "children": {},
-                              "dataType": "string",
-                              "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.sret))(ClientInfosForm.sourceData, ClientInfosForm.formData, ClientInfosForm.fieldState)}}",
-                              "fieldType": "Text Input",
-                              "isCustomField": false,
-                              "accessor": "sret",
-                              "identifier": "sret",
-                              "position": 5,
-                              "originalIdentifier": "sret",
-                              "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(ClientInfosForm.sourceData, ClientInfosForm.formData, ClientInfosForm.fieldState)}}",
-                              "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(ClientInfosForm.sourceData, ClientInfosForm.formData, ClientInfosForm.fieldState)}}",
-                              "boxShadow": "none",
-                              "iconAlign": "left",
-                              "isDisabled": true,
-                              "isRequired": false,
-                              "isSpellCheck": false,
-                              "isVisible": true,
-                              "labelTextSize": "0.875rem",
-                              "label": "Sret"
-                            },
-                            "codepostal": {
-                              "children": {},
-                              "dataType": "string",
-                              "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.codepostal))(ClientInfosForm.sourceData, ClientInfosForm.formData, ClientInfosForm.fieldState)}}",
-                              "fieldType": "Text Input",
-                              "isCustomField": false,
-                              "accessor": "codepostal",
-                              "identifier": "codepostal",
-                              "position": 6,
-                              "originalIdentifier": "codepostal",
-                              "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(ClientInfosForm.sourceData, ClientInfosForm.formData, ClientInfosForm.fieldState)}}",
-                              "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(ClientInfosForm.sourceData, ClientInfosForm.formData, ClientInfosForm.fieldState)}}",
-                              "boxShadow": "none",
-                              "iconAlign": "left",
-                              "isDisabled": true,
-                              "isRequired": false,
-                              "isSpellCheck": false,
-                              "isVisible": true,
-                              "labelTextSize": "0.875rem",
-                              "label": "Codepostal"
-                            },
-                            "adresse": {
-                              "children": {},
-                              "dataType": "string",
-                              "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.adresse))(ClientInfosForm.sourceData, ClientInfosForm.formData, ClientInfosForm.fieldState)}}",
-                              "fieldType": "Text Input",
-                              "isCustomField": false,
-                              "accessor": "adresse",
-                              "identifier": "adresse",
-                              "position": 7,
-                              "originalIdentifier": "adresse",
-                              "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(ClientInfosForm.sourceData, ClientInfosForm.formData, ClientInfosForm.fieldState)}}",
-                              "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(ClientInfosForm.sourceData, ClientInfosForm.formData, ClientInfosForm.fieldState)}}",
-                              "boxShadow": "none",
-                              "iconAlign": "left",
-                              "isDisabled": true,
-                              "isRequired": false,
-                              "isSpellCheck": false,
-                              "isVisible": true,
-                              "labelTextSize": "0.875rem",
-                              "label": "Adresse"
+                              "serverSideFiltering": false,
+                              "options": [
+                                {
+                                  "label": "Blue",
+                                  "value": "BLUE"
+                                },
+                                {
+                                  "label": "Green",
+                                  "value": "GREEN"
+                                },
+                                {
+                                  "label": "Red",
+                                  "value": "RED"
+                                }
+                              ]
                             }
                           },
                           "dataType": "object",
                           "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData))(ClientInfosForm.sourceData, ClientInfosForm.formData, ClientInfosForm.fieldState)}}",
                           "fieldType": "Object",
                           "sourceData": {
-                            "codeclient": "CHABAS",
-                            "raisonsocialeclient": "CHABAS AVOIR",
-                            "plafond": "0,000000"
+                            "@odata.context": "https://org3ef8cf42.crm2.dynamics.com/api/data/v9.2/$metadata#cr2b8_clientsunifie_2s(cr2b8_CLIENTSUNIFIE_2_cr2b8_CLIENTSUNIFIE())",
+                            "value": []
                           },
                           "isCustomField": false,
                           "accessor": "__root_schema__",
@@ -912,76 +793,22 @@
                           "key": "sourceData"
                         },
                         {
-                          "key": "schema.__root_schema__.children.creele.defaultValue"
+                          "key": "schema.__root_schema__.children._odata_context.defaultValue"
                         },
                         {
-                          "key": "schema.__root_schema__.children.creele.accentColor"
+                          "key": "schema.__root_schema__.children._odata_context.accentColor"
                         },
                         {
-                          "key": "schema.__root_schema__.children.creele.borderRadius"
+                          "key": "schema.__root_schema__.children._odata_context.borderRadius"
                         },
                         {
-                          "key": "schema.__root_schema__.children.plafond.defaultValue"
+                          "key": "schema.__root_schema__.children.value.defaultValue"
                         },
                         {
-                          "key": "schema.__root_schema__.children.plafond.accentColor"
+                          "key": "schema.__root_schema__.children.value.accentColor"
                         },
                         {
-                          "key": "schema.__root_schema__.children.plafond.borderRadius"
-                        },
-                        {
-                          "key": "schema.__root_schema__.children.ville.defaultValue"
-                        },
-                        {
-                          "key": "schema.__root_schema__.children.ville.accentColor"
-                        },
-                        {
-                          "key": "schema.__root_schema__.children.ville.borderRadius"
-                        },
-                        {
-                          "key": "schema.__root_schema__.children.codeclient.defaultValue"
-                        },
-                        {
-                          "key": "schema.__root_schema__.children.codeclient.accentColor"
-                        },
-                        {
-                          "key": "schema.__root_schema__.children.codeclient.borderRadius"
-                        },
-                        {
-                          "key": "schema.__root_schema__.children.raisonsocialeclient.defaultValue"
-                        },
-                        {
-                          "key": "schema.__root_schema__.children.raisonsocialeclient.accentColor"
-                        },
-                        {
-                          "key": "schema.__root_schema__.children.raisonsocialeclient.borderRadius"
-                        },
-                        {
-                          "key": "schema.__root_schema__.children.sret.defaultValue"
-                        },
-                        {
-                          "key": "schema.__root_schema__.children.sret.accentColor"
-                        },
-                        {
-                          "key": "schema.__root_schema__.children.sret.borderRadius"
-                        },
-                        {
-                          "key": "schema.__root_schema__.children.codepostal.defaultValue"
-                        },
-                        {
-                          "key": "schema.__root_schema__.children.codepostal.accentColor"
-                        },
-                        {
-                          "key": "schema.__root_schema__.children.codepostal.borderRadius"
-                        },
-                        {
-                          "key": "schema.__root_schema__.children.adresse.defaultValue"
-                        },
-                        {
-                          "key": "schema.__root_schema__.children.adresse.accentColor"
-                        },
-                        {
-                          "key": "schema.__root_schema__.children.adresse.borderRadius"
+                          "key": "schema.__root_schema__.children.value.borderRadius"
                         }
                       ],
                       "sourceData": "{{getOneClient.data}}",
