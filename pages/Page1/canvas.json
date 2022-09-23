@@ -1184,7 +1184,7 @@
                         "label"
                       ],
                       "topRow": 16,
-                      "bottomRow": 20,
+                      "bottomRow": 34,
                       "parentRowSpace": 10,
                       "type": "TEXT_WIDGET",
                       "hideCard": false,
@@ -1207,7 +1207,7 @@
                       ],
                       "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
-                      "text": "{{appsmith.store.clientCode}}",
+                      "text": "{{JSON.stringify(appsmith.URL.queryParams)}}",
                       "key": "cmep7bcdvu",
                       "isDeprecated": false,
                       "rightColumn": 52,
