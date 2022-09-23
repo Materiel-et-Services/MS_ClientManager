@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "myFun2",
-    "fullyQualifiedName": "JSObject1.myFun2",
+    "name": "initClientsInfos",
+    "fullyQualifiedName": "Values.initClientsInfos",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -14,17 +14,16 @@
       "userPermissions": []
     },
     "pageId": "Page1",
-    "collectionId": "Page1_JSObject1",
+    "collectionId": "Page1_Values",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "async () => {}",
+      "body": "async () => {\n  await getOneClient.run({\n    clientCode: ClientSelector.selectedOptionValue\n  });\n  return Values.filterClientInfo(getOneClient.data.value[0]);\n}",
       "jsArguments": [],
       "isAsync": true
     },
-    "executeOnLoad": false,
-    "clientSideExecution": true,
+    "executeOnLoad": true,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -34,14 +33,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "async () => {}"
+      "async () => {\n  await getOneClient.run({\n    clientCode: ClientSelector.selectedOptionValue\n  });\n  return Values.filterClientInfo(getOneClient.data.value[0]);\n}"
     ],
-    "userSetOnLoad": false,
+    "userSetOnLoad": true,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Page1_JSObject1.myFun2",
+  "id": "Page1_Values.initClientsInfos",
   "deleted": false,
-  "gitSyncId": "632ae49cf774ad2bde7b789b_632c765a9a77b641b4d99a1e"
+  "gitSyncId": "632ae49cf774ad2bde7b789b_632d8ebec85ec46372f2f847"
 }
