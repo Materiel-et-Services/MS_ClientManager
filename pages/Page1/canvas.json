@@ -2276,18 +2276,6 @@
               ],
               "timeoutInMillisecond": 10000
             }
-          ],
-          [
-            {
-              "id": "Page1_getOneClient",
-              "name": "getOneClient",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "this.params.clientCode"
-              ],
-              "timeoutInMillisecond": 10000
-            }
           ]
         ],
         "validOnPageLoadActions": true,
