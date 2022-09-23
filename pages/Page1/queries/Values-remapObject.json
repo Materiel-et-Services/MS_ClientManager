@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "initClientsInfos",
-    "fullyQualifiedName": "Values.initClientsInfos",
+    "name": "remapObject",
+    "fullyQualifiedName": "Values.remapObject",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -19,9 +19,11 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "async () => {\n  await getOneClient.run({\n    clientCode: appsmith.store.clientCode\n  });\n  return Values.filterClientInfo(getOneClient.data.value[0]);\n}",
-      "jsArguments": [],
-      "isAsync": true
+      "body": "element => {\n  return element.map(element => {\n    return {\n      value: element.cr2b8_codeclient,\n      label: element.cr2b8_raisonsocialeclient\n    };\n  });\n}",
+      "jsArguments": [
+        {}
+      ],
+      "isAsync": false
     },
     "executeOnLoad": false,
     "dynamicBindingPathList": [
@@ -33,14 +35,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "async () => {\n  await getOneClient.run({\n    clientCode: appsmith.store.clientCode\n  });\n  return Values.filterClientInfo(getOneClient.data.value[0]);\n}"
+      "element => {\n  return element.map(element => {\n    return {\n      value: element.cr2b8_codeclient,\n      label: element.cr2b8_raisonsocialeclient\n    };\n  });\n}"
     ],
-    "userSetOnLoad": true,
+    "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Page1_Values.initClientsInfos",
+  "id": "Page1_Values.remapObject",
   "deleted": false,
-  "gitSyncId": "632ae49cf774ad2bde7b789b_632d8ebec85ec46372f2f847"
+  "gitSyncId": "632ae49cf774ad2bde7b789b_632dcfbc83f9da7b58c44e62"
 }
