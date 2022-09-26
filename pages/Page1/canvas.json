@@ -1180,7 +1180,7 @@
               "type": "SELECT_WIDGET",
               "serverSideFiltering": false,
               "hideCard": false,
-              "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( Object.keys(appsmith.URL.queryParams).includes(\"clientCode\") ? _.find(Values.remapObject(getAllClients.data.value),(element) => {\n\tif (element.value == appsmith.URL.queryParams.clientCode) {\n\t\treturn element\n\t}\n}).value : _.find(Values.remapObject(getAllClients.data.value),(element) => {\n\tif (element.value == appsmith.store.clientCode) {\n\t\treturn element\n\t}\n}).value))(ClientSelector.options, ClientSelector.serverSideFiltering) }}",
+              "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( _.find(Values.remapObject(getAllClients.data.value),(element) => {\n\tif (element.value == appsmith.store.clientCode) {\n\t\treturn element\n\t}\n}).value))(ClientSelector.options, ClientSelector.serverSideFiltering) }}",
               "animateLoading": true,
               "parentColumnSpace": 13.75,
               "dynamicTriggerPathList": [
