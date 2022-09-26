@@ -19,11 +19,11 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n  return getAllClients.run().then(async () => {\n    if (Object.keys(appsmith.URL.queryParams).includes(\"clientCode\") === true) {\n      return await storeValue(\"clientCode\", appsmith.URL.queryParams.clientCode, false);\n    } else {\n      return await storeValue(\"clientCode\", getAllClients.data.value[0].cr2b8_codeclient, false);\n    }\n  }).then(getOneClient.run({\n    clientCode: appsmith.store.clientCode\n  }));\n}",
+      "body": "() => {\n  return getAllClients.run().then(async () => {\n    if (Object.keys(appsmith.URL.queryParams).includes(\"clientCode\") === true) {\n      await storeValue(\"clientCode\", appsmith.URL.queryParams.clientCode, false);\n    } else {\n      await storeValue(\"clientCode\", getAllClients.data.value[0].cr2b8_codeclient, false);\n    }\n  }).then(() => {\n    getOneClient.run({\n      clientCode: appsmith.store.clientCode\n    });\n  });\n}",
       "jsArguments": [],
       "isAsync": true
     },
-    "executeOnLoad": false,
+    "executeOnLoad": true,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -33,9 +33,9 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n  return getAllClients.run().then(async () => {\n    if (Object.keys(appsmith.URL.queryParams).includes(\"clientCode\") === true) {\n      return await storeValue(\"clientCode\", appsmith.URL.queryParams.clientCode, false);\n    } else {\n      return await storeValue(\"clientCode\", getAllClients.data.value[0].cr2b8_codeclient, false);\n    }\n  }).then(getOneClient.run({\n    clientCode: appsmith.store.clientCode\n  }));\n}"
+      "() => {\n  return getAllClients.run().then(async () => {\n    if (Object.keys(appsmith.URL.queryParams).includes(\"clientCode\") === true) {\n      await storeValue(\"clientCode\", appsmith.URL.queryParams.clientCode, false);\n    } else {\n      await storeValue(\"clientCode\", getAllClients.data.value[0].cr2b8_codeclient, false);\n    }\n  }).then(() => {\n    getOneClient.run({\n      clientCode: appsmith.store.clientCode\n    });\n  });\n}"
     ],
-    "userSetOnLoad": false,
+    "userSetOnLoad": true,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
