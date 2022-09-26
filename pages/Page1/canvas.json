@@ -1221,7 +1221,7 @@
               "renderMode": "CANVAS",
               "isLoading": false,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-              "onOptionChange": "{{storeValue(\"clientCode\",ClientSelector.selectedOptionValue,false);Values.initApp()}}"
+              "onOptionChange": "{{storeValue(\"clientCode\",ClientSelector.selectedOptionValue,false); getOneClient.run({clientCode:appsmith.store.clientCode})}}"
             },
             {
               "boxShadow": "none",
