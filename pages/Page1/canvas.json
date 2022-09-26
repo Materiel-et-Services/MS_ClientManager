@@ -1207,7 +1207,7 @@
                       ],
                       "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
-                      "text": "{{JSON.stringify(appsmith.URL.queryParams)}}",
+                      "text": "{{_.find(Values.remapObject(getAllClients.data.value),(element) => {\n\tif (element.value == appsmith.store.clientCode) {\n\t\treturn element\n\t}\n}).value}}",
                       "key": "cmep7bcdvu",
                       "isDeprecated": false,
                       "rightColumn": 52,
