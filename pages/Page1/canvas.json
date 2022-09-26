@@ -120,7 +120,7 @@
                       ],
                       "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
-                      "text": "{{JSON.stringify(appsmith.URL.queryParams)}}",
+                      "text": "{{appsmith.URL.queryParams.clientCode}}",
                       "key": "cmep7bcdvu",
                       "isDeprecated": false,
                       "rightColumn": 51,
