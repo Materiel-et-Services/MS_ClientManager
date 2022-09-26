@@ -2348,7 +2348,7 @@
               "confirmBeforeExecute": false,
               "pluginType": "JS",
               "jsonPathKeys": [
-                "() => {\n  getAllClients.run().then(() => {\n    Object.keys(appsmith.URL.queryParams).includes(\"codeClient\") === true ? storeValue(\"clientCode\", appsmith.URL.clientCode, false) : storeValue(\"clientCode\", getAllClients.data.value[0].cr2b8_codeclient, false);\n    console.log(appsmith.store);\n  }).then(getOneClient.run({\n    clientCode: appsmith.store.clientCode\n  }));\n}"
+                "() => {\n  getAllClients.run().then(() => {\n    Object.keys(appsmith.URL.queryParams).includes(\"clientCode\") === true ? storeValue(\"clientCode\", appsmith.URL.clientCode, false) : storeValue(\"clientCode\", getAllClients.data.value[0].cr2b8_codeclient, false);\n  }).then(getOneClient.run({\n    clientCode: appsmith.store.clientCode\n  }));\n}"
               ],
               "timeoutInMillisecond": 10000
             }
