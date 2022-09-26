@@ -120,7 +120,7 @@
                       ],
                       "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
-                      "text": "{{appsmith.store.clientCode}}",
+                      "text": "{{JSON.stringify(appsmith.store)}}",
                       "key": "cmep7bcdvu",
                       "isDeprecated": false,
                       "rightColumn": 51,
