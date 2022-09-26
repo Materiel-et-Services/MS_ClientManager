@@ -169,7 +169,7 @@
                       ],
                       "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
-                      "text": "{{Object.keys(appsmith.URL.queryParams).includes(\"clientCode\")}}",
+                      "text": "{{Object.keys(appsmith.URL.queryParams).includes(\"clientCode\") === true ? \"oui\":\"non\"}}",
                       "key": "cmep7bcdvu",
                       "isDeprecated": false,
                       "rightColumn": 51,
