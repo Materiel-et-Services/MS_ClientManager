@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n  getAllClients.run().then(() => {\n    appsmith.URL.queryParams ? storeValue(\"clientCode\", appsmith.URL.clientCode) : storeValue(\"clientCode\", getAllClients.data.value[0].cr2b8_codeclient);\n    console.log(appsmith.store);\n  }).then(getOneClient.run({\n    clientCode: appsmith.store.clientCode\n  }));\n}",
+      "body": "() => {\n  getAllClients.run().then(() => {\n    Object.keys(appsmith.URL.queryParams).includes(\"codeClient\") === true ? storeValue(\"clientCode\", appsmith.URL.clientCode) : storeValue(\"clientCode\", getAllClients.data.value[0].cr2b8_codeclient);\n    console.log(appsmith.store);\n  }).then(getOneClient.run({\n    clientCode: appsmith.store.clientCode\n  }));\n}",
       "jsArguments": [],
       "isAsync": true
     },
@@ -33,7 +33,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n  getAllClients.run().then(() => {\n    appsmith.URL.queryParams ? storeValue(\"clientCode\", appsmith.URL.clientCode) : storeValue(\"clientCode\", getAllClients.data.value[0].cr2b8_codeclient);\n    console.log(appsmith.store);\n  }).then(getOneClient.run({\n    clientCode: appsmith.store.clientCode\n  }));\n}"
+      "() => {\n  getAllClients.run().then(() => {\n    Object.keys(appsmith.URL.queryParams).includes(\"codeClient\") === true ? storeValue(\"clientCode\", appsmith.URL.clientCode) : storeValue(\"clientCode\", getAllClients.data.value[0].cr2b8_codeclient);\n    console.log(appsmith.store);\n  }).then(getOneClient.run({\n    clientCode: appsmith.store.clientCode\n  }));\n}"
     ],
     "userSetOnLoad": true,
     "confirmBeforeExecute": false,
