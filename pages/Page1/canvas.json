@@ -169,7 +169,7 @@
                       ],
                       "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
-                      "text": "{{JSON.stringify(appsmith.store)}}",
+                      "text": "{{Object.keys(appsmith.URL.queryParams).includes(\"clientCode\")}}",
                       "key": "cmep7bcdvu",
                       "isDeprecated": false,
                       "rightColumn": 51,
@@ -1368,7 +1368,7 @@
               "renderMode": "CANVAS",
               "isLoading": false,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-              "onOptionChange": "{{storeValue(\"clientCode\",ClientSelector.selectedOptionValue,false);Values.initClientsInfos()}}"
+              "onOptionChange": "{{storeValue(\"clientCode\",ClientSelector.selectedOptionValue,false);Values.initApp()}}"
             },
             {
               "boxShadow": "none",
