@@ -2,7 +2,7 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "UpdateClientContact",
+    "name": "PostContact",
     "datasource": {
       "name": "DATA",
       "pluginId": "restapi-plugin",
@@ -17,22 +17,18 @@
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
-      "path": "cr9c2_contact_clients({{this.params.ContactOId}})",
+      "path": "cr9c2_contact_clients",
       "headers": [
         {
           "key": "content-type",
           "value": "application/json"
-        },
-        {
-          "key": "If-Match",
-          "value": "*"
         }
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{{\n_.omit(this.params.InfoToPatch,[\"cr9c2_contact_clientid\",\"createdon\",\"modifiedon\",\"EditActions1\",\"customColumn1\"])\n}}",
+      "body": "{{\nObject.assign(this.params.newClientContact,{\"cr2b8_CLIENTSUNIFIE_2@odata.bind\": `/cr2b8_clientsunifie_2s(${this.params.clientCode})`})\n}}",
       "bodyFormData": [],
-      "httpMethod": "PATCH",
+      "httpMethod": "POST",
       "pluginSpecifiedTemplates": [
         {
           "value": true
@@ -55,15 +51,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "_.omit(this.params.InfoToPatch,[\"cr9c2_contact_clientid\",\"createdon\",\"modifiedon\",\"EditActions1\",\"customColumn1\"])",
-      "this.params.ContactOId"
+      "Object.assign(this.params.newClientContact,{\"cr2b8_CLIENTSUNIFIE_2@odata.bind\": `/cr2b8_clientsunifie_2s(${this.params.clientCode})`})"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Page1_UpdateClientContact",
+  "id": "Page1_PostContact",
   "deleted": false,
-  "gitSyncId": "632ae49cf774ad2bde7b789b_632c4978d49f5626d3bbb891"
+  "gitSyncId": "6331b58283f9da7b58c47882_63345b7093ac462241a3b6df"
 }

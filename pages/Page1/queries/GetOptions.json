@@ -2,7 +2,7 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "UpdateClientContact",
+    "name": "GetOptions",
     "datasource": {
       "name": "DATA",
       "pluginId": "restapi-plugin",
@@ -17,53 +17,39 @@
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
-      "path": "cr9c2_contact_clients({{this.params.ContactOId}})",
-      "headers": [
-        {
-          "key": "content-type",
-          "value": "application/json"
-        },
-        {
-          "key": "If-Match",
-          "value": "*"
-        }
-      ],
+      "path": "GlobalOptionSetDefinitions(Name='{{this.params.options}}')",
+      "headers": [],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{{\n_.omit(this.params.InfoToPatch,[\"cr9c2_contact_clientid\",\"createdon\",\"modifiedon\",\"EditActions1\",\"customColumn1\"])\n}}",
       "bodyFormData": [],
-      "httpMethod": "PATCH",
+      "httpMethod": "GET",
       "pluginSpecifiedTemplates": [
         {
           "value": true
         }
       ],
       "formData": {
-        "apiContentType": "application/json"
+        "apiContentType": "none"
       }
     },
     "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
         "key": "path"
-      },
-      {
-        "key": "body"
       }
     ],
     "isValid": true,
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "_.omit(this.params.InfoToPatch,[\"cr9c2_contact_clientid\",\"createdon\",\"modifiedon\",\"EditActions1\",\"customColumn1\"])",
-      "this.params.ContactOId"
+      "this.params.options"
     ],
-    "userSetOnLoad": false,
+    "userSetOnLoad": true,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Page1_UpdateClientContact",
+  "id": "Page1_GetOptions",
   "deleted": false,
-  "gitSyncId": "632ae49cf774ad2bde7b789b_632c4978d49f5626d3bbb891"
+  "gitSyncId": "6331b58283f9da7b58c47882_63343ad904289f792a05d2a5"
 }
