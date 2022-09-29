@@ -3,10 +3,6 @@
     {
       "id": "Page1",
       "isDefault": true
-    },
-    {
-      "id": "Test",
-      "isDefault": false
     }
   ],
   "viewMode": false,
@@ -15,7 +11,7 @@
   "color": "#E3DEFF",
   "icon": "music",
   "unpublishedAppLayout": {
-    "type": "DESKTOP"
+    "type": "FLUID"
   },
   "publishedAppLayout": {
     "type": "DESKTOP"
