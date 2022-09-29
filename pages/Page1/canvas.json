@@ -578,7 +578,9 @@
                           "boxShadow": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( 'none'))}}",
                           "customAlias": "",
                           "buttonLabel": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( 'Supprimer'))}}",
+
                           "onClick": "{{(async function(){\nreturn await storeValue(\"contactToDelete\",currentRow.cr9c2_contact_clientid,false).then( async () => {\nreturn await showModal('DeleteContactModal')})})()\n}}"
+
                         }
                       },
                       "onRowSelected": "",
@@ -1171,6 +1173,7 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}"
+
                     }
                   ],
                   "isDisabled": false,
@@ -1466,7 +1469,9 @@
                       "resetFormOnClick": false,
                       "boxShadow": "none",
                       "widgetName": "ConfirmDeleteContact",
+
                       "onClick": "{{DeleteClientContactCopy.run({\"ContactOId\":appsmith.store.contactToDelete})\n.then( async () => {\nreturn await storeValue(\"contactToDelete\",undefined)\n\t}\n)\n.then( async () => {\nreturn await closeModal(\"DeleteContactModal\")})\n.then(async () => {\nreturn await getOneClient.run({clientCode:ClientSelector.selectedOptionValue})})\n.then(async () => {\nreturn await showAlert(\"La suppression a été effectuée\",\"success\"\n)}).catch( async () => {\nreturn await showAlert(\"Une erreur est survenu, le contact n'a pas été supprimé\",\"error\")})\n}}",
+
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                       "dynamicPropertyPathList": [
                         {
@@ -2473,7 +2478,9 @@
                       ],
                       "displayName": "JSON Form",
                       "iconSVG": "/static/media/icon.5b428de12db9ad6a591955ead07f86e9.svg",
+
                       "onSubmit": "{{await PostContact.run({clientCode:getOneClient.data.value[0].cr2b8_clientsunifie_2id,newClientContact:JSONForm1.formData}).then( async () => {\nreturn await getOneClient.run({clientCode:appsmith.store.clientCode})\n}).then(async () => { return await closeModal(\"AddCLientContact\")}\n)\n.catch((e) => {\n\tconsole.log(e)\nreturn showAlert(\"Une erreur c'est produit\",\"error\")\n\t}\n)\n}}",
+
                       "topRow": 2,
                       "bottomRow": 53,
                       "fieldLimitExceeded": false,
