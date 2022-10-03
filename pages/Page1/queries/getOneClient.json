@@ -18,7 +18,12 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "path": "cr2b8_clientsunifie_2s",
-      "headers": [],
+      "headers": [
+        {
+          "key": "Authorization",
+          "value": "Bearer {{appsmith.store.jwt}}"
+        }
+      ],
       "encodeParamsToggle": true,
       "queryParameters": [
         {
@@ -42,11 +47,16 @@
       }
     },
     "executeOnLoad": false,
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "headers[0].value"
+      }
+    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
+      "appsmith.store.jwt",
       "this.params.clientCode"
     ],
     "userSetOnLoad": true,

@@ -22,6 +22,10 @@
         {
           "key": "content-type",
           "value": "application/json"
+        },
+        {
+          "key": "Authorization",
+          "value": "Bearer {{appsmith.store.jwt}}"
         }
       ],
       "encodeParamsToggle": true,
@@ -45,13 +49,17 @@
       },
       {
         "key": "body"
+      },
+      {
+        "key": "headers[1].value"
       }
     ],
     "isValid": true,
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "Object.assign(this.params.newClientContact,{\"cr2b8_CLIENTSUNIFIE_2@odata.bind\": `/cr2b8_clientsunifie_2s(${this.params.clientCode})`})"
+      "Object.assign(this.params.newClientContact,{\"cr2b8_CLIENTSUNIFIE_2@odata.bind\": `/cr2b8_clientsunifie_2s(${this.params.clientCode})`})",
+      "appsmith.store.jwt"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
