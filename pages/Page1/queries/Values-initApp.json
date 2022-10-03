@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n  return getAllClients.run().then(async () => {\n    if (Object.keys(appsmith.URL.queryParams).includes(\"clientCode\") === true) {\n      await storeValue(\"clientCode\", appsmith.URL.queryParams.clientCode, false);\n    } else {\n      await storeValue(\"clientCode\", getAllClients.data.value[0].cr2b8_codeclient, false);\n    }\n  }).then(() => {\n    getOneClient.run({\n      clientCode: appsmith.store.clientCode\n    });\n  }).then(() => {\n    GetOptions.run({\n      options: \"cr9c2_type_de_contacts\"\n    });\n  });\n}",
+      "body": "() => {\n  if (appsmith.store.jwt != undefined) {\n    return getAllClients.run().then(async () => {\n      if (Object.keys(appsmith.URL.queryParams).includes(\"clientCode\") === true) {\n        await storeValue(\"clientCode\", appsmith.URL.queryParams.clientCode, false);\n      } else {\n        await storeValue(\"clientCode\", getAllClients.data.value[0].cr2b8_codeclient, false);\n      }\n    }).then(() => {\n      getOneClient.run({\n        clientCode: appsmith.store.clientCode\n      });\n    }).then(() => {\n      GetOptions.run({\n        options: \"cr9c2_type_de_contacts\"\n      });\n    });\n  } else {\n    navigateTo(\"login\");\n  }\n}",
       "jsArguments": [],
       "isAsync": true
     },
@@ -33,7 +33,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n  return getAllClients.run().then(async () => {\n    if (Object.keys(appsmith.URL.queryParams).includes(\"clientCode\") === true) {\n      await storeValue(\"clientCode\", appsmith.URL.queryParams.clientCode, false);\n    } else {\n      await storeValue(\"clientCode\", getAllClients.data.value[0].cr2b8_codeclient, false);\n    }\n  }).then(() => {\n    getOneClient.run({\n      clientCode: appsmith.store.clientCode\n    });\n  }).then(() => {\n    GetOptions.run({\n      options: \"cr9c2_type_de_contacts\"\n    });\n  });\n}"
+      "() => {\n  if (appsmith.store.jwt != undefined) {\n    return getAllClients.run().then(async () => {\n      if (Object.keys(appsmith.URL.queryParams).includes(\"clientCode\") === true) {\n        await storeValue(\"clientCode\", appsmith.URL.queryParams.clientCode, false);\n      } else {\n        await storeValue(\"clientCode\", getAllClients.data.value[0].cr2b8_codeclient, false);\n      }\n    }).then(() => {\n      getOneClient.run({\n        clientCode: appsmith.store.clientCode\n      });\n    }).then(() => {\n      GetOptions.run({\n        options: \"cr9c2_type_de_contacts\"\n      });\n    });\n  } else {\n    navigateTo(\"login\");\n  }\n}"
     ],
     "userSetOnLoad": true,
     "confirmBeforeExecute": false,
