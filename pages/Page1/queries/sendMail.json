@@ -17,7 +17,7 @@
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
-      "path": "sendMail",
+      "path": "/sendMail",
       "headers": [
         {
           "key": "content-type",
@@ -43,7 +43,11 @@
       }
     },
     "executeOnLoad": false,
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "headers[1].value"
+      }
+    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
