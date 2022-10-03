@@ -1176,6 +1176,7 @@
                       "resetFormOnClick": false,
                       "boxShadow": "none",
                       "widgetName": "Button4",
+                      "onClick": "{{sendMail.run()}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
@@ -1190,6 +1191,11 @@
                       "hideCard": false,
                       "animateLoading": true,
                       "parentColumnSpace": 23.078125,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
                       "leftColumn": 39,
                       "dynamicBindingPathList": [
                         {
@@ -1199,7 +1205,7 @@
                           "key": "borderRadius"
                         }
                       ],
-                      "text": "Submit",
+                      "text": "email",
                       "isDisabled": false,
                       "key": "nuueaxo7fx",
                       "isDeprecated": false,
