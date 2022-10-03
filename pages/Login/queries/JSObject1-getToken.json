@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "async () => {\n  if (appsmith.URL.queryParams.code != undefined) {\n    console.log(appsmith.URL.queryParams.code);\n    await storeValue(\"code\", appsmith.URL.queryParams.code, false);\n    console.log(appsmith.store.code);\n    let response = await getToken.run({\n      code: appsmith.store.code\n    });\n    console.log(response);\n    await storeValue(\"jwt\", response.access_token, false);\n    navigateTo(\"App\");\n  } else {\n    console.log(\"no\");\n  }\n}",
+      "body": "async () => {\n  if (appsmith.URL.queryParams.code != undefined) {\n    console.log(appsmith.URL.queryParams.code);\n    await storeValue(\"code\", appsmith.URL.queryParams.code, false);\n    console.log(appsmith.store.code);\n    let response = await getToken.run({\n      code: appsmith.store.code\n    });\n    console.log(response);\n    await storeValue(\"jwt\", response.access_token, false);\n    navigateTo(\"Page1\");\n  } else {\n    console.log(\"no\");\n  }\n}",
       "jsArguments": [],
       "isAsync": true
     },
@@ -33,7 +33,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "async () => {\n  if (appsmith.URL.queryParams.code != undefined) {\n    console.log(appsmith.URL.queryParams.code);\n    await storeValue(\"code\", appsmith.URL.queryParams.code, false);\n    console.log(appsmith.store.code);\n    let response = await getToken.run({\n      code: appsmith.store.code\n    });\n    console.log(response);\n    await storeValue(\"jwt\", response.access_token, false);\n    navigateTo(\"App\");\n  } else {\n    console.log(\"no\");\n  }\n}"
+      "async () => {\n  if (appsmith.URL.queryParams.code != undefined) {\n    console.log(appsmith.URL.queryParams.code);\n    await storeValue(\"code\", appsmith.URL.queryParams.code, false);\n    console.log(appsmith.store.code);\n    let response = await getToken.run({\n      code: appsmith.store.code\n    });\n    console.log(response);\n    await storeValue(\"jwt\", response.access_token, false);\n    navigateTo(\"Page1\");\n  } else {\n    console.log(\"no\");\n  }\n}"
     ],
     "userSetOnLoad": true,
     "confirmBeforeExecute": false,
