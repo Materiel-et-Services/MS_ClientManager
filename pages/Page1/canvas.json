@@ -597,6 +597,7 @@
                     {
                       "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
                       "widgetName": "Form1",
+                      "borderColor": "{{appsmith.theme.colors.primaryColor}}",
                       "isCanvas": true,
                       "displayName": "Form",
                       "iconSVG": "/static/media/icon.ea3e08d130e59c56867ae40114c10eed.svg",
@@ -610,6 +611,7 @@
                       "hideCard": false,
                       "animateLoading": true,
                       "parentColumnSpace": 19.5,
+                      "dynamicTriggerPathList": [],
                       "leftColumn": 2,
                       "dynamicBindingPathList": [
                         {
@@ -617,6 +619,9 @@
                         },
                         {
                           "key": "boxShadow"
+                        },
+                        {
+                          "key": "borderColor"
                         }
                       ],
                       "children": [
@@ -1158,8 +1163,9 @@
                           "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}"
                         }
                       ],
+                      "borderWidth": "1",
                       "key": "zqg3z7k050",
-                      "backgroundColor": "#FFFFFF",
+                      "backgroundColor": "#fafafa",
                       "isDeprecated": false,
                       "rightColumn": 33,
                       "widgetId": "d1910uhtt5",
