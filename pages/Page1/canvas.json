@@ -2059,12 +2059,15 @@
                             },
                             {
                               "boxShadow": "none",
-                              "widgetName": "IconButton3",
-                              "onClick": "{{ArchiveClient.run({ClientOId:Values.filterClientInfo(getOneClient.data.value[0]).cr2b8_clientsunifie_2id,archiveStatus:true})}}",
-                              "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                              "widgetName": "ArchiveButton",
+                              "onClick": "{{\nValues.filterClientInfo(getOneClient.data.value[0]).archived_client === true ?\nArchiveClient.run({ClientOId:Values.filterClientInfo(getOneClient.data.value[0]).clientsunifie_2id,archiveStatus:false}) : ArchiveClient.run({ClientOId:Values.filterClientInfo(getOneClient.data.value[0]).clientsunifie_2id,archiveStatus:true}).then(async ()=> {await getOneClient.run({clientCode:appsmith.store.clientCode})})}",
+                              "buttonColor": "{{Values.filterClientInfo(getOneClient.data.value[0]).archived_client === true ? \"#ff0000\" : appsmith.theme.colors.primaryColor}}",
                               "dynamicPropertyPathList": [
                                 {
                                   "key": "onClick"
+                                },
+                                {
+                                  "key": "buttonColor"
                                 }
                               ],
                               "displayName": "Icon Button",
