@@ -29,6 +29,10 @@
         {
           "key": "$select",
           "value": "cr2b8_codeclient,cr2b8_raisonsocialeclient,cr2b8_clientsunifie_2id"
+        },
+        {
+          "key": "$filter",
+          "value": "{{appsmith.store.withArchive}}"
         }
       ],
       "bodyFormData": [],
@@ -45,6 +49,12 @@
     "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
+        "key": "path"
+      },
+      {
+        "key": "queryParameters[1].value"
+      },
+      {
         "key": "headers[0].value"
       }
     ],
@@ -52,7 +62,8 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "appsmith.store.jwt"
+      "appsmith.store.jwt",
+      "appsmith.store.withArchive"
     ],
     "userSetOnLoad": true,
     "confirmBeforeExecute": false,

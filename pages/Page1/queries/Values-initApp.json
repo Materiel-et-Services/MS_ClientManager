@@ -19,11 +19,11 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n  if (appsmith.store.jwt != undefined) {\n    console.log(appsmith.store);\n    return getAllClients.run().then(async () => {\n      if (Object.keys(appsmith.URL.queryParams).includes(\"clientCode\") === true) {\n        await storeValue(\"clientCode\", appsmith.URL.queryParams.clientCode, false);\n      } else {\n        await storeValue(\"clientCode\", getAllClients.data.value[0].cr2b8_codeclient, false);\n      }\n    }).then(() => {\n      getOneClient.run({\n        clientCode: appsmith.store.clientCode\n      });\n    }).then(() => {\n      GetOptions.run({\n        options: \"cr9c2_type_de_contacts\"\n      });\n    });\n  } else {\n    console.log(\"test2\");\n    navigateTo(\"Login\");\n  }\n}",
+      "body": "async () => {\n  isArchivedIncluded.isChecked === true ? await storeValue(\"withArchive\", \"\", \"&$filter=cr2b8_archived_client ne null\") : await storeValue(\"withArchive\", \"&$filter=cr2b8_archived_client eq false\", false);\n  if (appsmith.store.jwt != undefined) {\n    console.log(appsmith.store);\n    return getAllClients.run().then(async () => {\n      if (Object.keys(appsmith.URL.queryParams).includes(\"clientCode\") === true) {\n        await storeValue(\"clientCode\", appsmith.URL.queryParams.clientCode, false);\n      } else {\n        await storeValue(\"clientCode\", getAllClients.data.value[0].cr2b8_codeclient, false);\n      }\n    }).then(() => {\n      getOneClient.run({\n        clientCode: appsmith.store.clientCode\n      });\n    }).then(() => {\n      GetOptions.run({\n        options: \"cr9c2_type_de_contacts\"\n      });\n    });\n  } else {\n    console.log(\"test2\");\n    navigateTo(\"Login\");\n  }\n}",
       "jsArguments": [],
       "isAsync": true
     },
-    "executeOnLoad": true,
+    "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -33,9 +33,9 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n  if (appsmith.store.jwt != undefined) {\n    console.log(appsmith.store);\n    return getAllClients.run().then(async () => {\n      if (Object.keys(appsmith.URL.queryParams).includes(\"clientCode\") === true) {\n        await storeValue(\"clientCode\", appsmith.URL.queryParams.clientCode, false);\n      } else {\n        await storeValue(\"clientCode\", getAllClients.data.value[0].cr2b8_codeclient, false);\n      }\n    }).then(() => {\n      getOneClient.run({\n        clientCode: appsmith.store.clientCode\n      });\n    }).then(() => {\n      GetOptions.run({\n        options: \"cr9c2_type_de_contacts\"\n      });\n    });\n  } else {\n    console.log(\"test2\");\n    navigateTo(\"Login\");\n  }\n}"
+      "async () => {\n  isArchivedIncluded.isChecked === true ? await storeValue(\"withArchive\", \"\", \"&$filter=cr2b8_archived_client ne null\") : await storeValue(\"withArchive\", \"&$filter=cr2b8_archived_client eq false\", false);\n  if (appsmith.store.jwt != undefined) {\n    console.log(appsmith.store);\n    return getAllClients.run().then(async () => {\n      if (Object.keys(appsmith.URL.queryParams).includes(\"clientCode\") === true) {\n        await storeValue(\"clientCode\", appsmith.URL.queryParams.clientCode, false);\n      } else {\n        await storeValue(\"clientCode\", getAllClients.data.value[0].cr2b8_codeclient, false);\n      }\n    }).then(() => {\n      getOneClient.run({\n        clientCode: appsmith.store.clientCode\n      });\n    }).then(() => {\n      GetOptions.run({\n        options: \"cr9c2_type_de_contacts\"\n      });\n    });\n  } else {\n    console.log(\"test2\");\n    navigateTo(\"Login\");\n  }\n}"
     ],
-    "userSetOnLoad": true,
+    "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
