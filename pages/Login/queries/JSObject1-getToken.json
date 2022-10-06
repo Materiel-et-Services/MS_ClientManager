@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "async () => {\n  if (appsmith.URL.queryParams.code != undefined) {\n    console.log(appsmith.URL.queryParams);\n    await storeValue(\"code\", appsmith.URL.queryParams.code, false);\n    console.log(appsmith.store.code);\n    let response = await getToken.run({\n      code: appsmith.store.code\n    });\n    console.log(response);\n    await storeValue(\"jwt\", response.access_token, false);\n    let params = appsmith.URL.queryParams.state.split(\"&\");\n    let objectParams = {};\n    params.map(element => {\n      let itemObject = element.split(\"=\");\n      let newObj = {};\n      newObj[itemObject[0]] = itemObject[1];\n      Object.assign(objectParams, newObj);\n    });\n    console.log(objectParams);\n    navigateTo(\"Page1\", {\n      embed: true\n    });\n  } else {\n    console.log(\"no\");\n  }\n}",
+      "body": "async () => {\n  if (appsmith.URL.queryParams.code != undefined) {\n    console.log(appsmith.URL.queryParams);\n    await storeValue(\"code\", appsmith.URL.queryParams.code, false);\n    console.log(appsmith.store.code);\n    let response = await getToken.run({\n      code: appsmith.store.code\n    });\n    console.log(response);\n    await storeValue(\"jwt\", response.access_token, false);\n    let params = appsmith.URL.queryParams.state.split(\"&\");\n    let objectParams = {};\n    params.map(element => {\n      let itemObject = element.split(\"=\");\n      let newObj = {};\n      newObj[itemObject[0]] = itemObject[1];\n      Object.assign(objectParams, newObj);\n    });\n    navigateTo(\"Page1\", objectParams);\n  } else {\n    console.log(\"no\");\n  }\n}",
       "jsArguments": [],
       "isAsync": true
     },
@@ -33,7 +33,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "async () => {\n  if (appsmith.URL.queryParams.code != undefined) {\n    console.log(appsmith.URL.queryParams);\n    await storeValue(\"code\", appsmith.URL.queryParams.code, false);\n    console.log(appsmith.store.code);\n    let response = await getToken.run({\n      code: appsmith.store.code\n    });\n    console.log(response);\n    await storeValue(\"jwt\", response.access_token, false);\n    let params = appsmith.URL.queryParams.state.split(\"&\");\n    let objectParams = {};\n    params.map(element => {\n      let itemObject = element.split(\"=\");\n      let newObj = {};\n      newObj[itemObject[0]] = itemObject[1];\n      Object.assign(objectParams, newObj);\n    });\n    console.log(objectParams);\n    navigateTo(\"Page1\", {\n      embed: true\n    });\n  } else {\n    console.log(\"no\");\n  }\n}"
+      "async () => {\n  if (appsmith.URL.queryParams.code != undefined) {\n    console.log(appsmith.URL.queryParams);\n    await storeValue(\"code\", appsmith.URL.queryParams.code, false);\n    console.log(appsmith.store.code);\n    let response = await getToken.run({\n      code: appsmith.store.code\n    });\n    console.log(response);\n    await storeValue(\"jwt\", response.access_token, false);\n    let params = appsmith.URL.queryParams.state.split(\"&\");\n    let objectParams = {};\n    params.map(element => {\n      let itemObject = element.split(\"=\");\n      let newObj = {};\n      newObj[itemObject[0]] = itemObject[1];\n      Object.assign(objectParams, newObj);\n    });\n    navigateTo(\"Page1\", objectParams);\n  } else {\n    console.log(\"no\");\n  }\n}"
     ],
     "userSetOnLoad": true,
     "confirmBeforeExecute": false,
