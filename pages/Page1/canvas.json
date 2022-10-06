@@ -195,6 +195,9 @@
                         },
                         {
                           "key": "primaryColumns.cr9c2_type_contact.buttonLabel"
+                        },
+                        {
+                          "key": "primaryColumns.main_contact.computedValue"
                         }
                       ],
                       "leftColumn": 1,
@@ -247,7 +250,8 @@
                         "cr9c2_type_contact",
                         "EditActions1",
                         "cr9c2_contact_clientid",
-                        "customColumn1"
+                        "customColumn1",
+                        "main_contact"
                       ],
                       "dynamicPropertyPathList": [
                         {
@@ -576,6 +580,33 @@
                           "customAlias": "",
                           "buttonLabel": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( 'Supprimer'))}}",
                           "onClick": "{{(async function(){\nreturn await storeValue(\"contactToDelete\",currentRow.cr9c2_contact_clientid,false).then( async () => {\nreturn await showModal('DeleteContactModal')})})()\n}}"
+                        },
+                        "main_contact": {
+                          "allowCellWrapping": false,
+                          "index": 7,
+                          "width": 150,
+                          "originalId": "main_contact",
+                          "id": "main_contact",
+                          "alias": "main_contact",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "checkbox",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellEditable": true,
+                          "isEditable": true,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "Contact principal comptabilité",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"main_contact\"]))}}",
+                          "validation": {},
+                          "cellBackground": ""
                         }
                       },
                       "onRowSelected": "",
