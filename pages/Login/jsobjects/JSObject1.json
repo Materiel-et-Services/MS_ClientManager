@@ -6,7 +6,7 @@
     "pluginType": "JS",
     "actions": [],
     "archivedActions": [],
-    "body": "export default {\n\tgetToken: async () => {\n\t\tif (appsmith.URL.queryParams.code != undefined) {\n\t\t\tconsole.log(appsmith.URL.queryParams.code)\n\t\t\tawait storeValue(\"code\",appsmith.URL.queryParams.code,false)\n\t\t\tconsole.log(appsmith.store.code)\n\t\t\tlet response =  await getToken.run({code: appsmith.store.code})\n\t\t\tconsole.log(response)\n\t\t\tawait storeValue(\"jwt\",response.access_token,false)\n\t\t\tnavigateTo(\"Page1\")\n\t\t} else {\n\t\t\tconsole.log(\"no\")\n\t\t}\n\n\t}\n}",
+    "body": "export default {\n\tgetToken: async () => {\n\t\tif (appsmith.URL.queryParams.code != undefined) {\n\t\t\tconsole.log(appsmith.URL.queryParams)\n\t\t\tawait storeValue(\"code\",appsmith.URL.queryParams.code,false)\n\t\t\tconsole.log(appsmith.store.code)\n\t\t\tlet response =  await getToken.run({code: appsmith.store.code})\n\t\t\tconsole.log(response)\n\t\t\tawait storeValue(\"jwt\",response.access_token,false)\n\t\t\tnavigateTo(\"Page1\")\n\t\t} else {\n\t\t\tconsole.log(\"no\")\n\t\t}\n\n\t}\n}",
     "variables": []
   },
   "id": "Login_JSObject1",
