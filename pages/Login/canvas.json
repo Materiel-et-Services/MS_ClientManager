@@ -29,7 +29,7 @@
               "resetFormOnClick": false,
               "boxShadow": "none",
               "widgetName": "LoginButton",
-              "onClick": "{{navigateTo('https://login.microsoftonline.com/bd01764b-a54c-43a9-856d-94416f81b417/oauth2/v2.0/authorize?client_id=95f86478-fcbf-4ae3-b304-a1a89b936119&scope=https://org3ef8cf42.crm2.dynamics.com/.default&redirect_uri=https://app.appsmith.com/app/ms-clientmanager/login-633af1ff197d8c7f30ad792a?test=coucou&response_type=code', {},'SAME_WINDOW')}}",
+              "onClick": "{{navigateTo('https://login.microsoftonline.com/bd01764b-a54c-43a9-856d-94416f81b417/oauth2/v2.0/authorize?client_id=95f86478-fcbf-4ae3-b304-a1a89b936119&scope=https://org3ef8cf42.crm2.dynamics.com/.default&redirect_uri=https://app.appsmith.com/app/ms-clientmanager/login-633af1ff197d8c7f30ad792a&response_type=code&state=coucou=test', {},'SAME_WINDOW')}}",
               "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
               "dynamicPropertyPathList": [
                 {
