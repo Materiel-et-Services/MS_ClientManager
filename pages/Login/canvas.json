@@ -28,6 +28,58 @@
             {
               "resetFormOnClick": false,
               "boxShadow": "none",
+              "widgetName": "LoginButtonCopy",
+              "onClick": "{{storeValue('jwt','eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6IjJaUXBKM1VwYmpBWVhZR2FYRUpsOGxWMFRPSSIsImtpZCI6IjJaUXBKM1VwYmpBWVhZR2FYRUpsOGxWMFRPSSJ9.eyJhdWQiOiJodHRwczovL29yZzNlZjhjZjQyLmNybTIuZHluYW1pY3MuY29tIiwiaXNzIjoiaHR0cHM6Ly9zdHMud2luZG93cy5uZXQvYmQwMTc2NGItYTU0Yy00M2E5LTg1NmQtOTQ0MTZmODFiNDE3LyIsImlhdCI6MTY2NTA3MTg0MCwibmJmIjoxNjY1MDcxODQwLCJleHAiOjE2NjUwNzczNDcsImFjciI6IjEiLCJhaW8iOiJBVFFBeS84VEFBQUFjSTZNak9KOFF0a2ZhVjh5dFBCdE5vckttbGxuTHFxWDhqeHByRE93YUg0cjducytMYXc1Z3JtamN5ZnQvTFZhIiwiYW1yIjpbInB3ZCJdLCJhcHBpZCI6Ijk1Zjg2NDc4LWZjYmYtNGFlMy1iMzA0LWExYTg5YjkzNjExOSIsImFwcGlkYWNyIjoiMSIsImZhbWlseV9uYW1lIjoiU09TSU4iLCJnaXZlbl9uYW1lIjoiQnJ1bm8iLCJpcGFkZHIiOiI4MS4yNDguNDYuNjciLCJuYW1lIjoiQnJ1bm8gU09TSU4iLCJvaWQiOiJjNDc1M2IxYi04N2FkLTRjMDgtOGJmYi04NjBkMGVjNzZiMjMiLCJwdWlkIjoiMTAwMzIwMDE5RTgzQTlDRSIsInJoIjoiMC5BVVlBUzNZQnZVeWxxVU9GYlpSQmI0RzBGd2NBQUFBQUFBQUF3QUFBQUFBQUFBQkdBUDAuIiwic2NwIjoidXNlcl9pbXBlcnNvbmF0aW9uIiwic3ViIjoiaHNaYzI1Z0tVYklaSW1odE81VWhvSjZWZ1oyemM2dE0yUkJXd3Y4RmJhSSIsInRpZCI6ImJkMDE3NjRiLWE1NGMtNDNhOS04NTZkLTk0NDE2ZjgxYjQxNyIsInVuaXF1ZV9uYW1lIjoid2VibWFzdGVyQHNvY2hyaW1hLm9ubWljcm9zb2Z0LmNvbSIsInVwbiI6IndlYm1hc3RlckBzb2NocmltYS5vbm1pY3Jvc29mdC5jb20iLCJ1dGkiOiIybmNBbHoxNXMwaWpWVjhyTjNaUUFBIiwidmVyIjoiMS4wIiwid2lkcyI6WyJiNzlmYmY0ZC0zZWY5LTQ2ODktODE0My03NmIxOTRlODU1MDkiXX0.qQSmQy0xCAW2L-G-CMU4HCcwcUSlntcMtdxCiKk8DK-12OPQNhrbTT_bhfMvH7llJ4X8BcTWSFHa8QhmjMKDqUnJL-hYT4a_Nh6T8uhAhb0fjyhjvoCzsIxdZpe2bIJaXfWR0Y9TNEn_jScmOWs4KPfE2guiOymntfLV_fSQMyXtyhLzSuwDKhtb21xZ-USwEyFxF2EIxkLVeJZtoqHVG-h9HWOpV7MpLpnMCm6AM2cw_KpYjxilJRp9iCnLfSeHdup3WQFR5wtg8d_4KdgrXz78p6w7FxMxvVSyf3dSxlsxknpG-Bk67OjuxYycoMXzp6QDdjaThUgFkuwhRx5QZg')}}",
+              "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+              "dynamicPropertyPathList": [],
+              "displayName": "Button",
+              "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
+              "searchTags": [
+                "click",
+                "submit"
+              ],
+              "topRow": 7,
+              "bottomRow": 11,
+              "parentRowSpace": 10,
+              "type": "BUTTON_WIDGET",
+              "hideCard": false,
+              "animateLoading": true,
+              "parentColumnSpace": 23.390625,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onClick"
+                }
+              ],
+              "leftColumn": 22,
+              "dynamicBindingPathList": [
+                {
+                  "key": "buttonColor"
+                },
+                {
+                  "key": "borderRadius"
+                }
+              ],
+              "text": "jwt",
+              "isDisabled": false,
+              "key": "p9d3mwcida",
+              "isDeprecated": false,
+              "rightColumn": 38,
+              "isDefaultClickDisabled": true,
+              "widgetId": "3w9g5stkdi",
+              "isVisible": true,
+              "recaptchaType": "V3",
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "disabledWhenInvalid": false,
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "buttonVariant": "PRIMARY",
+              "placement": "CENTER"
+            },
+            {
+              "resetFormOnClick": false,
+              "boxShadow": "none",
               "widgetName": "LoginButton",
               "onClick": "{{navigateTo('https://login.microsoftonline.com/bd01764b-a54c-43a9-856d-94416f81b417/oauth2/v2.0/authorize?client_id=95f86478-fcbf-4ae3-b304-a1a89b936119&scope=https://org3ef8cf42.crm2.dynamics.com/.default&redirect_uri=https://app.appsmith.com/app/ms-clientmanager/login-633af1ff197d8c7f30ad792a&response_type=code', {},'SAME_WINDOW')}}",
               "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
