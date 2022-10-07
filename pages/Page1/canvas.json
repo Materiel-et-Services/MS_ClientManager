@@ -197,7 +197,7 @@
                           "key": "primaryColumns.cr9c2_type_contact.buttonLabel"
                         },
                         {
-                          "key": "primaryColumns.main_contact.computedValue"
+                          "key": "primaryColumns.cr2b8_main_contact.computedValue"
                         }
                       ],
                       "leftColumn": 1,
@@ -251,7 +251,7 @@
                         "EditActions1",
                         "cr9c2_contact_clientid",
                         "customColumn1",
-                        "main_contact"
+                        "cr2b8_main_contact"
                       ],
                       "dynamicPropertyPathList": [
                         {
@@ -581,13 +581,13 @@
                           "buttonLabel": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( 'Supprimer'))}}",
                           "onClick": "{{(async function(){\nreturn await storeValue(\"contactToDelete\",currentRow.cr9c2_contact_clientid,false).then( async () => {\nreturn await showModal('DeleteContactModal')})})()\n}}"
                         },
-                        "main_contact": {
+                        "cr2b8_main_contact": {
                           "allowCellWrapping": false,
                           "index": 7,
                           "width": 150,
-                          "originalId": "main_contact",
-                          "id": "main_contact",
-                          "alias": "main_contact",
+                          "originalId": "cr2b8_main_contact",
+                          "id": "cr2b8_main_contact",
+                          "alias": "cr2b8_main_contact",
                           "horizontalAlignment": "LEFT",
                           "verticalAlignment": "CENTER",
                           "columnType": "checkbox",
@@ -604,7 +604,7 @@
                           "label": "Contact principal comptabilité",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"main_contact\"]))}}",
+                          "computedValue": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"cr2b8_main_contact\"]))}}",
                           "validation": {},
                           "cellBackground": ""
                         }
