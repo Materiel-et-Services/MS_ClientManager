@@ -42,7 +42,7 @@
         },
         {
           "key": "redirect_uri",
-          "value": "https://app.appsmith.com/app/gestion-des-contacts-clients/login-633af1ff197d8c7f30ad792a?"
+          "value": "https://app.appsmith.com/app/gestion-des-contacts-clients/login-633af1ff197d8c7f30ad792a?branch=main&embed=true"
         },
         {
           "key": "client_secret",
@@ -66,10 +66,8 @@
         "key": "bodyFormData[1].value"
       }
     ],
-    "isValid": false,
-    "invalids": [
-      "Unable to find plugin 5ca385dc81b37f0004b4db85"
-    ],
+    "isValid": true,
+    "invalids": [],
     "messages": [],
     "jsonPathKeys": [
       "appsmith.store.code"
