@@ -7,7 +7,8 @@
     "actions": [],
     "archivedActions": [],
     "body": "export default {\n\tgetToken: async () => {\n\t\tif (appsmith.URL.queryParams.code != undefined) {\n\t\t\tconsole.log(appsmith.URL.queryParams)\n\t\t\tawait storeValue(\"code\",appsmith.URL.queryParams.code,false)\n\t\t\tconsole.log(appsmith.store.code)\n\t\t\tlet response =  await getToken.run({code: appsmith.store.code})\n\t\t\tconsole.log(response)\n\t\t\tawait storeValue(\"jwt\",response.access_token,false)\n\t\t\tlet params = appsmith.URL.queryParams.state.split(\"&\")\n\t\t\tlet objectParams = {}\n\t\t\tparams.map((element) => {\n\t\t\t\tlet itemObject = element.split(\"=\")\n\t\t\t\tlet newObj = {}\n\t\t\t\tnewObj[itemObject[0]] = itemObject[1]\n\t\t\t\tObject.assign(objectParams,newObj)\n\t\t\t})\n\t\t\t\n\t\t\tnavigateTo(\"Page1\",objectParams)\n\t\t} else {\n\t\t\tconsole.log(\"no\")\n\t\t}\n\n\t}\n}",
-    "variables": []
+    "variables": [],
+    "userPermissions": []
   },
   "id": "Login_JSObject1",
   "deleted": false,

@@ -19,7 +19,7 @@
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 64,
+          "version": 67,
           "minHeight": 1292,
           "dynamicTriggerPathList": [],
           "parentColumnSpace": 1,
@@ -518,7 +518,7 @@
                           "discardButtonVariant": "TERTIARY",
                           "isSaveDisabled": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( !ClientsContactsTable.updatedRowIndices.includes(currentIndex)))}}",
                           "isDiscardDisabled": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( !ClientsContactsTable.updatedRowIndices.includes(currentIndex)))}}",
-                          "onSave": "{{ UpdateClientContact.run({ContactOId:ClientsContactsTable.triggeredRow.cr9c2_contact_clientid,\nInfoToPatch:ClientsContactsTable.updatedRow\n}).then(() => {\n\tshowAlert(\"Les informations ont bien été mis à jour\")\n})}}"
+                          "onSave": "{{ UpdateClientContact.run({ContactOId:ClientsContactsTable.triggeredRow.cr9c2_contact_clientid,\nInfoToPatch:ClientsContactsTable.updatedRow\n}).then(() => {\n\tshowAlert(\"Les informations ont bien été mis à jour\")\n}).then(async () => {\nreturn await getOneClient.run({clientCode:ClientSelector.selectedOptionValue})})}}"
                         },
                         "cr9c2_contact_clientid": {
                           "allowCellWrapping": false,

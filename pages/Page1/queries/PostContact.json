@@ -33,6 +33,7 @@
       "body": "{{\nObject.assign(this.params.newClientContact,{\"cr2b8_CLIENTSUNIFIE_2@odata.bind\": `/cr2b8_clientsunifie_2s(${this.params.clientCode})`})\n}}",
       "bodyFormData": [],
       "httpMethod": "POST",
+      "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
           "value": true

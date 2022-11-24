@@ -33,6 +33,7 @@
       "body": "",
       "bodyFormData": [],
       "httpMethod": "DELETE",
+      "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
           "value": true

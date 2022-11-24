@@ -20,6 +20,7 @@
       "paginationType": "NONE",
       "encodeParamsToggle": true,
       "body": "async () => {\n  await getOneClient.run({\n    clientCode: appsmith.store.clientCode\n  });\n  return Values.filterClientInfo(getOneClient.data.value[0]);\n}",
+      "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": true
     },

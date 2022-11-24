@@ -33,6 +33,7 @@
       "body": "{\n    \"message\": {\n        \"subject\": \"Meet for lunch?\",\n        \"body\": {\n            \"contentType\": \"Text\",\n            \"content\": \"The new cafeteria is open.\"\n        },\n        \"toRecipients\": [\n            {\n                \"emailAddress\": {\n                    \"address\": \"webmaster@matservgf.com\"\n                }\n            }\n        ]\n    }\n}",
       "bodyFormData": [],
       "httpMethod": "POST",
+      "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
           "value": true

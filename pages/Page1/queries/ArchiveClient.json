@@ -37,6 +37,7 @@
       "body": "{{\n{\n\t\t\t\t\"cr2b8_archived_client\": this.params.archiveStatus,\n}\n}}",
       "bodyFormData": [],
       "httpMethod": "PATCH",
+      "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
           "value": true
