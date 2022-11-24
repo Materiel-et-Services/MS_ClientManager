@@ -42,7 +42,7 @@
         },
         {
           "key": "redirect_uri",
-          "value": "https://app.appsmith.com/app/ms-clientmanager/login-633af1ff197d8c7f30ad792a"
+          "value": "https://app.appsmith.com/app/gestion-des-contacts-clients/login-633af1ff197d8c7f30ad792a?"
         },
         {
           "key": "client_secret",
@@ -66,8 +66,10 @@
         "key": "bodyFormData[1].value"
       }
     ],
-    "isValid": true,
-    "invalids": [],
+    "isValid": false,
+    "invalids": [
+      "Unable to find plugin 5ca385dc81b37f0004b4db85"
+    ],
     "messages": [],
     "jsonPathKeys": [
       "appsmith.store.code"
