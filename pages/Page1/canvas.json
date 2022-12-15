@@ -177,6 +177,9 @@
                         },
                         {
                           "key": "primaryColumns.test_mobile.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.cr9c2_type_contact.selectOptions"
                         }
                       ],
                       "leftColumn": 1,
@@ -423,15 +426,15 @@
                           "alias": "cr9c2_type_contact",
                           "horizontalAlignment": "LEFT",
                           "verticalAlignment": "CENTER",
-                          "columnType": "button",
+                          "columnType": "select",
                           "textColor": "",
                           "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
                           "isVisible": true,
                           "isDisabled": false,
-                          "isCellEditable": false,
-                          "isEditable": false,
+                          "isCellEditable": true,
+                          "isEditable": true,
                           "isCellVisible": true,
                           "isDerived": false,
                           "label": "Type de contact",
@@ -462,7 +465,8 @@
                           },
                           "iconName": "",
                           "buttonLabel": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( GetOptions.data.Options[currentRow.cr9c2_type_contact].Label.UserLocalizedLabel.Label))}}",
-                          "buttonVariant": "SECONDARY"
+                          "buttonVariant": "SECONDARY",
+                          "selectOptions": "{{Values.remapOptions(GetOptions.data.Options)}}"
                         },
                         "EditActions1": {
                           "allowCellWrapping": false,
