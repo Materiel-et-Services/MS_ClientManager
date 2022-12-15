@@ -180,6 +180,18 @@
                         },
                         {
                           "key": "primaryColumns.cr9c2_type_contact.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.test_genre.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.test_famille.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.test_typedecommunication.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.cr9c2_contact_clientid.selectOptions"
                         }
                       ],
                       "leftColumn": 1,
@@ -224,6 +236,7 @@
                       "widgetName": "ClientsContactsTable",
                       "defaultPageSize": 0,
                       "columnOrder": [
+                        "cr9c2_contact_clientid",
                         "cr9c2_name",
                         "cr9c2_email",
                         "cr9c2_telephone",
@@ -232,11 +245,13 @@
                         "createdon",
                         "cr9c2_type_contact",
                         "EditActions1",
-                        "cr9c2_contact_clientid",
                         "customColumn1",
                         "cr2b8_main_contact",
                         "customColumn2",
-                        "test_mobile"
+                        "test_mobile",
+                        "test_genre",
+                        "test_famille",
+                        "test_typedecommunication"
                       ],
                       "dynamicPropertyPathList": [
                         {
@@ -515,23 +530,24 @@
                           "alias": "cr9c2_contact_clientid",
                           "horizontalAlignment": "LEFT",
                           "verticalAlignment": "CENTER",
-                          "columnType": "text",
+                          "columnType": "select",
                           "textColor": "",
                           "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": false,
+                          "isVisible": true,
                           "isDisabled": false,
-                          "isCellEditable": false,
-                          "isEditable": false,
+                          "isCellEditable": true,
+                          "isEditable": true,
                           "isCellVisible": true,
                           "isDerived": false,
                           "label": "Genre",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"test_Genre\"]))}}",
+                          "computedValue": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( appsmith.store.optionsObject.genreOptions.filter(element => element.value === currentRow[\"test_genre\"])[0].label))}}",
                           "validation": {},
-                          "cellBackground": ""
+                          "cellBackground": "",
+                          "selectOptions": "{{appsmith.store.optionsObject.genreOptions}}"
                         },
                         "customColumn1": {
                           "allowCellWrapping": false,
@@ -673,6 +689,90 @@
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
                           "computedValue": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( appsmith.store.optionsObject.contactOptions.filter(element => element.value === currentRow[\"cr9c2_type_contact\"])[0].label))}}",
+                          "validation": {},
+                          "cellBackground": ""
+                        },
+                        "test_genre": {
+                          "allowCellWrapping": false,
+                          "index": 9,
+                          "width": 150,
+                          "originalId": "test_genre",
+                          "id": "test_genre",
+                          "alias": "test_genre",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "number",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "fontStyle": "",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "test_genre",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"test_genre\"]))}}",
+                          "validation": {},
+                          "cellBackground": ""
+                        },
+                        "test_famille": {
+                          "allowCellWrapping": false,
+                          "index": 10,
+                          "width": 150,
+                          "originalId": "test_famille",
+                          "id": "test_famille",
+                          "alias": "test_famille",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "fontStyle": "",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "test_famille",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"test_famille\"]))}}",
+                          "validation": {},
+                          "cellBackground": ""
+                        },
+                        "test_typedecommunication": {
+                          "allowCellWrapping": false,
+                          "index": 11,
+                          "width": 150,
+                          "originalId": "test_typedecommunication",
+                          "id": "test_typedecommunication",
+                          "alias": "test_typedecommunication",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "fontStyle": "",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "test_typedecommunication",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"test_typedecommunication\"]))}}",
                           "validation": {},
                           "cellBackground": ""
                         }
@@ -3087,7 +3187,7 @@
               "confirmBeforeExecute": false,
               "pluginType": "JS",
               "jsonPathKeys": [
-                "async () => {\n  isArchivedIncluded.isChecked === true ? await storeValue(\"withArchive\", \"cr2b8_archived_client ne null\", false) : await storeValue(\"withArchive\", \"cr2b8_archived_client eq false\", false);\n  if (appsmith.store.jwt != undefined) {\n    console.log(appsmith.store);\n    return getAllClients.run().then(async () => {\n      if (Object.keys(appsmith.URL.queryParams).includes(\"clientCode\") === true) {\n        await storeValue(\"clientCode\", appsmith.URL.queryParams.clientCode, false);\n      } else {\n        await storeValue(\"clientCode\", getAllClients.data.value[0].cr2b8_codeclient, false);\n      }\n    }).then(() => {\n      getOneClient.run({\n        clientCode: appsmith.store.clientCode\n      });\n    }).then(async () => {\n      let optionsContainer = {};\n      await GetOptions.run({\n        options: \"cr9c2_type_de_contacts\"\n      });\n      optionsContainer.contactOptions = Values.remapOptions(GetOptions.data.Options);\n      await GetOptions.run({\n        options: \"test_genre\"\n      });\n      optionsContainer.genreOptions = Values.remapOptions(GetOptions.data.Options);\n      await GetOptions.run({\n        options: \"test_typedecommunication\"\n      });\n      optionsContainer.communicationsOptions = Values.remapOptions(GetOptions.data.Options);\n      await GetOptions.run({\n        options: \"test_famille\"\n      });\n      optionsContainer.familleOptions = Values.remapOptions(GetOptions.data.Options);\n      await storeValue(\"optionsObject\", optionsContainer, false);\n    });\n  } else {\n    console.log(\"test2\");\n    navigateTo(\"Login\");\n  }\n}"
+                "async () => {\n  isArchivedIncluded.isChecked === true ? await storeValue(\"withArchive\", \"cr2b8_archived_client ne null\", false) : await storeValue(\"withArchive\", \"cr2b8_archived_client eq false\", false);\n  if (appsmith.store.jwt != undefined) {\n    console.log(appsmith.store);\n    return getAllClients.run().then(async () => {\n      if (Object.keys(appsmith.URL.queryParams).includes(\"clientCode\") === true) {\n        await storeValue(\"clientCode\", appsmith.URL.queryParams.clientCode, false);\n      } else {\n        await storeValue(\"clientCode\", getAllClients.data.value[0].cr2b8_codeclient, false);\n      }\n    }).then(() => {\n      getOneClient.run({\n        clientCode: appsmith.store.clientCode\n      });\n    }).then(async () => {\n      let optionsContainer = {};\n      await GetOptions.run({\n        options: \"cr9c2_type_de_contacts\"\n      });\n      optionsContainer.contactOptions = Values.remapOptions(GetOptions.data.Options);\n      console.log(optionsContainer);\n      await GetOptions.run({\n        options: \"test_genre\"\n      });\n      optionsContainer.genreOptions = Values.remapOptions(GetOptions.data.Options);\n      console.log(optionsContainer);\n      await GetOptions.run({\n        options: \"test_typedecommunication\"\n      });\n      optionsContainer.communicationsOptions = Values.remapOptions(GetOptions.data.Options);\n      console.log(optionsContainer);\n      await GetOptions.run({\n        options: \"test_famille\"\n      });\n      optionsContainer.familleOptions = Values.remapOptions(GetOptions.data.Options);\n      await storeValue(\"optionsObject\", optionsContainer, false);\n    });\n  } else {\n    console.log(\"test2\");\n    navigateTo(\"Login\");\n  }\n}"
               ],
               "timeoutInMillisecond": 10000
             }
