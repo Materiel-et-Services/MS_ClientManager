@@ -2808,7 +2808,54 @@
                               "label": "Type de contact",
                               "labelTextSize": "0.875rem",
                               "serverSideFiltering": false,
-                              "options": "{{Values.optionsObject()}}"
+                              "options": "{{appsmith.store.optionsObject.contactOptions}}"
+                            },
+                            "customField1": {
+                              "children": {},
+                              "dataType": "array",
+                              "defaultValue": [],
+                              "fieldType": "Multiselect",
+                              "sourceData": [],
+                              "isCustomField": true,
+                              "accessor": "test_famille",
+                              "identifier": "customField1",
+                              "position": 4,
+                              "originalIdentifier": "customField1",
+                              "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                              "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                              "boxShadow": "none",
+                              "isDisabled": false,
+                              "isFilterable": false,
+                              "isRequired": false,
+                              "isVisible": true,
+                              "label": "Famille",
+                              "labelTextSize": "0.875rem",
+                              "serverSideFiltering": false,
+                              "options": "{{appsmith.store.optionsObject.familleOptions}}"
+                            },
+                            "customField2": {
+                              "children": {},
+                              "dataType": "array",
+                              "defaultValue": [],
+                              "fieldType": "Multiselect",
+                              "sourceData": [],
+                              "isCustomField": true,
+                              "accessor": "test_typedecommunication",
+                              "identifier": "customField2",
+                              "position": 5,
+                              "originalIdentifier": "customField2",
+                              "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                              "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                              "boxShadow": "none",
+                              "isDisabled": false,
+                              "isFilterable": false,
+                              "isRequired": false,
+                              "isVisible": true,
+                              "label": "Type de communication",
+                              "labelTextSize": "0.875rem",
+                              "serverSideFiltering": false,
+                              "options": "{{appsmith.store.optionsObject.communicationsOptions}}",
+                              "allowSelectAll": false
                             }
                           },
                           "dataType": "object",
@@ -2927,6 +2974,24 @@
                         },
                         {
                           "key": "schema.__root_schema__.children.cr9c2_type_contact.options"
+                        },
+                        {
+                          "key": "schema.__root_schema__.children.customField1.accentColor"
+                        },
+                        {
+                          "key": "schema.__root_schema__.children.customField1.borderRadius"
+                        },
+                        {
+                          "key": "schema.__root_schema__.children.customField1.options"
+                        },
+                        {
+                          "key": "schema.__root_schema__.children.customField2.accentColor"
+                        },
+                        {
+                          "key": "schema.__root_schema__.children.customField2.borderRadius"
+                        },
+                        {
+                          "key": "schema.__root_schema__.children.customField2.options"
                         }
                       ],
                       "sourceData": "{\"cr9c2_telephone\": \"0694010203\",\n\t\t\t\t\t\"cr9c2_email\": \"Tate5@yopmail.com\",\n\t\t\t\t\t\"cr9c2_name\": \"Robert Le grand\",\n\"cr9c2_type_contact\": 0\n}",
