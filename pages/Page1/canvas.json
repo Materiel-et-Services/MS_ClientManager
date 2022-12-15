@@ -167,12 +167,6 @@
                           "key": "primaryColumns.cr2b8_main_contact.computedValue"
                         },
                         {
-                          "key": "primaryColumns.customColumn2.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.customColumn3.computedValue"
-                        },
-                        {
                           "key": "primaryColumns.test_mobile.computedValue"
                         },
                         {
@@ -185,13 +179,16 @@
                           "key": "primaryColumns.test_genre.computedValue"
                         },
                         {
-                          "key": "primaryColumns.test_famille.computedValue"
-                        },
-                        {
                           "key": "primaryColumns.test_typedecommunication.computedValue"
                         },
                         {
                           "key": "primaryColumns.cr9c2_contact_clientid.selectOptions"
+                        },
+                        {
+                          "key": "primaryColumns.test_famille.selectOptions"
+                        },
+                        {
+                          "key": "primaryColumns.test_famille.computedValue"
                         }
                       ],
                       "leftColumn": 1,
@@ -240,18 +237,16 @@
                         "cr9c2_name",
                         "cr9c2_email",
                         "cr9c2_telephone",
-                        "customColumn3",
-                        "modifiedon",
-                        "createdon",
+                        "test_mobile",
                         "cr9c2_type_contact",
+                        "cr2b8_main_contact",
                         "EditActions1",
                         "customColumn1",
-                        "cr2b8_main_contact",
-                        "customColumn2",
-                        "test_mobile",
                         "test_genre",
                         "test_famille",
-                        "test_typedecommunication"
+                        "test_typedecommunication",
+                        "modifiedon",
+                        "createdon"
                       ],
                       "dynamicPropertyPathList": [
                         {
@@ -280,7 +275,11 @@
                         "step": 62,
                         "status": 75,
                         "cr9c2_name": 234,
-                        "EditActions1": 201
+                        "EditActions1": 201,
+                        "cr9c2_contact_clientid": 88,
+                        "cr9c2_email": 226,
+                        "test_mobile": 113,
+                        "cr9c2_telephone": 120
                       },
                       "parentRowSpace": 10,
                       "hideCard": false,
@@ -547,7 +546,7 @@
                           "computedValue": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( appsmith.store.optionsObject.genreOptions.filter(element => element.value === currentRow[\"test_genre\"])[0].label))}}",
                           "validation": {},
                           "cellBackground": "",
-                          "selectOptions": "{{appsmith.store.optionsObject.genreOptions}}"
+                          "selectOptions": "{{appsmith.store.optionsObjectoptionsObject}}"
                         },
                         "customColumn1": {
                           "allowCellWrapping": false,
@@ -610,60 +609,6 @@
                           "validation": {},
                           "cellBackground": ""
                         },
-                        "customColumn2": {
-                          "allowCellWrapping": false,
-                          "index": 10,
-                          "width": 150,
-                          "originalId": "customColumn2",
-                          "id": "customColumn2",
-                          "alias": "Type de communication",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "checkbox",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": true,
-                          "isDisabled": false,
-                          "isCellEditable": false,
-                          "isEditable": false,
-                          "isCellVisible": true,
-                          "isDerived": true,
-                          "label": "Type de communication",
-                          "isSaveVisible": true,
-                          "isDiscardVisible": true,
-                          "computedValue": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"test_typedecommunication\"]))}}",
-                          "validation": {},
-                          "buttonStyle": "rgb(3, 179, 101)",
-                          "labelColor": "#FFFFFF"
-                        },
-                        "customColumn3": {
-                          "allowCellWrapping": false,
-                          "index": 10,
-                          "width": 150,
-                          "originalId": "customColumn3",
-                          "id": "customColumn3",
-                          "alias": "Mobile",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "text",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": true,
-                          "isDisabled": false,
-                          "isCellEditable": false,
-                          "isEditable": false,
-                          "isCellVisible": true,
-                          "isDerived": true,
-                          "label": "Mobile",
-                          "isSaveVisible": true,
-                          "isDiscardVisible": true,
-                          "computedValue": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( currentRow.test_mobile))}}",
-                          "validation": {},
-                          "buttonStyle": "rgb(3, 179, 101)",
-                          "labelColor": "#FFFFFF"
-                        },
                         "test_mobile": {
                           "allowCellWrapping": false,
                           "index": 8,
@@ -685,10 +630,10 @@
                           "isEditable": false,
                           "isCellVisible": true,
                           "isDerived": false,
-                          "label": "test_mobile",
+                          "label": "Mobile",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( appsmith.store.optionsObject.contactOptions.filter(element => element.value === currentRow[\"cr9c2_type_contact\"])[0].label))}}",
+                          "computedValue": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( currentRow.test_mobile))}}",
                           "validation": {},
                           "cellBackground": ""
                         },
@@ -707,7 +652,7 @@
                           "fontStyle": "",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": true,
+                          "isVisible": false,
                           "isDisabled": false,
                           "isCellEditable": false,
                           "isEditable": false,
@@ -741,12 +686,14 @@
                           "isEditable": false,
                           "isCellVisible": true,
                           "isDerived": false,
-                          "label": "test_famille",
+                          "label": "Famille",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"test_famille\"]))}}",
+                          "computedValue": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( currentRow.test_famille ? currentRow.test_famille.join(\"-\") : \"pas de famille assigné\"))}}",
                           "validation": {},
-                          "cellBackground": ""
+                          "cellBackground": "",
+                          "selectOptions": "{{appsmith.store.optionsObject.familleOptions}}",
+                          "customAlias": ""
                         },
                         "test_typedecommunication": {
                           "allowCellWrapping": false,
@@ -769,10 +716,10 @@
                           "isEditable": false,
                           "isCellVisible": true,
                           "isDerived": false,
-                          "label": "test_typedecommunication",
+                          "label": "Type de communication",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"test_typedecommunication\"]))}}",
+                          "computedValue": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( currentRow.Type_de_communication ? currentRow.test_typedecommunication.join(\"-\") : \"pas de comm commerciales\"))}}",
                           "validation": {},
                           "cellBackground": ""
                         }
