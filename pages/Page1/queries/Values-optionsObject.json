@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "myFun1",
-    "fullyQualifiedName": "Values.myFun1",
+    "name": "optionsObject",
+    "fullyQualifiedName": "Values.optionsObject",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -19,13 +19,12 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "async () => {}",
+      "body": "async () => {\n  let optionsContainer = {};\n  await GetOptions.run({\n    options: \"cr9c2_type_de_contacts\"\n  });\n  optionsContainer.contactOptions = Values.remapOptions(GetOptions.data);\n  await GetOptions.run({\n    options: \"test_genre\"\n  });\n  optionsContainer.genreOptions = Values.remapOptions(GetOptions.data);\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": true
     },
     "executeOnLoad": false,
-    "clientSideExecution": true,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -35,14 +34,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "async () => {}"
+      "async () => {\n  let optionsContainer = {};\n  await GetOptions.run({\n    options: \"cr9c2_type_de_contacts\"\n  });\n  optionsContainer.contactOptions = Values.remapOptions(GetOptions.data);\n  await GetOptions.run({\n    options: \"test_genre\"\n  });\n  optionsContainer.genreOptions = Values.remapOptions(GetOptions.data);\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Page1_Values.myFun1",
+  "id": "Page1_Values.optionsObject",
   "deleted": false,
-  "gitSyncId": "632ae49cf774ad2bde7b789b_632afa09e3c0dc3a8257b7cb"
+  "gitSyncId": "639b03a35b4b533c8eaa85b7_639b1db15b4b533c8eaa890e"
 }
