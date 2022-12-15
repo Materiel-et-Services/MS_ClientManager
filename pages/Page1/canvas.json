@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 980,
+          "bottomRow": 1040,
           "containerStyle": "none",
           "snapRows": 125,
           "parentRowSpace": 1,
@@ -65,13 +65,13 @@
                   "widgetName": "Canvas1",
                   "displayName": "Canvas",
                   "topRow": 0,
-                  "bottomRow": 850,
+                  "bottomRow": 870,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": true,
                   "hideCard": true,
                   "shouldScrollContents": false,
-                  "minHeight": 400,
+                  "minHeight": 870,
                   "parentColumnSpace": 1,
                   "dynamicTriggerPathList": [],
                   "leftColumn": 0,
@@ -226,6 +226,7 @@
                         }
                       },
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "originalBottomRow": 83,
                       "primaryColumnId": "cr9c2_contact_clientid",
                       "defaultSelectedRowIndices": [
                         0
@@ -737,6 +738,7 @@
                       "renderMode": "CANVAS",
                       "horizontalAlignment": "LEFT",
                       "isVisibleSearch": true,
+                      "originalTopRow": 41,
                       "isVisiblePagination": true,
                       "verticalAlignment": "CENTER"
                     },
@@ -1392,8 +1394,10 @@
                       "parentId": "pajhr8gnpm",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "originalTopRow": 14,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
+                      "originalBottomRow": 18,
                       "fontSize": "1rem",
                       "minDynamicHeight": 4
                     }
