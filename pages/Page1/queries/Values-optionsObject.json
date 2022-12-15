@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "async () => {\n  let optionsContainer = {};\n  await GetOptions.run({\n    options: \"cr9c2_type_de_contacts\"\n  });\n  optionsContainer.contactOptions = Values.remapOptions(GetOptions.data);\n  await GetOptions.run({\n    options: \"test_genre\"\n  });\n  optionsContainer.genreOptions = Values.remapOptions(GetOptions.data);\n}",
+      "body": "async () => {\n  let optionsContainer = {};\n  await GetOptions.run({\n    options: \"cr9c2_type_de_contacts\"\n  });\n  optionsContainer.contactOptions = Values.remapOptions(GetOptions.data);\n  await GetOptions.run({\n    options: \"test_genre\"\n  });\n  optionsContainer.genreOptions = Values.remapOptions(GetOptions.data);\n  await GetOptions.run({\n    options: \"test_typedecommunication\"\n  });\n  optionsContainer.communicationsOptions = Values.remapOptions(GetOptions.data);\n  await GetOptions.run({\n    options: \"test_famille\"\n  });\n  optionsContainer.familleOptions = Values.remapOptions(GetOptions.data);\n  return optionsContainer;\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": true
@@ -34,7 +34,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "async () => {\n  let optionsContainer = {};\n  await GetOptions.run({\n    options: \"cr9c2_type_de_contacts\"\n  });\n  optionsContainer.contactOptions = Values.remapOptions(GetOptions.data);\n  await GetOptions.run({\n    options: \"test_genre\"\n  });\n  optionsContainer.genreOptions = Values.remapOptions(GetOptions.data);\n}"
+      "async () => {\n  let optionsContainer = {};\n  await GetOptions.run({\n    options: \"cr9c2_type_de_contacts\"\n  });\n  optionsContainer.contactOptions = Values.remapOptions(GetOptions.data);\n  await GetOptions.run({\n    options: \"test_genre\"\n  });\n  optionsContainer.genreOptions = Values.remapOptions(GetOptions.data);\n  await GetOptions.run({\n    options: \"test_typedecommunication\"\n  });\n  optionsContainer.communicationsOptions = Values.remapOptions(GetOptions.data);\n  await GetOptions.run({\n    options: \"test_famille\"\n  });\n  optionsContainer.familleOptions = Values.remapOptions(GetOptions.data);\n  return optionsContainer;\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
