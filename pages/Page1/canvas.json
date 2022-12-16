@@ -2662,13 +2662,13 @@
                   "widgetName": "Canvas5",
                   "displayName": "Canvas",
                   "topRow": 0,
-                  "bottomRow": 550,
+                  "bottomRow": 820,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": true,
                   "hideCard": true,
                   "shouldScrollContents": false,
-                  "minHeight": 540,
+                  "minHeight": 820,
                   "parentColumnSpace": 1,
                   "dynamicTriggerPathList": [],
                   "leftColumn": 0,
@@ -2817,7 +2817,7 @@
                             "customField1": {
                               "children": {},
                               "dataType": "array",
-                              "defaultValue": [],
+                              "defaultValue": "",
                               "fieldType": "Multiselect",
                               "sourceData": [],
                               "isCustomField": true,
@@ -2905,9 +2905,9 @@
                       ],
                       "displayName": "JSON Form",
                       "iconSVG": "/static/media/icon.5b428de12db9ad6a591955ead07f86e9.svg",
-                      "onSubmit": "{{await PostContact.run({clientCode:getOneClient.data.value[0].cr2b8_clientsunifie_2id,newClientContact:JSONForm1.formData}).then( async () => {\nreturn await getOneClient.run({clientCode:appsmith.store.clientCode})\n}).then(async () => { return await closeModal(\"AddCLientContact\")}\n)\n.catch((e) => {\n\tconsole.log(e)\nreturn showAlert(\"Une erreur c'est produit\",\"error\")\n\t}\n)\n}}",
-                      "topRow": 2,
-                      "bottomRow": 53,
+                      "onSubmit": "{{\nJSONForm1.formData[\"test_famille\"].length != 0 ? JSONForm1.formData[\"test_famille\"] = JSONForm1.formData[\"test_famille\"].join(\",\") : JSONForm1.formData[\"test_famille\"] = null\n\nJSONForm1.formData[\"test_typedecommunication\"].length != 0 ? JSONForm1.formData[\"test_typedecommunication\"] = JSONForm1.formData[\"test_typedecommunication\"].join(\",\") : JSONForm1.formData[\"test_typedecommunication\"] = null\n;;await PostContact.run({clientCode:getOneClient.data.value[0].cr2b8_clientsunifie_2id,newClientContact:JSONForm1.formData}).then( async () => {\nreturn await getOneClient.run({clientCode:appsmith.store.clientCode})\n}).then(async () => { return await closeModal(\"AddCLientContact\")}\n)\n.catch((e) => {\n\tconsole.log(e)\nreturn showAlert(\"Une erreur c'est produit\",\"error\")\n\t}\n)\n}}",
+                      "topRow": 0,
+                      "bottomRow": 61,
                       "fieldLimitExceeded": false,
                       "parentRowSpace": 10,
                       "title": "Ajouter un contact client",
@@ -3103,6 +3103,63 @@
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
                       "minDynamicHeight": 4
+                    },
+                    {
+                      "widgetName": "Text4",
+                      "displayName": "Text",
+                      "iconSVG": "/static/media/icon.97c59b523e6f70ba6f40a10fc2c7c5b5.svg",
+                      "searchTags": [
+                        "typography",
+                        "paragraph",
+                        "label"
+                      ],
+                      "topRow": 62,
+                      "bottomRow": 66,
+                      "parentRowSpace": 10,
+                      "type": "TEXT_WIDGET",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "overflow": "NONE",
+                      "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+                      "parentColumnSpace": 6.9375,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 2,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "truncateButtonColor"
+                        },
+                        {
+                          "key": "fontFamily"
+                        },
+                        {
+                          "key": "borderRadius"
+                        },
+                        {
+                          "key": "text"
+                        }
+                      ],
+                      "shouldTruncate": false,
+                      "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "text": "{{}}",
+                      "key": "e5ldie1t16",
+                      "isDeprecated": false,
+                      "rightColumn": 57,
+                      "textAlign": "LEFT",
+                      "dynamicHeight": "AUTO_HEIGHT",
+                      "widgetId": "eikrwh6lcc",
+                      "isVisible": true,
+                      "fontStyle": "BOLD",
+                      "textColor": "#231F20",
+                      "version": 1,
+                      "parentId": "sfx5o85rn1",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "originalTopRow": 62,
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "maxDynamicHeight": 9000,
+                      "originalBottomRow": 71,
+                      "fontSize": "1rem",
+                      "minDynamicHeight": 4
                     }
                   ],
                   "isDisabled": false,
@@ -3121,7 +3178,7 @@
                 }
               ],
               "key": "vhdc6egnb3",
-              "height": 540,
+              "height": 814,
               "isDeprecated": false,
               "rightColumn": 52,
               "detachFromLayout": true,
