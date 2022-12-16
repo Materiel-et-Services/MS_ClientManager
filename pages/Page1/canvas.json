@@ -690,7 +690,7 @@
                           "label": "Famille",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( currentRow.test_famille ? currentRow.test_famille.join(\"-\") : \"pas de famille assigné\"))}}",
+                          "computedValue": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( currentRow))}}",
                           "validation": {},
                           "cellBackground": "",
                           "selectOptions": "{{appsmith.store.optionsObject.familleOptions}}",
