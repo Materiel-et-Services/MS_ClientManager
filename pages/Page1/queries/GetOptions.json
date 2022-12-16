@@ -22,6 +22,10 @@
         {
           "key": "Authorization",
           "value": "Bearer {{appsmith.store.jwt}}"
+        },
+        {
+          "key": "content-type",
+          "value": "text/plain"
         }
       ],
       "encodeParamsToggle": true,
@@ -35,7 +39,7 @@
         }
       ],
       "formData": {
-        "apiContentType": "none"
+        "apiContentType": "text/plain"
       }
     },
     "executeOnLoad": false,

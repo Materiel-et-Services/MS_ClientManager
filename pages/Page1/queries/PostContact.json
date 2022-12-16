@@ -59,7 +59,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "Object.assign(this.params.newClientContact,{\"cr2b8_CLIENTSUNIFIE_2@odata.bind\": `/cr2b8_clientsunifie_2s(${this.params.clientCode})`})",
+      "\nObject.assign(this.params.newClientContact,{\"cr2b8_CLIENTSUNIFIE_2@odata.bind\": `/cr2b8_clientsunifie_2s(${this.params.clientCode})`})\n",
       "appsmith.store.jwt"
     ],
     "userSetOnLoad": false,
