@@ -544,7 +544,7 @@
                           "label": "Genre",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( appsmith.store.optionsObject.genreOptions.find(element => element.value === currentRow.test_genre).label))}}",
+                          "computedValue": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( \ncurrentRow.test_genre ? appsmith.store.optionsObject.genreOptions.find(element => element.value === currentRow.test_genre).label : null))}}",
                           "validation": {},
                           "cellBackground": "",
                           "selectOptions": "{{appsmith.store.optionsObject.genreOptions}}"
@@ -690,7 +690,7 @@
                           "label": "Famille",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( currentRow))}}",
+                          "computedValue": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( currentRow.test_famille))}}",
                           "validation": {},
                           "cellBackground": "",
                           "selectOptions": "{{appsmith.store.optionsObject.familleOptions}}",
@@ -711,7 +711,7 @@
                           "fontStyle": "",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": true,
+                          "isVisible": false,
                           "isDisabled": false,
                           "isCellEditable": false,
                           "isEditable": false,
@@ -720,7 +720,7 @@
                           "label": "Type de communication",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( currentRow.Type_de_communication ? currentRow.test_typedecommunication.join(\"-\") : \"pas de comm commerciales\"))}}",
+                          "computedValue": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( currentRow.test_typedecommunication ? currentRow.test_typedecommunication.split(\",\").map((element) => appsmith.store.optionsObject.communicationsOptions) : \"pas de comm commerciales\"))}}",
                           "validation": {},
                           "cellBackground": ""
                         }
