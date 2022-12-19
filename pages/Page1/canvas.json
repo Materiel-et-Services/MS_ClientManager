@@ -1346,7 +1346,6 @@
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
                       "minDynamicHeight": 4
-
                     },
                     {
                       "widgetName": "Text3",
@@ -1401,7 +1400,6 @@
                       "originalBottomRow": 18,
                       "fontSize": "1rem",
                       "minDynamicHeight": 4
-
                     }
                   ],
                   "isDisabled": false,
@@ -3105,7 +3103,6 @@
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
                       "minDynamicHeight": 4
-
                     },
                     {
                       "widgetName": "Text4",
@@ -3163,7 +3160,6 @@
                       "originalBottomRow": 71,
                       "fontSize": "1rem",
                       "minDynamicHeight": 4
-
                     }
                   ],
                   "isDisabled": false,
