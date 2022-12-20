@@ -63,7 +63,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "_.omit(this.params.InfoToPatch,[\"cr9c2_contact_clientid\",\"createdon\",\"modifiedon\",\"EditActions1\",\"customColumn1\"])",
+      "\n_.omit(this.params.InfoToPatch,[\"cr9c2_contact_clientid\",\"createdon\",\"modifiedon\",\"EditActions1\",\"customColumn1\"])\n",
       "appsmith.store.jwt",
       "this.params.ContactOId"
     ],
