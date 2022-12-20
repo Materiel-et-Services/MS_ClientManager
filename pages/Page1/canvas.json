@@ -2655,7 +2655,7 @@
                               "isCustomField": false,
                               "accessor": "cr9c2_telephone",
                               "identifier": "cr9c2_telephone",
-                              "position": 0,
+                              "position": 2,
                               "originalIdentifier": "cr9c2_telephone",
                               "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
                               "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
@@ -2677,7 +2677,7 @@
                               "isCustomField": false,
                               "accessor": "cr9c2_email",
                               "identifier": "cr9c2_email",
-                              "position": 1,
+                              "position": 4,
                               "originalIdentifier": "cr9c2_email",
                               "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
                               "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
@@ -2699,7 +2699,7 @@
                               "isCustomField": false,
                               "accessor": "cr9c2_name",
                               "identifier": "cr9c2_name",
-                              "position": 2,
+                              "position": 1,
                               "originalIdentifier": "cr9c2_name",
                               "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
                               "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
@@ -2721,7 +2721,7 @@
                               "isCustomField": false,
                               "accessor": "cr9c2_type_contact",
                               "identifier": "cr9c2_type_contact",
-                              "position": 3,
+                              "position": 5,
                               "originalIdentifier": "cr9c2_type_contact",
                               "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
                               "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
@@ -2738,13 +2738,13 @@
                             "customField1": {
                               "children": {},
                               "dataType": "array",
-                              "defaultValue": "",
+                              "defaultValue": "{{((sourceData, formData, fieldState) => (appsmith.store.optionsObject.familleOptions.filter((element) => {\nreturn sourceData.test_famille.split(\",\").includes(element.value.toString()) === true\n})))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
                               "fieldType": "Multiselect",
                               "sourceData": [],
                               "isCustomField": true,
                               "accessor": "test_famille",
                               "identifier": "customField1",
-                              "position": 4,
+                              "position": 6,
                               "originalIdentifier": "customField1",
                               "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
                               "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
@@ -2761,13 +2761,13 @@
                             "customField2": {
                               "children": {},
                               "dataType": "array",
-                              "defaultValue": [],
+                              "defaultValue": "{{((sourceData, formData, fieldState) => (appsmith.store.optionsObject.communicationsOptions.filter((element) => {\nreturn sourceData.test_typedecommunication.split(\",\").includes(element.value.toString()) === true\n})))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
                               "fieldType": "Multiselect",
                               "sourceData": [],
                               "isCustomField": true,
                               "accessor": "test_typedecommunication",
                               "identifier": "customField2",
-                              "position": 5,
+                              "position": 7,
                               "originalIdentifier": "customField2",
                               "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
                               "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
@@ -2791,7 +2791,7 @@
                               "isCustomField": false,
                               "accessor": "modifiedon",
                               "identifier": "modifiedon",
-                              "position": 6,
+                              "position": 8,
                               "originalIdentifier": "modifiedon",
                               "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
                               "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
@@ -2800,7 +2800,7 @@
                               "isDisabled": false,
                               "isRequired": false,
                               "isSpellCheck": false,
-                              "isVisible": true,
+                              "isVisible": false,
                               "labelTextSize": "0.875rem",
                               "label": "Modifiedon"
                             },
@@ -2813,7 +2813,7 @@
                               "isCustomField": false,
                               "accessor": "createdon",
                               "identifier": "createdon",
-                              "position": 7,
+                              "position": 9,
                               "originalIdentifier": "createdon",
                               "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
                               "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
@@ -2822,7 +2822,7 @@
                               "isDisabled": false,
                               "isRequired": false,
                               "isSpellCheck": false,
-                              "isVisible": true,
+                              "isVisible": false,
                               "labelTextSize": "0.875rem",
                               "label": "Createdon"
                             },
@@ -2834,7 +2834,7 @@
                               "isCustomField": false,
                               "accessor": "test_mobile",
                               "identifier": "test_mobile",
-                              "position": 8,
+                              "position": 3,
                               "originalIdentifier": "test_mobile",
                               "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
                               "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
@@ -2845,7 +2845,7 @@
                               "isSpellCheck": false,
                               "isVisible": true,
                               "labelTextSize": "0.875rem",
-                              "label": "Test Mobile"
+                              "label": "Téléphone Portable"
                             },
                             "cr2b8_main_contact": {
                               "children": {},
@@ -2856,7 +2856,7 @@
                               "isCustomField": false,
                               "accessor": "cr2b8_main_contact",
                               "identifier": "cr2b8_main_contact",
-                              "position": 9,
+                              "position": 10,
                               "originalIdentifier": "cr2b8_main_contact",
                               "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
                               "boxShadow": "none",
@@ -2865,7 +2865,7 @@
                               "isRequired": false,
                               "isVisible": true,
                               "labelTextSize": "0.875rem",
-                              "label": "Cr 2 B 8 Main Contact"
+                              "label": "Contact principal comptabilité"
                             },
                             "cr9c2_contact_clientid": {
                               "children": {},
@@ -2876,7 +2876,7 @@
                               "isCustomField": false,
                               "accessor": "cr9c2_contact_clientid",
                               "identifier": "cr9c2_contact_clientid",
-                              "position": 10,
+                              "position": 11,
                               "originalIdentifier": "cr9c2_contact_clientid",
                               "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
                               "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
@@ -2885,30 +2885,31 @@
                               "isDisabled": false,
                               "isRequired": false,
                               "isSpellCheck": false,
-                              "isVisible": true,
+                              "isVisible": false,
                               "labelTextSize": "0.875rem",
                               "label": "Cr 9 C 2 Contact Clientid"
                             },
                             "test_genre": {
                               "children": {},
                               "dataType": "null",
-                              "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.test_genre))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
-                              "fieldType": "Text Input",
+                              "defaultValue": "{{((sourceData, formData, fieldState) => (appsmith.store.optionsObject.genreOptions.find((element) => {\n\treturn element.value === sourceData.test_genre\n})))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                              "fieldType": "Select",
                               "isCustomField": false,
                               "accessor": "test_genre",
                               "identifier": "test_genre",
-                              "position": 11,
+                              "position": 0,
                               "originalIdentifier": "test_genre",
                               "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
                               "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
                               "boxShadow": "none",
-                              "iconAlign": "left",
                               "isDisabled": false,
+                              "isFilterable": false,
                               "isRequired": false,
-                              "isSpellCheck": false,
                               "isVisible": true,
+                              "label": "Genre",
                               "labelTextSize": "0.875rem",
-                              "label": "Test Genre"
+                              "serverSideFiltering": false,
+                              "options": "{{appsmith.store.optionsObject.genreOptions}}"
                             }
                           },
                           "dataType": "object",
@@ -3095,9 +3096,6 @@
                           "key": "schema.__root_schema__.children.cr9c2_contact_clientid.borderRadius"
                         },
                         {
-                          "key": "schema.__root_schema__.children.test_genre.defaultValue"
-                        },
-                        {
                           "key": "schema.__root_schema__.children.test_genre.accentColor"
                         },
                         {
@@ -3111,6 +3109,18 @@
                         },
                         {
                           "key": "schema.__root_schema__.children.cr9c2_name.defaultValue"
+                        },
+                        {
+                          "key": "schema.__root_schema__.children.customField1.defaultValue"
+                        },
+                        {
+                          "key": "schema.__root_schema__.children.customField2.defaultValue"
+                        },
+                        {
+                          "key": "schema.__root_schema__.children.test_genre.defaultValue"
+                        },
+                        {
+                          "key": "schema.__root_schema__.children.test_genre.options"
                         }
                       ],
                       "sourceData": "{{appsmith.store.contactInfos ? appsmith.store.contactInfos : null}}",
