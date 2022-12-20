@@ -122,27 +122,6 @@
                           "key": "primaryColumns.cr9c2_name.computedValue"
                         },
                         {
-                          "key": "primaryColumns.EditActions1.saveButtonColor"
-                        },
-                        {
-                          "key": "primaryColumns.EditActions1.saveBorderRadius"
-                        },
-                        {
-                          "key": "primaryColumns.EditActions1.discardBorderRadius"
-                        },
-                        {
-                          "key": "primaryColumns.EditActions1.isSaveDisabled"
-                        },
-                        {
-                          "key": "primaryColumns.EditActions1.isDiscardDisabled"
-                        },
-                        {
-                          "key": "primaryColumns.EditActions1.saveActionLabel"
-                        },
-                        {
-                          "key": "primaryColumns.EditActions1.discardActionLabel"
-                        },
-                        {
                           "key": "primaryColumns.cr9c2_contact_clientid.computedValue"
                         },
                         {
@@ -189,6 +168,9 @@
                         },
                         {
                           "key": "primaryColumns.test_famille.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.customColumn2.buttonLabel"
                         }
                       ],
                       "leftColumn": 1,
@@ -234,7 +216,7 @@
                       "widgetName": "ClientsContactsTable",
                       "defaultPageSize": 0,
                       "columnOrder": [
-                        "test_genre",
+                        "customColumn2",
                         "cr9c2_contact_clientid",
                         "cr9c2_name",
                         "cr9c2_email",
@@ -242,23 +224,14 @@
                         "test_mobile",
                         "cr9c2_type_contact",
                         "cr2b8_main_contact",
-                        "EditActions1",
                         "customColumn1",
                         "test_famille",
+                        "test_genre",
                         "test_typedecommunication",
                         "modifiedon",
                         "createdon"
                       ],
                       "dynamicPropertyPathList": [
-                        {
-                          "key": "primaryColumns.EditActions1.isSaveDisabled"
-                        },
-                        {
-                          "key": "primaryColumns.EditActions1.isDiscardDisabled"
-                        },
-                        {
-                          "key": "primaryColumns.EditActions1.onSave"
-                        },
                         {
                           "key": "primaryColumns.customColumn1.onClick"
                         },
@@ -267,6 +240,9 @@
                         },
                         {
                           "key": "primaryColumns.cr9c2_type_contact.iconName"
+                        },
+                        {
+                          "key": "primaryColumns.customColumn2.onClick"
                         }
                       ],
                       "displayName": "Table",
@@ -280,20 +256,21 @@
                         "cr9c2_contact_clientid": 88,
                         "cr9c2_email": 226,
                         "test_mobile": 113,
-                        "cr9c2_telephone": 120
+                        "cr9c2_telephone": 120,
+                        "customColumn2": 87
                       },
                       "parentRowSpace": 10,
                       "hideCard": false,
                       "parentColumnSpace": 13.75,
                       "dynamicTriggerPathList": [
                         {
-                          "key": "primaryColumns.EditActions1.onSave"
-                        },
-                        {
                           "key": "primaryColumns.customColumn1.onClick"
                         },
                         {
                           "key": "onRowSelected"
+                        },
+                        {
+                          "key": "primaryColumns.customColumn2.onClick"
                         }
                       ],
                       "primaryColumns": {
@@ -367,8 +344,8 @@
                           "enableSort": true,
                           "isVisible": true,
                           "isDisabled": false,
-                          "isCellEditable": true,
-                          "isEditable": true,
+                          "isCellEditable": false,
+                          "isEditable": false,
                           "isCellVisible": true,
                           "isDerived": false,
                           "label": "Téléphone",
@@ -394,8 +371,8 @@
                           "enableSort": true,
                           "isVisible": true,
                           "isDisabled": false,
-                          "isCellEditable": true,
-                          "isEditable": true,
+                          "isCellEditable": false,
+                          "isEditable": false,
                           "isCellVisible": true,
                           "isDerived": false,
                           "label": "Email",
@@ -421,8 +398,8 @@
                           "enableSort": true,
                           "isVisible": true,
                           "isDisabled": false,
-                          "isCellEditable": true,
-                          "isEditable": true,
+                          "isCellEditable": false,
+                          "isEditable": false,
                           "isCellVisible": true,
                           "isDerived": false,
                           "label": "Nom du contact",
@@ -448,8 +425,8 @@
                           "enableSort": true,
                           "isVisible": true,
                           "isDisabled": false,
-                          "isCellEditable": true,
-                          "isEditable": true,
+                          "isCellEditable": false,
+                          "isEditable": false,
                           "isCellVisible": true,
                           "isDerived": false,
                           "label": "Type de contact",
@@ -483,44 +460,6 @@
                           "buttonVariant": "SECONDARY",
                           "selectOptions": "{{appsmith.store.optionsObject.contactOptions}}"
                         },
-                        "EditActions1": {
-                          "allowCellWrapping": false,
-                          "index": 10,
-                          "width": 150,
-                          "originalId": "EditActions1",
-                          "id": "EditActions1",
-                          "alias": "EditActions1",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "editActions",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": true,
-                          "isDisabled": false,
-                          "isCellEditable": false,
-                          "isEditable": false,
-                          "isCellVisible": true,
-                          "isDerived": true,
-                          "label": "Enregistrer / annuler",
-                          "isSaveVisible": true,
-                          "isDiscardVisible": true,
-                          "computedValue": "",
-                          "validation": {},
-                          "buttonStyle": "rgb(3, 179, 101)",
-                          "saveIconAlign": "left",
-                          "discardIconAlign": "left",
-                          "saveActionLabel": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( 'Enregister'))}}",
-                          "discardActionLabel": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( 'Annuler'))}}",
-                          "saveButtonColor": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.colors.primaryColor))}}",
-                          "discardButtonColor": "#F22B2B",
-                          "saveBorderRadius": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.borderRadius.appBorderRadius))}}",
-                          "discardBorderRadius": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.borderRadius.appBorderRadius))}}",
-                          "discardButtonVariant": "TERTIARY",
-                          "isSaveDisabled": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( !ClientsContactsTable.updatedRowIndices.includes(currentIndex)))}}",
-                          "isDiscardDisabled": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( !ClientsContactsTable.updatedRowIndices.includes(currentIndex)))}}",
-                          "onSave": "{{ UpdateClientContact.run({ContactOId:ClientsContactsTable.triggeredRow.cr9c2_contact_clientid,\nInfoToPatch:ClientsContactsTable.updatedRow\n}).then(() => {\n\tshowAlert(\"Les informations ont bien été mis à jour\")\n}).then(async () => {\nreturn await getOneClient.run({clientCode:ClientSelector.selectedOptionValue})})}}"
-                        },
                         "cr9c2_contact_clientid": {
                           "allowCellWrapping": false,
                           "index": 6,
@@ -537,8 +476,8 @@
                           "enableSort": true,
                           "isVisible": true,
                           "isDisabled": false,
-                          "isCellEditable": true,
-                          "isEditable": true,
+                          "isCellEditable": false,
+                          "isEditable": false,
                           "isCellVisible": true,
                           "isDerived": false,
                           "label": "Genre",
@@ -581,7 +520,7 @@
                           "boxShadow": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( 'none'))}}",
                           "customAlias": "",
                           "buttonLabel": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( 'Supprimer'))}}",
-                          "onClick": "{{(async function(){\nreturn await storeValue(\"contactToDelete\",currentRow.cr9c2_contact_clientid,false).then( async () => {\nreturn await showModal('DeleteContactModal')})})()\n}}"
+                          "onClick": "{{/*(async function(){\nreturn await storeValue(\"contactToDelete\",currentRow.cr9c2_contact_clientid,false).then( async () => {\nreturn await showModal('DeleteContactModal')})})()*/\nshowAlert(JSON.stringify(ClientsContactsTable.triggeredRow))\n}}"
                         },
                         "cr2b8_main_contact": {
                           "allowCellWrapping": false,
@@ -599,8 +538,8 @@
                           "enableSort": true,
                           "isVisible": true,
                           "isDisabled": false,
-                          "isCellEditable": true,
-                          "isEditable": true,
+                          "isCellEditable": false,
+                          "isEditable": false,
                           "isCellVisible": true,
                           "isDerived": false,
                           "label": "Contact principal comptabilité",
@@ -723,6 +662,37 @@
                           "computedValue": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( currentRow.test_typedecommunication ? currentRow.test_typedecommunication.split(\",\").map((element) => appsmith.store.optionsObject.communicationsOptions) : \"pas de comm commerciales\"))}}",
                           "validation": {},
                           "cellBackground": ""
+                        },
+                        "customColumn2": {
+                          "allowCellWrapping": false,
+                          "index": 10,
+                          "width": 150,
+                          "originalId": "customColumn2",
+                          "id": "customColumn2",
+                          "alias": "Modifier",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "iconButton",
+                          "textSize": "0.875rem",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
+                          "isDerived": true,
+                          "label": "Modifier",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "",
+                          "validation": {},
+                          "buttonStyle": "rgb(3, 179, 101)",
+                          "labelColor": "#FFFFFF",
+                          "customAlias": "",
+                          "buttonLabel": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( 'Action'))}}",
+                          "iconName": "edit",
+                          "onClick": "{{ storeValue('contactInfos',ClientsContactsTable.tableData[ClientsContactsTable.triggeredRowIndex],false).then(\nshowModal('AddCLientContact')\n\t)\n}}"
                         }
                       },
                       "onRowSelected": "",
@@ -799,8 +769,13 @@
                               "resetFormOnClick": true,
                               "boxShadow": "none",
                               "widgetName": "Button1Copy",
-                              "onClick": "{{showModal('AddCLientContact')}}",
+                              "onClick": "{{ storeValue('contactInfos',null,false).then(\nshowModal('AddCLientContact')\n\t)\n}}",
                               "buttonColor": "rgb(3, 179, 101)",
+                              "dynamicPropertyPathList": [
+                                {
+                                  "key": "onClick"
+                                }
+                              ],
                               "displayName": "Button",
                               "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
                               "searchTags": [
@@ -1345,60 +1320,6 @@
                       "isLoading": false,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
-                      "minDynamicHeight": 4
-                    },
-                    {
-                      "widgetName": "Text3",
-                      "displayName": "Text",
-                      "iconSVG": "/static/media/icon.97c59b523e6f70ba6f40a10fc2c7c5b5.svg",
-                      "searchTags": [
-                        "typography",
-                        "paragraph",
-                        "label"
-                      ],
-                      "topRow": 14,
-                      "bottomRow": 18,
-                      "parentRowSpace": 10,
-                      "type": "TEXT_WIDGET",
-                      "hideCard": false,
-                      "animateLoading": true,
-                      "overflow": "NONE",
-                      "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-                      "parentColumnSpace": 23.078125,
-                      "dynamicTriggerPathList": [],
-                      "leftColumn": 43,
-                      "dynamicBindingPathList": [
-                        {
-                          "key": "truncateButtonColor"
-                        },
-                        {
-                          "key": "fontFamily"
-                        },
-                        {
-                          "key": "borderRadius"
-                        }
-                      ],
-                      "shouldTruncate": false,
-                      "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-                      "text": "",
-                      "key": "isdatdaxui",
-                      "isDeprecated": false,
-                      "rightColumn": 59,
-                      "textAlign": "LEFT",
-                      "dynamicHeight": "AUTO_HEIGHT",
-                      "widgetId": "yxmbqj86qu",
-                      "isVisible": true,
-                      "fontStyle": "BOLD",
-                      "textColor": "#231F20",
-                      "version": 1,
-                      "parentId": "pajhr8gnpm",
-                      "renderMode": "CANVAS",
-                      "isLoading": false,
-                      "originalTopRow": 14,
-                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                      "maxDynamicHeight": 9000,
-                      "originalBottomRow": 18,
-                      "fontSize": "1rem",
                       "minDynamicHeight": 4
                     }
                   ],
@@ -2662,7 +2583,7 @@
                   "widgetName": "Canvas5",
                   "displayName": "Canvas",
                   "topRow": 0,
-                  "bottomRow": 820,
+                  "bottomRow": 810,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": true,
@@ -2728,7 +2649,7 @@
                             "cr9c2_telephone": {
                               "children": {},
                               "dataType": "string",
-                              "defaultValue": "",
+                              "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.cr9c2_telephone))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
                               "fieldType": "Text Input",
                               "sourceData": "0694010203",
                               "isCustomField": false,
@@ -2750,7 +2671,7 @@
                             "cr9c2_email": {
                               "children": {},
                               "dataType": "string",
-                              "defaultValue": "",
+                              "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.cr9c2_email))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
                               "fieldType": "Email Input",
                               "sourceData": "Tate5@yopmail.com",
                               "isCustomField": false,
@@ -2772,7 +2693,7 @@
                             "cr9c2_name": {
                               "children": {},
                               "dataType": "string",
-                              "defaultValue": "",
+                              "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.cr9c2_name))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
                               "fieldType": "Text Input",
                               "sourceData": "Robert Le grand",
                               "isCustomField": false,
@@ -2860,6 +2781,134 @@
                               "serverSideFiltering": false,
                               "options": "{{appsmith.store.optionsObject.communicationsOptions}}",
                               "allowSelectAll": false
+                            },
+                            "modifiedon": {
+                              "children": {},
+                              "dataType": "string",
+                              "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.modifiedon))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                              "fieldType": "Text Input",
+                              "sourceData": "2022-11-14T17:31:32Z",
+                              "isCustomField": false,
+                              "accessor": "modifiedon",
+                              "identifier": "modifiedon",
+                              "position": 6,
+                              "originalIdentifier": "modifiedon",
+                              "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                              "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                              "boxShadow": "none",
+                              "iconAlign": "left",
+                              "isDisabled": false,
+                              "isRequired": false,
+                              "isSpellCheck": false,
+                              "isVisible": true,
+                              "labelTextSize": "0.875rem",
+                              "label": "Modifiedon"
+                            },
+                            "createdon": {
+                              "children": {},
+                              "dataType": "string",
+                              "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.createdon))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                              "fieldType": "Text Input",
+                              "sourceData": "2022-11-14T17:31:32Z",
+                              "isCustomField": false,
+                              "accessor": "createdon",
+                              "identifier": "createdon",
+                              "position": 7,
+                              "originalIdentifier": "createdon",
+                              "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                              "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                              "boxShadow": "none",
+                              "iconAlign": "left",
+                              "isDisabled": false,
+                              "isRequired": false,
+                              "isSpellCheck": false,
+                              "isVisible": true,
+                              "labelTextSize": "0.875rem",
+                              "label": "Createdon"
+                            },
+                            "test_mobile": {
+                              "children": {},
+                              "dataType": "null",
+                              "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.test_mobile))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                              "fieldType": "Text Input",
+                              "isCustomField": false,
+                              "accessor": "test_mobile",
+                              "identifier": "test_mobile",
+                              "position": 8,
+                              "originalIdentifier": "test_mobile",
+                              "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                              "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                              "boxShadow": "none",
+                              "iconAlign": "left",
+                              "isDisabled": false,
+                              "isRequired": false,
+                              "isSpellCheck": false,
+                              "isVisible": true,
+                              "labelTextSize": "0.875rem",
+                              "label": "Test Mobile"
+                            },
+                            "cr2b8_main_contact": {
+                              "children": {},
+                              "dataType": "boolean",
+                              "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.cr2b8_main_contact))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                              "fieldType": "Switch",
+                              "sourceData": true,
+                              "isCustomField": false,
+                              "accessor": "cr2b8_main_contact",
+                              "identifier": "cr2b8_main_contact",
+                              "position": 9,
+                              "originalIdentifier": "cr2b8_main_contact",
+                              "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                              "boxShadow": "none",
+                              "alignWidget": "LEFT",
+                              "isDisabled": false,
+                              "isRequired": false,
+                              "isVisible": true,
+                              "labelTextSize": "0.875rem",
+                              "label": "Cr 2 B 8 Main Contact"
+                            },
+                            "cr9c2_contact_clientid": {
+                              "children": {},
+                              "dataType": "string",
+                              "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.cr9c2_contact_clientid))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                              "fieldType": "Text Input",
+                              "sourceData": "ac80ffde-c044-ed11-bba3-000d3a88ff01",
+                              "isCustomField": false,
+                              "accessor": "cr9c2_contact_clientid",
+                              "identifier": "cr9c2_contact_clientid",
+                              "position": 10,
+                              "originalIdentifier": "cr9c2_contact_clientid",
+                              "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                              "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                              "boxShadow": "none",
+                              "iconAlign": "left",
+                              "isDisabled": false,
+                              "isRequired": false,
+                              "isSpellCheck": false,
+                              "isVisible": true,
+                              "labelTextSize": "0.875rem",
+                              "label": "Cr 9 C 2 Contact Clientid"
+                            },
+                            "test_genre": {
+                              "children": {},
+                              "dataType": "null",
+                              "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.test_genre))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                              "fieldType": "Text Input",
+                              "isCustomField": false,
+                              "accessor": "test_genre",
+                              "identifier": "test_genre",
+                              "position": 11,
+                              "originalIdentifier": "test_genre",
+                              "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                              "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                              "boxShadow": "none",
+                              "iconAlign": "left",
+                              "isDisabled": false,
+                              "isRequired": false,
+                              "isSpellCheck": false,
+                              "isVisible": true,
+                              "labelTextSize": "0.875rem",
+                              "label": "Test Genre"
                             }
                           },
                           "dataType": "object",
@@ -2901,6 +2950,9 @@
                         },
                         {
                           "key": "onSubmit"
+                        },
+                        {
+                          "key": "schema.__root_schema__.children.cr2b8_main_contact.defaultValue"
                         }
                       ],
                       "displayName": "JSON Form",
@@ -2996,9 +3048,72 @@
                         },
                         {
                           "key": "schema.__root_schema__.children.customField2.options"
+                        },
+                        {
+                          "key": "sourceData"
+                        },
+                        {
+                          "key": "schema.__root_schema__.children.modifiedon.defaultValue"
+                        },
+                        {
+                          "key": "schema.__root_schema__.children.modifiedon.accentColor"
+                        },
+                        {
+                          "key": "schema.__root_schema__.children.modifiedon.borderRadius"
+                        },
+                        {
+                          "key": "schema.__root_schema__.children.createdon.defaultValue"
+                        },
+                        {
+                          "key": "schema.__root_schema__.children.createdon.accentColor"
+                        },
+                        {
+                          "key": "schema.__root_schema__.children.createdon.borderRadius"
+                        },
+                        {
+                          "key": "schema.__root_schema__.children.test_mobile.defaultValue"
+                        },
+                        {
+                          "key": "schema.__root_schema__.children.test_mobile.accentColor"
+                        },
+                        {
+                          "key": "schema.__root_schema__.children.test_mobile.borderRadius"
+                        },
+                        {
+                          "key": "schema.__root_schema__.children.cr2b8_main_contact.defaultValue"
+                        },
+                        {
+                          "key": "schema.__root_schema__.children.cr2b8_main_contact.accentColor"
+                        },
+                        {
+                          "key": "schema.__root_schema__.children.cr9c2_contact_clientid.defaultValue"
+                        },
+                        {
+                          "key": "schema.__root_schema__.children.cr9c2_contact_clientid.accentColor"
+                        },
+                        {
+                          "key": "schema.__root_schema__.children.cr9c2_contact_clientid.borderRadius"
+                        },
+                        {
+                          "key": "schema.__root_schema__.children.test_genre.defaultValue"
+                        },
+                        {
+                          "key": "schema.__root_schema__.children.test_genre.accentColor"
+                        },
+                        {
+                          "key": "schema.__root_schema__.children.test_genre.borderRadius"
+                        },
+                        {
+                          "key": "schema.__root_schema__.children.cr9c2_telephone.defaultValue"
+                        },
+                        {
+                          "key": "schema.__root_schema__.children.cr9c2_email.defaultValue"
+                        },
+                        {
+                          "key": "schema.__root_schema__.children.cr9c2_name.defaultValue"
                         }
                       ],
-                      "sourceData": "{\"cr9c2_telephone\": \"0694010203\",\n\t\t\t\t\t\"cr9c2_email\": \"Tate5@yopmail.com\",\n\t\t\t\t\t\"cr9c2_name\": \"Robert Le grand\",\n\"cr9c2_type_contact\": 0\n}",
+                      "sourceData": "{{appsmith.store.contactInfos ? appsmith.store.contactInfos : null}}",
                       "showReset": false,
                       "resetButtonLabel": "Reset",
                       "key": "015tzibajx",
@@ -3102,63 +3217,6 @@
                       "disabledWhenInvalid": true,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
-                      "minDynamicHeight": 4
-                    },
-                    {
-                      "widgetName": "Text4",
-                      "displayName": "Text",
-                      "iconSVG": "/static/media/icon.97c59b523e6f70ba6f40a10fc2c7c5b5.svg",
-                      "searchTags": [
-                        "typography",
-                        "paragraph",
-                        "label"
-                      ],
-                      "topRow": 62,
-                      "bottomRow": 66,
-                      "parentRowSpace": 10,
-                      "type": "TEXT_WIDGET",
-                      "hideCard": false,
-                      "animateLoading": true,
-                      "overflow": "NONE",
-                      "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-                      "parentColumnSpace": 6.9375,
-                      "dynamicTriggerPathList": [],
-                      "leftColumn": 2,
-                      "dynamicBindingPathList": [
-                        {
-                          "key": "truncateButtonColor"
-                        },
-                        {
-                          "key": "fontFamily"
-                        },
-                        {
-                          "key": "borderRadius"
-                        },
-                        {
-                          "key": "text"
-                        }
-                      ],
-                      "shouldTruncate": false,
-                      "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-                      "text": "{{}}",
-                      "key": "e5ldie1t16",
-                      "isDeprecated": false,
-                      "rightColumn": 57,
-                      "textAlign": "LEFT",
-                      "dynamicHeight": "AUTO_HEIGHT",
-                      "widgetId": "eikrwh6lcc",
-                      "isVisible": true,
-                      "fontStyle": "BOLD",
-                      "textColor": "#231F20",
-                      "version": 1,
-                      "parentId": "sfx5o85rn1",
-                      "renderMode": "CANVAS",
-                      "isLoading": false,
-                      "originalTopRow": 62,
-                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                      "maxDynamicHeight": 9000,
-                      "originalBottomRow": 71,
-                      "fontSize": "1rem",
                       "minDynamicHeight": 4
                     }
                   ],
