@@ -520,7 +520,7 @@
                           "boxShadow": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( 'none'))}}",
                           "customAlias": "",
                           "buttonLabel": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( 'Supprimer'))}}",
-                          "onClick": "{{/*(async function(){\nreturn await storeValue(\"contactToDelete\",currentRow.cr9c2_contact_clientid,false).then( async () => {\nreturn await showModal('DeleteContactModal')})})()*/\nshowAlert(JSON.stringify(ClientsContactsTable.triggeredRow))\n}}"
+                          "onClick": "{{(async function(){\nreturn await storeValue(\"contactToDelete\",ClientsContactsTable.tableData[ClientsContactsTable.triggeredRowIndex].cr9c2_contact_clientid,false).then( async () => {\nreturn await showModal('DeleteContactModal')})})()\n}}"
                         },
                         "cr2b8_main_contact": {
                           "allowCellWrapping": false,
