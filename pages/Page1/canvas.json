@@ -2958,12 +2958,12 @@
                       ],
                       "displayName": "JSON Form",
                       "iconSVG": "/static/media/icon.5b428de12db9ad6a591955ead07f86e9.svg",
-                      "onSubmit": "{{\nJSONForm1.formData[\"test_famille\"].length != 0 ? JSONForm1.formData[\"test_famille\"] = JSONForm1.formData[\"test_famille\"].join(\",\") : JSONForm1.formData[\"test_famille\"] = null\n\nJSONForm1.formData[\"test_typedecommunication\"].length != 0 ? JSONForm1.formData[\"test_typedecommunication\"] = JSONForm1.formData[\"test_typedecommunication\"].join(\",\") : JSONForm1.formData[\"test_typedecommunication\"] = null\n;;await PostContact.run({clientCode:getOneClient.data.value[0].cr2b8_clientsunifie_2id,newClientContact:JSONForm1.formData}).then( async () => {\nreturn await getOneClient.run({clientCode:appsmith.store.clientCode})\n}).then(async () => { return await closeModal(\"AddCLientContact\")}\n)\n.catch((e) => {\n\tconsole.log(e)\nreturn showAlert(\"Une erreur c'est produit\",\"error\")\n\t}\n)\n}}",
+                      "onSubmit": "{{\nJSONForm1.formData[\"test_famille\"].length != 0 ? JSONForm1.formData[\"test_famille\"] = JSONForm1.formData[\"test_famille\"].join(\",\") : JSONForm1.formData[\"test_famille\"] = null\n\nJSONForm1.formData[\"test_typedecommunication\"].length != 0 ? JSONForm1.formData[\"test_typedecommunication\"] = JSONForm1.formData[\"test_typedecommunication\"].join(\",\") : JSONForm1.formData[\"test_typedecommunication\"] = null\n;;\nappsmith.store.contactInfos ? \nnull : await PostContact.run({clientCode:getOneClient.data.value[0].cr2b8_clientsunifie_2id,newClientContact:JSONForm1.formData}).then( async () => {\nreturn await getOneClient.run({clientCode:appsmith.store.clientCode})\n}).then(async () => { return await closeModal(\"AddCLientContact\")}\n)\n.catch((e) => {\n\tconsole.log(e)\nreturn showAlert(\"Une erreur c'est produit\",\"error\")\n\t}\n)\n}}",
                       "topRow": 0,
-                      "bottomRow": 61,
+                      "bottomRow": 79,
                       "fieldLimitExceeded": false,
                       "parentRowSpace": 10,
-                      "title": "Ajouter un contact client",
+                      "title": "{{appsmith.store.contactInfos ? \"Modifier un contact client\" : \"Ajouter un contact client\"}}",
                       "type": "JSON_FORM_WIDGET",
                       "hideCard": false,
                       "animateLoading": true,
@@ -2973,7 +2973,7 @@
                           "key": "onSubmit"
                         }
                       ],
-                      "leftColumn": 1,
+                      "leftColumn": 0,
                       "dynamicBindingPathList": [
                         {
                           "key": "borderRadius"
@@ -3121,6 +3121,12 @@
                         },
                         {
                           "key": "schema.__root_schema__.children.test_genre.options"
+                        },
+                        {
+                          "key": "title"
+                        },
+                        {
+                          "key": "submitButtonLabel"
                         }
                       ],
                       "sourceData": "{{appsmith.store.contactInfos ? appsmith.store.contactInfos : null}}",
@@ -3129,7 +3135,7 @@
                       "key": "015tzibajx",
                       "backgroundColor": "#fff",
                       "isDeprecated": false,
-                      "rightColumn": 61,
+                      "rightColumn": 60,
                       "dynamicHeight": "FIXED",
                       "autoGenerateForm": true,
                       "widgetId": "eukmfyy75i",
@@ -3146,7 +3152,7 @@
                       "isLoading": false,
                       "scrollContents": true,
                       "fixedFooter": true,
-                      "submitButtonLabel": "Submit",
+                      "submitButtonLabel": "{{appsmith.store.contactInfos ? \"Modifier\" : \"Ajouter\"}}",
                       "childStylesheet": {
                         "ARRAY": {
                           "accentColor": "{{appsmith.theme.colors.primaryColor}}",
