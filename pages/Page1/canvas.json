@@ -629,7 +629,7 @@
                           "label": "Famille",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( currentRow.test_famille))}}",
+                          "computedValue": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( appsmith.store.optionsObject.familleOptions.filter((element) => currentRow.test_famille.includes(element.value) === true).map((item) =>  item.label).join(\" - \")))}}",
                           "validation": {},
                           "cellBackground": "",
                           "selectOptions": "{{appsmith.store.optionsObject.familleOptions}}",
