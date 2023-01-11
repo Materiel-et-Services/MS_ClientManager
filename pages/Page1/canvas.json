@@ -171,6 +171,9 @@
                         },
                         {
                           "key": "primaryColumns.customColumn2.buttonLabel"
+                        },
+                        {
+                          "key": "primaryColumns.matserv_depot.computedValue"
                         }
                       ],
                       "leftColumn": 1,
@@ -229,7 +232,8 @@
                         "test_genre",
                         "test_typedecommunication",
                         "modifiedon",
-                        "createdon"
+                        "createdon",
+                        "matserv_depot"
                       ],
                       "dynamicPropertyPathList": [
                         {
@@ -693,6 +697,34 @@
                           "buttonLabel": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( 'Action'))}}",
                           "iconName": "edit",
                           "onClick": "{{ storeValue('contactInfos',ClientsContactsTable.tableData[ClientsContactsTable.triggeredRowIndex],false).then(\nshowModal('AddCLientContact')\n\t)\n}}"
+                        },
+                        "matserv_depot": {
+                          "allowCellWrapping": false,
+                          "index": 4,
+                          "width": 150,
+                          "originalId": "matserv_depot",
+                          "id": "matserv_depot",
+                          "alias": "matserv_depot",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "fontStyle": "",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "matserv_depot",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"matserv_depot\"]))}}",
+                          "validation": {},
+                          "cellBackground": ""
                         }
                       },
                       "onRowSelected": "",
@@ -2793,7 +2825,7 @@
                               "isCustomField": false,
                               "accessor": "modifiedon",
                               "identifier": "modifiedon",
-                              "position": 8,
+                              "position": 9,
                               "originalIdentifier": "modifiedon",
                               "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
                               "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
@@ -2815,7 +2847,7 @@
                               "isCustomField": false,
                               "accessor": "createdon",
                               "identifier": "createdon",
-                              "position": 9,
+                              "position": 10,
                               "originalIdentifier": "createdon",
                               "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
                               "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
@@ -2858,7 +2890,7 @@
                               "isCustomField": false,
                               "accessor": "cr2b8_main_contact",
                               "identifier": "cr2b8_main_contact",
-                              "position": 10,
+                              "position": 11,
                               "originalIdentifier": "cr2b8_main_contact",
                               "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
                               "boxShadow": "none",
@@ -2878,7 +2910,7 @@
                               "isCustomField": false,
                               "accessor": "cr9c2_contact_clientid",
                               "identifier": "cr9c2_contact_clientid",
-                              "position": 11,
+                              "position": 12,
                               "originalIdentifier": "cr9c2_contact_clientid",
                               "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
                               "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
@@ -2912,6 +2944,30 @@
                               "labelTextSize": "0.875rem",
                               "serverSideFiltering": false,
                               "options": "{{appsmith.store.optionsObject.genreOptions}}"
+                            },
+                            "matserv_depot": {
+                              "children": {},
+                              "dataType": "null",
+                              "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.matserv_depot!= null ? appsmith.store.optionsObject.communicationsOptions.filter((element) => {\nreturn sourceData.matserv_depot.split(\",\").includes(element.value.toString()) === true\n}): null))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                              "fieldType": "Multiselect",
+                              "isCustomField": false,
+                              "accessor": "matserv_depot",
+                              "identifier": "matserv_depot",
+                              "position": 13,
+                              "originalIdentifier": "matserv_depot",
+                              "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                              "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                              "boxShadow": "none",
+                              "isDisabled": false,
+                              "isFilterable": false,
+                              "isRequired": false,
+                              "isVisible": true,
+                              "label": "Depot",
+                              "labelTextSize": "0.875rem",
+                              "serverSideFiltering": false,
+                              "options": "{{appsmith.store.optionsObject.depotOptions}}",
+                              "tooltip": "Sélectionner les points de vente fréquenté par le client",
+                              "placeholderText": "Selectionner les dépots"
                             }
                           },
                           "dataType": "object",
@@ -3129,6 +3185,18 @@
                         },
                         {
                           "key": "submitButtonLabel"
+                        },
+                        {
+                          "key": "schema.__root_schema__.children.matserv_depot.defaultValue"
+                        },
+                        {
+                          "key": "schema.__root_schema__.children.matserv_depot.accentColor"
+                        },
+                        {
+                          "key": "schema.__root_schema__.children.matserv_depot.borderRadius"
+                        },
+                        {
+                          "key": "schema.__root_schema__.children.matserv_depot.options"
                         }
                       ],
                       "sourceData": "{{appsmith.store.contactInfos ? appsmith.store.contactInfos : null}}",
