@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "clientArray => {\n  return clientArray.map(clientObject => {\n    let object = {};\n    for (const [key, value] of Object.entries(clientObject)) {\n      if ([\"createdon\", \"modifiedon\", \"cr9c2_telephone\", \"test_mobile\", \"test_genre\", \"test_famille\", \"test_typedecommunication\", \"matserv_depot\", \"cr2b8_main_contact\", \"cr9c2_email\", \"cr9c2_name\", \"cr9c2_contact_clientid\", \"cr9c2_type_contact\"].includes(key) == true) {\n        object[key] = value;\n      }\n    }\n    return object;\n  });\n}",
+      "body": "clientArray => {\n  return clientArray.map(clientObject => {\n    let object = {};\n    for (const [key, value] of Object.entries(clientObject)) {\n      if ([\"createdon\", \"modifiedon\", \"cr9c2_telephone\", \"test_mobile\", \"test_genre\", \"test_famille\", \"test_typedecommunication\", \"matserv_depot\", \"matserv_last_consent_date\", \"cr2b8_main_contact\", \"cr9c2_email\", \"cr9c2_name\", \"cr9c2_contact_clientid\", \"cr9c2_type_contact\"].includes(key) == true) {\n        object[key] = value;\n      }\n    }\n    return object;\n  });\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [
         {}
@@ -36,7 +36,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "clientArray => {\n  return clientArray.map(clientObject => {\n    let object = {};\n    for (const [key, value] of Object.entries(clientObject)) {\n      if ([\"createdon\", \"modifiedon\", \"cr9c2_telephone\", \"test_mobile\", \"test_genre\", \"test_famille\", \"test_typedecommunication\", \"matserv_depot\", \"cr2b8_main_contact\", \"cr9c2_email\", \"cr9c2_name\", \"cr9c2_contact_clientid\", \"cr9c2_type_contact\"].includes(key) == true) {\n        object[key] = value;\n      }\n    }\n    return object;\n  });\n}"
+      "clientArray => {\n  return clientArray.map(clientObject => {\n    let object = {};\n    for (const [key, value] of Object.entries(clientObject)) {\n      if ([\"createdon\", \"modifiedon\", \"cr9c2_telephone\", \"test_mobile\", \"test_genre\", \"test_famille\", \"test_typedecommunication\", \"matserv_depot\", \"matserv_last_consent_date\", \"cr2b8_main_contact\", \"cr9c2_email\", \"cr9c2_name\", \"cr9c2_contact_clientid\", \"cr9c2_type_contact\"].includes(key) == true) {\n        object[key] = value;\n      }\n    }\n    return object;\n  });\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

@@ -174,6 +174,9 @@
                         },
                         {
                           "key": "primaryColumns.matserv_depot.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.matserv_last_consent_date.computedValue"
                         }
                       ],
                       "leftColumn": 1,
@@ -233,7 +236,8 @@
                         "test_typedecommunication",
                         "modifiedon",
                         "createdon",
-                        "matserv_depot"
+                        "matserv_depot",
+                        "matserv_last_consent_date"
                       ],
                       "dynamicPropertyPathList": [
                         {
@@ -723,6 +727,34 @@
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
                           "computedValue": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"matserv_depot\"]))}}",
+                          "validation": {},
+                          "cellBackground": ""
+                        },
+                        "matserv_last_consent_date": {
+                          "allowCellWrapping": false,
+                          "index": 13,
+                          "width": 150,
+                          "originalId": "matserv_last_consent_date",
+                          "id": "matserv_last_consent_date",
+                          "alias": "matserv_last_consent_date",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "fontStyle": "",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "matserv_last_consent_date",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"matserv_last_consent_date\"]))}}",
                           "validation": {},
                           "cellBackground": ""
                         }
@@ -2968,6 +3000,32 @@
                               "options": "{{appsmith.store.optionsObject.depotOptions}}",
                               "tooltip": "Sélectionner les points de vente fréquenté par le client",
                               "placeholderText": "Selectionner les dépots"
+                            },
+                            "matserv_last_consent_date": {
+                              "children": {},
+                              "dataType": "null",
+                              "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.matserv_last_consent_date != null ? sourceData.matserv_last_consent_date : null))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                              "fieldType": "Datepicker",
+                              "isCustomField": false,
+                              "accessor": "matserv_last_consent_date",
+                              "identifier": "matserv_last_consent_date",
+                              "position": 13,
+                              "originalIdentifier": "matserv_last_consent_date",
+                              "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                              "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                              "boxShadow": "none",
+                              "closeOnSelection": false,
+                              "convertToISO": false,
+                              "dateFormat": "YYYY-MM-DD HH:mm",
+                              "isDisabled": false,
+                              "isRequired": false,
+                              "isVisible": true,
+                              "label": "Date du dernier consentement",
+                              "maxDate": "2121-12-31T18:29:00.000Z",
+                              "minDate": "1920-12-31T18:30:00.000Z",
+                              "shortcuts": false,
+                              "timePrecision": "minute",
+                              "labelTextSize": "0.875rem"
                             }
                           },
                           "dataType": "object",
@@ -3012,6 +3070,9 @@
                         },
                         {
                           "key": "schema.__root_schema__.children.cr2b8_main_contact.defaultValue"
+                        },
+                        {
+                          "key": "schema.__root_schema__.children.matserv_last_consent_date.defaultValue"
                         }
                       ],
                       "displayName": "JSON Form",
@@ -3197,6 +3258,15 @@
                         },
                         {
                           "key": "schema.__root_schema__.children.matserv_depot.options"
+                        },
+                        {
+                          "key": "schema.__root_schema__.children.matserv_last_consent_date.accentColor"
+                        },
+                        {
+                          "key": "schema.__root_schema__.children.matserv_last_consent_date.borderRadius"
+                        },
+                        {
+                          "key": "schema.__root_schema__.children.matserv_last_consent_date.defaultValue"
                         }
                       ],
                       "sourceData": "{{appsmith.store.contactInfos ? appsmith.store.contactInfos : null}}",
