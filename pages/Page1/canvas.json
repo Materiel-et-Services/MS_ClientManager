@@ -13,13 +13,13 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 1040,
+          "bottomRow": 960,
           "containerStyle": "none",
           "snapRows": 125,
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 74,
+          "version": 77,
           "minHeight": 1292,
           "dynamicTriggerPathList": [],
           "parentColumnSpace": 1,
@@ -65,7 +65,7 @@
                   "widgetName": "Canvas1",
                   "displayName": "Canvas",
                   "topRow": 0,
-                  "bottomRow": 870,
+                  "bottomRow": 880,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": true,
@@ -215,6 +215,7 @@
                       },
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "originalBottomRow": 83,
+                      "columnUpdatedAt": 1677851779596,
                       "primaryColumnId": "test_genre",
                       "defaultSelectedRowIndices": [
                         0
@@ -307,7 +308,8 @@
                           "isDiscardVisible": true,
                           "computedValue": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"modifiedon\"]))}}",
                           "validation": {},
-                          "cellBackground": ""
+                          "cellBackground": "",
+                          "sticky": ""
                         },
                         "createdon": {
                           "allowCellWrapping": false,
@@ -334,7 +336,8 @@
                           "isDiscardVisible": true,
                           "computedValue": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"createdon\"]))}}",
                           "validation": {},
-                          "cellBackground": ""
+                          "cellBackground": "",
+                          "sticky": ""
                         },
                         "cr9c2_telephone": {
                           "allowCellWrapping": false,
@@ -361,7 +364,8 @@
                           "isDiscardVisible": true,
                           "computedValue": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"cr9c2_telephone\"]))}}",
                           "validation": {},
-                          "cellBackground": ""
+                          "cellBackground": "",
+                          "sticky": ""
                         },
                         "cr9c2_email": {
                           "allowCellWrapping": false,
@@ -388,7 +392,8 @@
                           "isDiscardVisible": true,
                           "computedValue": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"cr9c2_email\"]))}}",
                           "validation": {},
-                          "cellBackground": ""
+                          "cellBackground": "",
+                          "sticky": ""
                         },
                         "cr9c2_name": {
                           "allowCellWrapping": false,
@@ -415,7 +420,8 @@
                           "isDiscardVisible": true,
                           "computedValue": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"cr9c2_name\"]))}}",
                           "validation": {},
-                          "cellBackground": ""
+                          "cellBackground": "",
+                          "sticky": ""
                         },
                         "cr9c2_type_contact": {
                           "allowCellWrapping": false,
@@ -466,7 +472,8 @@
                           "iconName": "",
                           "buttonLabel": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( GetOptions.data.Options[currentRow.cr9c2_type_contact].Label.UserLocalizedLabel.Label))}}",
                           "buttonVariant": "SECONDARY",
-                          "selectOptions": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( appsmith.store.optionsObject.contactOptions))}}"
+                          "selectOptions": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( appsmith.store.optionsObject.contactOptions))}}",
+                          "sticky": ""
                         },
                         "cr9c2_contact_clientid": {
                           "allowCellWrapping": false,
@@ -494,7 +501,8 @@
                           "computedValue": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( \ncurrentRow.test_genre ? appsmith.store.optionsObject.genreOptions.find(element => element.value === currentRow.test_genre).label : null))}}",
                           "validation": {},
                           "cellBackground": "",
-                          "selectOptions": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( appsmith.store.optionsObject.genreOptions))}}"
+                          "selectOptions": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( appsmith.store.optionsObject.genreOptions))}}",
+                          "sticky": ""
                         },
                         "customColumn1": {
                           "allowCellWrapping": false,
@@ -528,7 +536,8 @@
                           "boxShadow": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( 'none'))}}",
                           "customAlias": "",
                           "buttonLabel": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( 'Supprimer'))}}",
-                          "onClick": "{{(async function(){\nreturn await storeValue(\"contactToDelete\",ClientsContactsTable.tableData[ClientsContactsTable.triggeredRowIndex].cr9c2_contact_clientid,false).then( async () => {\nreturn await showModal('DeleteContactModal')})})()\n}}"
+                          "onClick": "{{(async function(){\nreturn await storeValue(\"contactToDelete\",ClientsContactsTable.tableData[ClientsContactsTable.triggeredRowIndex].cr9c2_contact_clientid,false).then( async () => {\nreturn await showModal('DeleteContactModal')})})()\n}}",
+                          "sticky": ""
                         },
                         "cr2b8_main_contact": {
                           "allowCellWrapping": false,
@@ -555,7 +564,8 @@
                           "isDiscardVisible": true,
                           "computedValue": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"cr2b8_main_contact\"]))}}",
                           "validation": {},
-                          "cellBackground": ""
+                          "cellBackground": "",
+                          "sticky": ""
                         },
                         "test_mobile": {
                           "allowCellWrapping": false,
@@ -583,7 +593,8 @@
                           "isDiscardVisible": true,
                           "computedValue": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( currentRow.test_mobile))}}",
                           "validation": {},
-                          "cellBackground": ""
+                          "cellBackground": "",
+                          "sticky": ""
                         },
                         "test_genre": {
                           "allowCellWrapping": false,
@@ -611,7 +622,8 @@
                           "isDiscardVisible": true,
                           "computedValue": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( currentRow.cr9c2_contact_clientid))}}",
                           "validation": {},
-                          "cellBackground": ""
+                          "cellBackground": "",
+                          "sticky": ""
                         },
                         "test_famille": {
                           "allowCellWrapping": false,
@@ -641,7 +653,8 @@
                           "validation": {},
                           "cellBackground": "",
                           "selectOptions": "{{appsmith.store.optionsObject.familleOptions}}",
-                          "customAlias": ""
+                          "customAlias": "",
+                          "sticky": ""
                         },
                         "test_typedecommunication": {
                           "allowCellWrapping": false,
@@ -669,7 +682,8 @@
                           "isDiscardVisible": true,
                           "computedValue": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( currentRow.test_typedecommunication ?  appsmith.store.optionsObject.communicationsOptions.filter((element) => currentRow.test_typedecommunication.includes(element.value) === true).map((item) =>  item.label).join(\" - \") : \"n'a pas encore accepté de communication\"))}}",
                           "validation": {},
-                          "cellBackground": ""
+                          "cellBackground": "",
+                          "sticky": ""
                         },
                         "customColumn2": {
                           "allowCellWrapping": false,
@@ -700,7 +714,8 @@
                           "customAlias": "",
                           "buttonLabel": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( 'Action'))}}",
                           "iconName": "edit",
-                          "onClick": "{{ storeValue('contactInfos',ClientsContactsTable.tableData[ClientsContactsTable.triggeredRowIndex],false).then(\nshowModal('AddCLientContact')\n\t)\n}}"
+                          "onClick": "{{ storeValue('contactInfos',ClientsContactsTable.tableData[ClientsContactsTable.triggeredRowIndex],false).then(\nshowModal('AddCLientContact')\n\t)\n}}",
+                          "sticky": ""
                         },
                         "matserv_depot": {
                           "allowCellWrapping": false,
@@ -728,7 +743,8 @@
                           "isDiscardVisible": true,
                           "computedValue": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"matserv_depot\"]))}}",
                           "validation": {},
-                          "cellBackground": ""
+                          "cellBackground": "",
+                          "sticky": ""
                         },
                         "matserv_last_consent_date": {
                           "allowCellWrapping": false,
@@ -756,11 +772,13 @@
                           "isDiscardVisible": true,
                           "computedValue": "{{ClientsContactsTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"matserv_last_consent_date\"]))}}",
                           "validation": {},
-                          "cellBackground": ""
+                          "cellBackground": "",
+                          "sticky": ""
                         }
                       },
                       "onRowSelected": "",
                       "key": "myagq5coay",
+                      "canFreezeColumn": false,
                       "isDeprecated": false,
                       "rightColumn": 63,
                       "textSize": "0.875rem",
@@ -812,7 +830,7 @@
                           "widgetName": "Canvas3",
                           "displayName": "Canvas",
                           "topRow": 0,
-                          "bottomRow": 390,
+                          "bottomRow": 400,
                           "parentRowSpace": 1,
                           "type": "CANVAS_WIDGET",
                           "canExtend": false,
@@ -1862,7 +1880,7 @@
                           "widgetName": "Canvas3Copy",
                           "displayName": "Canvas",
                           "topRow": 0,
-                          "bottomRow": 470,
+                          "bottomRow": 560,
                           "parentRowSpace": 1,
                           "type": "CANVAS_WIDGET",
                           "canExtend": false,
