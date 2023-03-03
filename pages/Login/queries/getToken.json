@@ -17,15 +17,28 @@
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
-      "path": "",
+      "path": "token",
       "headers": [
         {
           "key": "content-type",
           "value": "application/x-www-form-urlencoded"
+        },
+        {
+          "key": "",
+          "value": ""
         }
       ],
       "encodeParamsToggle": true,
-      "queryParameters": [],
+      "queryParameters": [
+        {
+          "key": "",
+          "value": ""
+        },
+        {
+          "key": "",
+          "value": ""
+        }
+      ],
       "body": "",
       "bodyFormData": [
         {
@@ -34,7 +47,7 @@
         },
         {
           "key": "code",
-          "value": "{{appsmith.store.code}}"
+          "value": "0.AUYAS3YBvUylqUOFbZRBb4G0F3hk-JW__ONKswShqJuTYRlGAAA.AgABAAIAAAD--DLA3VO7QrddgJg7WevrAgDs_wUA9P9GMecJn2Sbh8-7c3Hw9g_piPaWY3bn4PEpAdKeqwMKTtAfTh21hVM2zdiwACLl2a3fIp2JpmtqLrlqlkt4vPURe6D-3w-PUeEoOg72DHHn0sBOCDncsaHeHRN_Il6Em169f05oaac4LJOBh3jV7gbovDuW8znN8UmUZxCkpPZWtCj7L8P5ZpH4Hs2UPvXkgNwhCGHeiTOHhVBsDiSlQUEv-fC1Bxw2amXer89Q3ImsKNlPSZnsnFUmV_8WcWFWUfmZjGfRNvJvdqLb2SI4__adyr6bHkfUgmu8OwhF-A4ZbZxKx_kW91uGlo3zWlgWZsCR-GdavERdWFWpygUH8XmCjqLQbDabtCkFA0QUgDpG4tEF8dvHw74jZfLH_P9x0LJy75PBcpxkNc9EPswgxlvvrLcHOPPn0gDj05VXxLDDjd7lzt5XRfXMSINtPPNaz9O7ShqjVZXzioKDI_VP-3GujHm5Og4iH3pN1w9FqRRN8Jh9GenK-SOTJisFwuNkr1uS8ZZJUWjkDaK0oVHbx26uyvYHtBrOtg5sYWhvSMZTENV7HWj_ubUef-sG2iS-2axhrY2naJRYQ60VBMx5TRWVfX07A5VsoSi0BVOCbi8GLgDflFcKFA-IPiZIMhT6mR7KXVkPnRCJf2z98DklQ3tYP7f840crkNeWrKh-FjWoJfcEif2QhijOISQ_b4wfBkTS02qQjB1YDYDR-6DL-NWTaVz-ruJ1XRscCYg"
         },
         {
           "key": "client_id",
@@ -46,7 +59,7 @@
         },
         {
           "key": "client_secret",
-          "value": ".tX8Q~pqSwpsNptY3Z~yh.GBw2FoS93gMuqb5acS"
+          "value": "Giq8Q~BCZNIWdYAQAa~sEJRFPeZWUbA8TeJpwa3f"
         }
       ],
       "httpMethod": "POST",
@@ -61,17 +74,11 @@
       }
     },
     "executeOnLoad": false,
-    "dynamicBindingPathList": [
-      {
-        "key": "bodyFormData[1].value"
-      }
-    ],
+    "dynamicBindingPathList": [],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [
-      "appsmith.store.code"
-    ],
+    "jsonPathKeys": [],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
@@ -79,5 +86,5 @@
   },
   "id": "Login_getToken",
   "deleted": false,
-  "gitSyncId": "633af1cfc5bfa30f1eac78d5_633af439cc554c49c42c7293"
+  "gitSyncId": "6334819a04289f792a05dcaa_6402131947e5fd1a6c7521c9"
 }
