@@ -38,8 +38,8 @@
                 "click",
                 "submit"
               ],
-              "topRow": 5,
-              "bottomRow": 9,
+              "topRow": 3,
+              "bottomRow": 7,
               "parentRowSpace": 10,
               "type": "BUTTON_WIDGET",
               "hideCard": false,
@@ -50,7 +50,7 @@
                   "key": "onClick"
                 }
               ],
-              "leftColumn": 21,
+              "leftColumn": 24,
               "dynamicBindingPathList": [
                 {
                   "key": "buttonColor"
@@ -63,7 +63,7 @@
               "isDisabled": false,
               "key": "p9d3mwcida",
               "isDeprecated": false,
-              "rightColumn": 37,
+              "rightColumn": 40,
               "isDefaultClickDisabled": true,
               "widgetId": "rj7ad24cjr",
               "isVisible": false,
