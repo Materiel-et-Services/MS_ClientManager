@@ -1,6 +1,7 @@
 export default {
 	getAuthUser: async () => {
-		if (getUser.data.id != undefined) {
+		await getUser.run()
+		if (getUser.data != undefined) {
 			
 			navigateTo("Page1",appsmith.URL.queryParams)
 		} else {
