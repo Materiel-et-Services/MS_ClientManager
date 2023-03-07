@@ -1,6 +1,7 @@
 export default {
 	getAuthUser: async () => {
 		await getUser.run()
+		
 		if (getUser.data != undefined) {
 			await showAlert("SUper")
 			await storeValue("userLogged",getUser.data,false)
