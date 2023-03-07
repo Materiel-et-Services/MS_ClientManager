@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "async () => {\n  await getUser.run();\n  if (getUser.data != undefined) {\n    await showAlert(\"SUper\");\n    navigateTo(\"Page1\", appsmith.URL.queryParams);\n  } else {\n    showAlert(\"Un soucis c'est produit lors de l'authentification, essayer de vous relogger ou contacter votre administrateur\");\n  }\n}",
+      "body": "async () => {\n  await getUser.run();\n  if (getUser.data != undefined) {\n    await showAlert(\"SUper\");\n    await storeValue(\"userLogged\", getUser.data, false);\n    navigateTo(\"Page1\", appsmith.URL.queryParams);\n  } else {\n    showAlert(\"Un soucis c'est produit lors de l'authentification, essayer de vous relogger ou contacter votre administrateur\");\n  }\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": true
@@ -34,7 +34,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "async () => {\n  await getUser.run();\n  if (getUser.data != undefined) {\n    await showAlert(\"SUper\");\n    navigateTo(\"Page1\", appsmith.URL.queryParams);\n  } else {\n    showAlert(\"Un soucis c'est produit lors de l'authentification, essayer de vous relogger ou contacter votre administrateur\");\n  }\n}"
+      "async () => {\n  await getUser.run();\n  if (getUser.data != undefined) {\n    await showAlert(\"SUper\");\n    await storeValue(\"userLogged\", getUser.data, false);\n    navigateTo(\"Page1\", appsmith.URL.queryParams);\n  } else {\n    showAlert(\"Un soucis c'est produit lors de l'authentification, essayer de vous relogger ou contacter votre administrateur\");\n  }\n}"
     ],
     "userSetOnLoad": true,
     "confirmBeforeExecute": false,
