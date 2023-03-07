@@ -17,28 +17,10 @@
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
-      "headers": [
-        {
-          "key": "",
-          "value": ""
-        },
-        {
-          "key": "",
-          "value": ""
-        }
-      ],
+      "path": "me",
+      "headers": [],
       "encodeParamsToggle": true,
-      "queryParameters": [
-        {
-          "key": "",
-          "value": ""
-        },
-        {
-          "key": "",
-          "value": ""
-        }
-      ],
-      "body": "",
+      "queryParameters": [],
       "bodyFormData": [],
       "httpMethod": "GET",
       "selfReferencingDataPaths": [],
@@ -52,6 +34,7 @@
       }
     },
     "executeOnLoad": false,
+    "dynamicBindingPathList": [],
     "isValid": true,
     "invalids": [],
     "messages": [],

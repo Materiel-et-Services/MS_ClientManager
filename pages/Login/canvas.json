@@ -82,7 +82,7 @@
               "resetFormOnClick": false,
               "boxShadow": "none",
               "widgetName": "LoginButton",
-              "onClick": "",
+              "onClick": "{{JSObject1.getAuthUser()}}",
               "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
               "dynamicPropertyPathList": [
                 {
