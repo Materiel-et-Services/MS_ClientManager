@@ -2,6 +2,7 @@
   "unpublishedPage": {
     "name": "Login",
     "slug": "login",
+    "customSlug": "",
     "layouts": [
       {
         "viewMode": false,
@@ -81,7 +82,7 @@
               "resetFormOnClick": false,
               "boxShadow": "none",
               "widgetName": "LoginButton",
-              "onClick": "{{navigateTo('https://login.microsoftonline.com/bd01764b-a54c-43a9-856d-94416f81b417/oauth2/v2.0/authorize?client_id=95f86478-fcbf-4ae3-b304-a1a89b936119&scope=https://org099306d0.crm12.dynamics.com/.default&redirect_uri=https://app.appsmith.com/app/gestion-des-contacts-clients/login-633af1ff197d8c7f30ad792a?branch=main%26embed=true&response_type=code&state=branch=main%26embed=true', {},'SAME_WINDOW')}}",
+              "onClick": "",
               "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
               "dynamicPropertyPathList": [
                 {
@@ -173,21 +174,7 @@
             }
           ]
         },
-        "layoutOnLoadActions": [
-          [
-            {
-              "id": "Login_JSObject1.getToken",
-              "name": "JSObject1.getToken",
-              "collectionId": "Login_JSObject1",
-              "confirmBeforeExecute": false,
-              "pluginType": "JS",
-              "jsonPathKeys": [
-                "async () => {\n  if (appsmith.URL.queryParams.code != undefined) {\n    console.log(appsmith.URL.queryParams);\n    await storeValue(\"code\", appsmith.URL.queryParams.code, false);\n    console.log(appsmith.store.code);\n    let response = await getToken.run({\n      code: appsmith.store.code\n    });\n    console.log(response);\n    await storeValue(\"jwt\", response.access_token, false);\n    let params = appsmith.URL.queryParams.state.split(\"&\");\n    let objectParams = {};\n    params.map(element => {\n      let itemObject = element.split(\"=\");\n      let newObj = {};\n      newObj[itemObject[0]] = itemObject[1];\n      Object.assign(objectParams, newObj);\n    });\n    navigateTo(\"Page1\", objectParams);\n  } else {\n    console.log(\"no\");\n  }\n}"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ]
-        ],
+        "layoutOnLoadActions": [],
         "layoutOnLoadActionErrors": [],
         "validOnPageLoadActions": true,
         "id": "Login",
