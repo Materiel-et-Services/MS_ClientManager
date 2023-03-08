@@ -1,13 +1,24 @@
 export default {
-	getAuthUser: async () => {
-		await getUser.run()
-		
-		if (getUser.data != undefined) {
-			await showAlert("SUper")
-			await storeValue("userLogged",getUser.data,false)
-			navigateTo("Page1",appsmith.URL.queryParams)
+	getToken: async () => {
+		if (appsmith.URL.queryParams.code != undefined) {
+			console.log(appsmith.URL.queryParams)
+			await storeValue("code",appsmith.URL.queryParams.code,false)
+			console.log(appsmith.store.code)
+			let response =  await getToken.run({code: appsmith.store.code})
+			console.log(response)
+			await storeValue("jwt",response.access_token,false)
+			let params = appsmith.URL.queryParams.state.split("&")
+			let objectParams = {}
+			params.map((element) => {
+				let itemObject = element.split("=")
+				let newObj = {}
+				newObj[itemObject[0]] = itemObject[1]
+				Object.assign(objectParams,newObj)
+			})
+			
+			navigateTo("Page1",objectParams)
 		} else {
-			showAlert("Un soucis c'est produit lors de l'authentification, essayer de vous relogger ou contacter votre administrateur")
+			console.log("no")
 		}
 
 	}
