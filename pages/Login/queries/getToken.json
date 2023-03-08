@@ -71,7 +71,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "this.code"
+      "appsmith.store.code"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
