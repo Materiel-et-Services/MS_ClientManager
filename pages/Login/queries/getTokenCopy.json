@@ -2,7 +2,7 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "getToken",
+    "name": "getTokenCopy",
     "datasource": {
       "name": "getAzureToken",
       "pluginId": "restapi-plugin",
@@ -35,7 +35,7 @@
         },
         {
           "key": "code",
-          "value": "{{this.code}}"
+          "value": "ok"
         },
         {
           "key": "client_id",
@@ -62,23 +62,17 @@
       }
     },
     "executeOnLoad": false,
-    "dynamicBindingPathList": [
-      {
-        "key": "bodyFormData[1].value"
-      }
-    ],
+    "dynamicBindingPathList": [],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [
-      "this.code"
-    ],
+    "jsonPathKeys": [],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Login_getToken",
+  "id": "Login_getTokenCopy",
   "deleted": false,
-  "gitSyncId": "64074317887745024a55ebce_6408b4ba51fa044369cb4cf3"
+  "gitSyncId": "6408bd9151fa044369cb4d37_6408bdbc51fa044369cb4d53"
 }
