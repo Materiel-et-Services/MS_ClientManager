@@ -35,7 +35,7 @@
         },
         {
           "key": "code",
-          "value": "{{this.code}}"
+          "value": "{{this.params.code}}"
         },
         {
           "key": "client_id",
