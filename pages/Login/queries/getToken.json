@@ -35,7 +35,7 @@
         },
         {
           "key": "code",
-          "value": "{{this.params.code}}"
+          "value": "{{appsmith.store.code}}"
         },
         {
           "key": "client_id",
