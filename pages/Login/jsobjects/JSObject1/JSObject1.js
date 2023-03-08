@@ -21,5 +21,8 @@ export default {
 			console.log("no")
 		}
 
+	},
+	storeUser: async () => {
+		return await storeValue("userLogged ","ok",false)
 	}
 }
