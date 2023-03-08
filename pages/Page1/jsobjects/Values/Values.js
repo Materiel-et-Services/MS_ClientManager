@@ -50,7 +50,7 @@ export default {
 	},
 	initApp: async () => {
 		isArchivedIncluded.isChecked === true ? await storeValue("withArchive","cr2b8_archived_client ne null",false) : await storeValue("withArchive","cr2b8_archived_client eq false",false)
-		
+		console.log(appsmith.store)
 		if(appsmith.store.jwt != undefined) {
 			//console.log(appsmith.store)
 			return await getAllClients.run()
