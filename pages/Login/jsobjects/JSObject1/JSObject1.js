@@ -4,7 +4,7 @@ export default {
 			console.log(appsmith.URL.queryParams)
 			await storeValue("code",appsmith.URL.queryParams.code,false)
 			console.log(appsmith.store.code)
-			let response =  await getToken.run({code: appsmith.store.code})
+			let response =  await getToken.run()
 			console.log(response)
 			await storeValue("jwt",response.access_token,false)
 			let params = appsmith.URL.queryParams.state.split("&")
