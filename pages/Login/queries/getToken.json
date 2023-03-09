@@ -35,7 +35,7 @@
         },
         {
           "key": "code",
-          "value": "test"
+          "value": "0.AUYAS3YBvUylqUOFbZRBb4G0F3hk-JW__ONKswShqJuTYRlGAAA.AgABAAIAAAD--DLA3VO7QrddgJg7WevrAgDs_wUA9P_a4Te4Ook9ZnU2_j1tWPVe0CeeAexqKI9At8BT73f6yA6DTftzFMJrWzYEkBXz20tNM2cPPJJuGFtbnw-F3Pf-AcVy1deILHz1871Uu3uiLtR1MA_emxynXocXnJqlfjIm0ifIiXYYGLuSqXvgatkWAZIR_ymfLvLpRy5-rTMAmGSPgrRcMfITl0fsA3T0d8hJYHmGcGvgABf3xHY1fAPyZnuc00j7TbFiS5psEiVFLeO2KiqBfh_UWYZefbGyggDtwi1y66xONIo62mnWVOGxbz7hpHqldYbE88Ly965iTFd7BYvmX_LYCB9bcreq5wXRFgWWvBBqjfx2-_UBJM_Ow7krgRUaxkUPbM3MY0UbW4FG2QFCfMNjwAXHcLzM8ZgEU-z9T9i5cwkLsYIATXdh_BUEk7EXB0gcONpaAWSGXMCLAtjT5KBNYMig4uldDRNLm4_GZzjSPq--KZ3odwLXan6aKX96mTFAfL45A9VtHXXkilqanFXvM5YikPRywhd4k1dOk_Z1zp_lWVZhyIyzvuc4P9a51KOfwFtjxW-inaxFSUmaMWXjd8TR_r9gzr6smLcm7vlQcM9l9LEpShx6EGF9oksDau4zI9sgcJsAXyCHUH5XtOxq0eGxweoK_z_g7fixKXQrWlrlDeagC6dlrFqczQla3vcjWuR7faWobsc-1CLgg8VheTBEwUg2w2DJ8I3N1PCqcSaAVtSvrqL5-eNA"
         },
         {
           "key": "client_id",
@@ -43,7 +43,7 @@
         },
         {
           "key": "redirect_uri",
-          "value": "https://app.appsmith.com/app/gestion-des-contacts-clients/login-633af1ff197d8c7f30ad792a?branch=main&embed=true"
+          "value": "https://app.appsmith.com/app/ms-clientmanager/login-6408c9a851fa044369cb4de0?branch=main&embed=true"
         },
         {
           "key": "client_secret",
@@ -62,17 +62,11 @@
       }
     },
     "executeOnLoad": false,
-    "dynamicBindingPathList": [
-      {
-        "key": "bodyFormData[1].value"
-      }
-    ],
+    "dynamicBindingPathList": [],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [
-      "appsmith.store.code"
-    ],
+    "jsonPathKeys": [],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
