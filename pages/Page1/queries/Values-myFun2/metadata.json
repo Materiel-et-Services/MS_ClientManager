@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "remapOptions",
-    "fullyQualifiedName": "Values.remapOptions",
+    "name": "myFun2",
+    "fullyQualifiedName": "Values.myFun2",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -19,14 +19,12 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "element => {\n  return element.map(element => {\n    return {\n      value: element.Value,\n      label: element.Label.UserLocalizedLabel.Label\n    };\n  });\n}",
       "selfReferencingDataPaths": [],
-      "jsArguments": [
-        {}
-      ],
-      "isAsync": false
+      "jsArguments": [],
+      "isAsync": true
     },
     "executeOnLoad": false,
+    "clientSideExecution": true,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -35,15 +33,12 @@
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [
-      "element => {\n  return element.map(element => {\n    return {\n      value: element.Value,\n      label: element.Label.UserLocalizedLabel.Label\n    };\n  });\n}"
-    ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Page1_Values.remapOptions",
+  "id": "Page1_Values.myFun2",
   "deleted": false,
-  "gitSyncId": "6331b58283f9da7b58c47882_63343c9f93ac462241a3b31d"
+  "gitSyncId": "632ae49cf774ad2bde7b789b_632afa09e3c0dc3a8257b7cc"
 }

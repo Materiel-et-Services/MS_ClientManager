@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "initClientsInfos",
-    "fullyQualifiedName": "Values.initClientsInfos",
+    "name": "getToken",
+    "fullyQualifiedName": "JSObject1.getToken",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -13,18 +13,17 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Page1",
-    "collectionId": "Page1_Values",
+    "pageId": "Login",
+    "collectionId": "Login_JSObject1",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "async () => {\n  await getOneClient.run({\n    clientCode: appsmith.store.clientCode\n  });\n  return Values.filterClientInfo(getOneClient.data.value[0]);\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": true
     },
-    "executeOnLoad": false,
+    "executeOnLoad": true,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -33,15 +32,12 @@
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [
-      "async () => {\n  await getOneClient.run({\n    clientCode: appsmith.store.clientCode\n  });\n  return Values.filterClientInfo(getOneClient.data.value[0]);\n}"
-    ],
     "userSetOnLoad": true,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Page1_Values.initClientsInfos",
+  "id": "Login_JSObject1.getToken",
   "deleted": false,
-  "gitSyncId": "632ae49cf774ad2bde7b789b_632d8ebec85ec46372f2f847"
+  "gitSyncId": "64074317887745024a55ebce_6408b49d51fa044369cb4cf1"
 }

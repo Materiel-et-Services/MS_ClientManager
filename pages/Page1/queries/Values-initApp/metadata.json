@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "storeUser",
-    "fullyQualifiedName": "JSObject1.storeUser",
+    "name": "initApp",
+    "fullyQualifiedName": "Values.initApp",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -13,18 +13,17 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Login",
-    "collectionId": "Login_JSObject1",
+    "pageId": "Page1",
+    "collectionId": "Page1_Values",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "async () => {\n  return await storeValue(\"userLogged \", \"ok\", false);\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": true
     },
-    "executeOnLoad": false,
+    "executeOnLoad": true,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -33,15 +32,12 @@
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [
-      "async () => {\n  return await storeValue(\"userLogged \", \"ok\", false);\n}"
-    ],
-    "userSetOnLoad": false,
+    "userSetOnLoad": true,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Login_JSObject1.storeUser",
+  "id": "Page1_Values.initApp",
   "deleted": false,
-  "gitSyncId": "64074317887745024a55ebce_6408b6be51fa044369cb4d0c"
+  "gitSyncId": "632ae49cf774ad2bde7b789b_632dc606be85ab180498894d"
 }

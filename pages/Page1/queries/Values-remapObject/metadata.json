@@ -19,10 +19,11 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "element => {\n  return element.map(element => {\n    return {\n      value: element.cr2b8_codeclient,\n      label: element.cr2b8_raisonsocialeclient\n    };\n  });\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [
-        {}
+        {
+          "name": "element"
+        }
       ],
       "isAsync": false
     },
@@ -35,9 +36,6 @@
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [
-      "element => {\n  return element.map(element => {\n    return {\n      value: element.cr2b8_codeclient,\n      label: element.cr2b8_raisonsocialeclient\n    };\n  });\n}"
-    ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
