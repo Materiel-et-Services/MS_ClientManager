@@ -39,7 +39,8 @@
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
-    "userPermissions": []
+    "userPermissions": [],
+    "createdAt": "2023-03-08T17:45:12Z"
   },
   "id": "Page1_Values.filterContactsInfo",
   "deleted": false,

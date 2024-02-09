@@ -11,8 +11,8 @@
         "click",
         "submit"
     ],
-    "topRow": 64,
-    "bottomRow": 68,
+    "topRow": 24,
+    "bottomRow": 28,
     "tooltip": "Se connecter",
     "parentRowSpace": 10,
     "type": "BUTTON_WIDGET",
@@ -20,7 +20,7 @@
     "animateLoading": true,
     "parentColumnSpace": 23.390625,
     "dynamicTriggerPathList": [{"key": "onClick"}],
-    "leftColumn": 23,
+    "leftColumn": 24,
     "dynamicBindingPathList": [
         {"key": "buttonColor"},
         {"key": "borderRadius"}
@@ -29,7 +29,7 @@
     "isDisabled": false,
     "key": "p9d3mwcida",
     "isDeprecated": false,
-    "rightColumn": 39,
+    "rightColumn": 40,
     "isDefaultClickDisabled": true,
     "widgetId": "0sppidf6i0",
     "isVisible": true,
