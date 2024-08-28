@@ -1,68 +1,82 @@
 {
-    "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
-    "widgetName": "Form1",
-    "borderColor": "{{appsmith.theme.colors.primaryColor}}",
-    "isCanvas": true,
-    "displayName": "Form",
-    "iconSVG": "/static/media/icon.ea3e08d130e59c56867ae40114c10eed.svg",
-    "searchTags": ["group"],
-    "topRow": 0,
-    "bottomRow": 40,
-    "parentRowSpace": 10,
-    "type": "FORM_WIDGET",
-    "hideCard": false,
-    "animateLoading": true,
-    "parentColumnSpace": 19.5,
-    "dynamicTriggerPathList": [],
-    "leftColumn": 2,
-    "dynamicBindingPathList": [
-        {"key": "borderRadius"},
-        {"key": "boxShadow"},
-        {"key": "borderColor"}
-    ],
-    "children": [{
-        "boxShadow": "none",
-        "widgetName": "Canvas3",
-        "displayName": "Canvas",
-        "topRow": 0,
-        "bottomRow": 400,
-        "parentRowSpace": 1,
-        "type": "CANVAS_WIDGET",
-        "canExtend": false,
-        "hideCard": true,
-        "minHeight": 400,
-        "parentColumnSpace": 1,
-        "leftColumn": 0,
-        "dynamicBindingPathList": [
-            {"key": "borderRadius"},
-            {"key": "accentColor"}
-        ],
-        "key": "d3fjd7v0x5",
-        "isDeprecated": false,
-        "rightColumn": 468,
-        "detachFromLayout": true,
-        "widgetId": "g982593vs7",
-        "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-        "containerStyle": "none",
-        "isVisible": true,
-        "version": 1,
-        "parentId": "d1910uhtt5",
-        "renderMode": "CANVAS",
-        "isLoading": false,
-        "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}"
-    }],
-    "borderWidth": "1",
-    "key": "zqg3z7k050",
-    "backgroundColor": "#fafafa",
-    "isDeprecated": false,
-    "rightColumn": 39,
-    "dynamicHeight": "FIXED",
-    "widgetId": "d1910uhtt5",
-    "isVisible": true,
-    "parentId": "pajhr8gnpm",
-    "renderMode": "CANVAS",
-    "isLoading": false,
-    "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-    "maxDynamicHeight": 9000,
-    "minDynamicHeight": 4
+  "animateLoading": true,
+  "backgroundColor": "#fafafa",
+  "borderColor": "{{appsmith.theme.colors.primaryColor}}",
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "borderWidth": "1",
+  "bottomRow": 40,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "children": [
+    {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "bottomRow": 400,
+      "boxShadow": "none",
+      "canExtend": false,
+      "containerStyle": "none",
+      "detachFromLayout": true,
+      "displayName": "Canvas",
+      "dynamicBindingPathList": [
+        {
+          "key": "borderRadius"
+        },
+        {
+          "key": "accentColor"
+        }
+      ],
+      "hideCard": true,
+      "isDeprecated": false,
+      "isLoading": false,
+      "isVisible": true,
+      "key": "d3fjd7v0x5",
+      "leftColumn": 0,
+      "minHeight": 400,
+      "parentColumnSpace": 1,
+      "parentId": "d1910uhtt5",
+      "parentRowSpace": 1,
+      "renderMode": "CANVAS",
+      "rightColumn": 468,
+      "topRow": 0,
+      "type": "CANVAS_WIDGET",
+      "version": 1,
+      "widgetId": "g982593vs7",
+      "widgetName": "Canvas3"
+    }
+  ],
+  "displayName": "Form",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
+    },
+    {
+      "key": "borderColor"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicTriggerPathList": [],
+  "hideCard": false,
+  "iconSVG": "/static/media/icon.ea3e08d130e59c56867ae40114c10eed.svg",
+  "isCanvas": true,
+  "isDeprecated": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "zqg3z7k050",
+  "leftColumn": 2,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "parentColumnSpace": 19.5,
+  "parentId": "pajhr8gnpm",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "rightColumn": 39,
+  "searchTags": [
+    "group"
+  ],
+  "topRow": 0,
+  "type": "FORM_WIDGET",
+  "widgetId": "d1910uhtt5",
+  "widgetName": "Form1"
 }

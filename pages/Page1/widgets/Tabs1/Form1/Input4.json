@@ -1,54 +1,64 @@
 {
-    "boxShadow": "none",
-    "widgetName": "Input4",
-    "dynamicPropertyPathList": [{"key": "labelTextSize"}],
-    "displayName": "Input",
-    "iconSVG": "/static/media/icon.9f505595da61a34f563dba82adeb06ec.svg",
-    "searchTags": [
-        "form",
-        "text input",
-        "number",
-        "textarea"
-    ],
-    "topRow": 26,
-    "bottomRow": 30,
-    "parentRowSpace": 10,
-    "labelWidth": 5,
-    "autoFocus": false,
-    "type": "INPUT_WIDGET_V2",
-    "hideCard": false,
-    "animateLoading": true,
-    "parentColumnSpace": 7,
-    "dynamicTriggerPathList": [],
-    "resetOnSubmit": true,
-    "leftColumn": 1,
-    "dynamicBindingPathList": [
-        {"key": "accentColor"},
-        {"key": "borderRadius"},
-        {"key": "defaultText"}
-    ],
-    "labelPosition": "Top",
-    "labelStyle": "",
-    "inputType": "TEXT",
-    "isDisabled": true,
-    "key": "fxo7oidhhd",
-    "labelTextSize": "0.70rem",
-    "isRequired": false,
-    "isDeprecated": false,
-    "rightColumn": 29,
-    "dynamicHeight": "FIXED",
-    "widgetId": "rxi44e3r2s",
-    "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-    "isVisible": true,
-    "label": "Ville",
-    "version": 2,
-    "parentId": "g982593vs7",
-    "labelAlignment": "left",
-    "renderMode": "CANVAS",
-    "isLoading": false,
-    "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-    "maxDynamicHeight": 9000,
-    "iconAlign": "left",
-    "defaultText": "{{Values.filterClientInfo(getOneClient.data.value[0]).ville}}",
-    "minDynamicHeight": 4
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "autoFocus": false,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 30,
+  "boxShadow": "none",
+  "defaultText": "{{Values.filterClientInfo(getOneClient.data.value[0]).ville}}",
+  "displayName": "Input",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "defaultText"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "labelTextSize"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "hideCard": false,
+  "iconAlign": "left",
+  "iconSVG": "/static/media/icon.9f505595da61a34f563dba82adeb06ec.svg",
+  "inputType": "TEXT",
+  "isDeprecated": false,
+  "isDisabled": true,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "fxo7oidhhd",
+  "label": "Ville",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelStyle": "",
+  "labelTextSize": "0.70rem",
+  "labelWidth": 5,
+  "leftColumn": 1,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "parentColumnSpace": 7,
+  "parentId": "g982593vs7",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "resetOnSubmit": true,
+  "rightColumn": 29,
+  "searchTags": [
+    "form",
+    "text input",
+    "number",
+    "textarea"
+  ],
+  "topRow": 26,
+  "type": "INPUT_WIDGET_V2",
+  "version": 2,
+  "widgetId": "rxi44e3r2s",
+  "widgetName": "Input4"
 }

@@ -1,43 +1,55 @@
 {
-    "boxShadow": "none",
-    "widgetName": "ArchiveButton",
-    "onClick": "{{\nValues.filterClientInfo(getOneClient.data.value[0]).archived_client === true ?\nArchiveClient.run({ClientOId:Values.filterClientInfo(getOneClient.data.value[0]).clientsunifie_2id,archiveStatus:false}).then(async () => {await getOneClient.run({clientCode:appsmith.store.clientCode})}) : ArchiveClient.run({ClientOId:Values.filterClientInfo(getOneClient.data.value[0]).clientsunifie_2id,archiveStatus:true}).then(async () => {await getOneClient.run({clientCode:appsmith.store.clientCode})})}}",
-    "buttonColor": "{{Values.filterClientInfo(getOneClient.data.value[0]).archived_client === true ? \"#ff0000\" : appsmith.theme.colors.primaryColor}}",
-    "dynamicPropertyPathList": [
-        {"key": "onClick"},
-        {"key": "buttonColor"}
-    ],
-    "displayName": "Icon Button",
-    "iconSVG": "/static/media/icon.1a0c634ac75f9fa6b6ae7a8df882a3ba.svg",
-    "searchTags": [
-        "click",
-        "submit"
-    ],
-    "topRow": 0,
-    "bottomRow": 4,
-    "tooltip": "Cliquez-ici pour archiver ce compte client.",
-    "parentRowSpace": 10,
-    "type": "ICON_BUTTON_WIDGET",
-    "hideCard": false,
-    "animateLoading": true,
-    "parentColumnSpace": 14.4140625,
-    "dynamicTriggerPathList": [{"key": "onClick"}],
-    "leftColumn": 25,
-    "dynamicBindingPathList": [
-        {"key": "buttonColor"},
-        {"key": "borderRadius"}
-    ],
-    "isDisabled": false,
-    "key": "m758sp6cf8",
-    "isDeprecated": false,
-    "rightColumn": 29,
-    "iconName": "box",
-    "widgetId": "06x61x6vtu",
-    "isVisible": true,
-    "version": 1,
-    "parentId": "jsaif5g0w9",
-    "renderMode": "CANVAS",
-    "isLoading": false,
-    "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-    "buttonVariant": "PRIMARY"
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 4,
+  "boxShadow": "none",
+  "buttonColor": "{{Values.filterClientInfo(getOneClient.data.value[0]).archived_client === true ? \"#ff0000\" : appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "PRIMARY",
+  "displayName": "Icon Button",
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    },
+    {
+      "key": "buttonColor"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "hideCard": false,
+  "iconName": "box",
+  "iconSVG": "/static/media/icon.1a0c634ac75f9fa6b6ae7a8df882a3ba.svg",
+  "isDeprecated": false,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "m758sp6cf8",
+  "leftColumn": 25,
+  "onClick": "{{\nValues.filterClientInfo(getOneClient.data.value[0]).archived_client === true ?\nArchiveClient.run({ClientOId:Values.filterClientInfo(getOneClient.data.value[0]).clientsunifie_2id,archiveStatus:false}).then(async () => {await getOneClient.run({clientCode:appsmith.store.clientCode})}) : ArchiveClient.run({ClientOId:Values.filterClientInfo(getOneClient.data.value[0]).clientsunifie_2id,archiveStatus:true}).then(async () => {await getOneClient.run({clientCode:appsmith.store.clientCode})})}}",
+  "parentColumnSpace": 14.4140625,
+  "parentId": "jsaif5g0w9",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "rightColumn": 29,
+  "searchTags": [
+    "click",
+    "submit"
+  ],
+  "tooltip": "Cliquez-ici pour archiver ce compte client.",
+  "topRow": 0,
+  "type": "ICON_BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "06x61x6vtu",
+  "widgetName": "ArchiveButton"
 }

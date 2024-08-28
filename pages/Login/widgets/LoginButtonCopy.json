@@ -1,44 +1,52 @@
 {
-    "resetFormOnClick": false,
-    "boxShadow": "none",
-    "widgetName": "LoginButtonCopy",
-    "onClick": "{{storeValue('jwt', '0.AUYAS3YBvUylqUOFbZRBb4G0F3hk-JW__ONKswShqJuTYRlGAOY.AgABAAIAAAAmoFfGtYxvRrNriQdPKIZ-AgDs_wUA9P8oWHfPpCuXP1ieccZcyCebnXc9KQnXS_iVM-_vf6bn7P5F0t7OxJsaWY7A2aAmNbsDARNfPIXrh1apYo51CAJqinVTB_chfSzN2GcKfiXtVNJDiqwK_4d3OkhRWHxqEaSaMfAoPXI6liD_UoP3whBe6yM7L5GTyPu8ix8thMcRsz0neYIcCpcLH_mRtAvasUEW4EEaLEMBwSlZOZMkjltbI908PXRn-swcPerkPFFvqQqoscp9YF6Om9YnSB6gOhrDvw5K1u7HTzU99MftBr1P3wW4I3UjVT1S71vCzCpLRMsJDEJpmtd9zuvB04jyJl6hyGBjVCLN45kpWjzEb60oux8HkxElPmdVVudzzzK7o-tthT3dsROilsQ8T96NUg0kCHmVr589cHdN0ntzY3WxKwEI3SdBTboZ8vAnFyEyj15LSaZ44Xf44P5c4getQQZ840Pzn-RH7wZ8ssE-rkLtYZrr6cPvF5fpYtCT3xQbd786TY6uDGfT0qPRkmBaIr5YgTPhzrnpyRokPJWnw23O4TWVME9UEFarjhxQzoo4WJS31fsr6HExdrJ_arKiMLsRDHH09X4kAuMa9WE_iwhk9Dy8csXAwBJZOD7n1r74GP8sqs5DJlDTrRYjPg9wGXB3Qv5ZcrABZLhhamXB16OnBouhJN6OutsExfHEs3Tq8HT6NyXgaZvMALommPDfhytFZ4pXveoVYgTahu8JQEb75A2BT9HUTVxgNxs');}}",
-    "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
-    "dynamicPropertyPathList": [],
-    "displayName": "Button",
-    "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
-    "searchTags": [
-        "click",
-        "submit"
-    ],
-    "topRow": 3,
-    "bottomRow": 7,
-    "parentRowSpace": 10,
-    "type": "BUTTON_WIDGET",
-    "hideCard": false,
-    "animateLoading": true,
-    "parentColumnSpace": 23.390625,
-    "dynamicTriggerPathList": [{"key": "onClick"}],
-    "leftColumn": 24,
-    "dynamicBindingPathList": [
-        {"key": "buttonColor"},
-        {"key": "borderRadius"}
-    ],
-    "text": "Se connecter avec microsoft",
-    "isDisabled": false,
-    "key": "p9d3mwcida",
-    "isDeprecated": false,
-    "rightColumn": 40,
-    "isDefaultClickDisabled": true,
-    "widgetId": "rj7ad24cjr",
-    "isVisible": false,
-    "recaptchaType": "V3",
-    "version": 1,
-    "parentId": "0",
-    "renderMode": "CANVAS",
-    "isLoading": false,
-    "disabledWhenInvalid": false,
-    "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-    "buttonVariant": "PRIMARY",
-    "placement": "CENTER"
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 7,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "displayName": "Button",
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "hideCard": false,
+  "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
+  "isDefaultClickDisabled": true,
+  "isDeprecated": false,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": false,
+  "key": "p9d3mwcida",
+  "leftColumn": 24,
+  "onClick": "{{storeValue('jwt', '0.AUYAS3YBvUylqUOFbZRBb4G0F3hk-JW__ONKswShqJuTYRlGAOY.AgABAAIAAAAmoFfGtYxvRrNriQdPKIZ-AgDs_wUA9P8oWHfPpCuXP1ieccZcyCebnXc9KQnXS_iVM-_vf6bn7P5F0t7OxJsaWY7A2aAmNbsDARNfPIXrh1apYo51CAJqinVTB_chfSzN2GcKfiXtVNJDiqwK_4d3OkhRWHxqEaSaMfAoPXI6liD_UoP3whBe6yM7L5GTyPu8ix8thMcRsz0neYIcCpcLH_mRtAvasUEW4EEaLEMBwSlZOZMkjltbI908PXRn-swcPerkPFFvqQqoscp9YF6Om9YnSB6gOhrDvw5K1u7HTzU99MftBr1P3wW4I3UjVT1S71vCzCpLRMsJDEJpmtd9zuvB04jyJl6hyGBjVCLN45kpWjzEb60oux8HkxElPmdVVudzzzK7o-tthT3dsROilsQ8T96NUg0kCHmVr589cHdN0ntzY3WxKwEI3SdBTboZ8vAnFyEyj15LSaZ44Xf44P5c4getQQZ840Pzn-RH7wZ8ssE-rkLtYZrr6cPvF5fpYtCT3xQbd786TY6uDGfT0qPRkmBaIr5YgTPhzrnpyRokPJWnw23O4TWVME9UEFarjhxQzoo4WJS31fsr6HExdrJ_arKiMLsRDHH09X4kAuMa9WE_iwhk9Dy8csXAwBJZOD7n1r74GP8sqs5DJlDTrRYjPg9wGXB3Qv5ZcrABZLhhamXB16OnBouhJN6OutsExfHEs3Tq8HT6NyXgaZvMALommPDfhytFZ4pXveoVYgTahu8JQEb75A2BT9HUTVxgNxs');}}",
+  "parentColumnSpace": 23.390625,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "rightColumn": 40,
+  "searchTags": [
+    "click",
+    "submit"
+  ],
+  "text": "Se connecter avec microsoft",
+  "topRow": 3,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "rj7ad24cjr",
+  "widgetName": "LoginButtonCopy"
 }

@@ -1,81 +1,99 @@
 {
-    "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
-    "widgetName": "Tabs1",
-    "isCanvas": true,
-    "dynamicPropertyPathList": [{"key": "isVisible"}],
-    "displayName": "Tabs",
-    "iconSVG": "/static/media/icon.74a6d653c8201e66f1cd367a3fba2657.svg",
-    "topRow": 4,
-    "bottomRow": 96,
-    "parentRowSpace": 10,
-    "type": "TABS_WIDGET",
-    "hideCard": false,
-    "shouldScrollContents": false,
-    "animateLoading": true,
-    "parentColumnSpace": 14.0625,
-    "dynamicTriggerPathList": [],
-    "leftColumn": 0,
-    "dynamicBindingPathList": [
-        {"key": "accentColor"},
-        {"key": "boxShadow"},
-        {"key": "isVisible"}
-    ],
-    "children": [{
-        "tabId": "tab1",
-        "boxShadow": "none",
-        "widgetName": "Canvas1",
-        "displayName": "Canvas",
-        "topRow": 0,
-        "bottomRow": 880,
-        "parentRowSpace": 1,
-        "type": "CANVAS_WIDGET",
-        "canExtend": true,
-        "hideCard": true,
-        "shouldScrollContents": false,
-        "minHeight": 870,
-        "parentColumnSpace": 1,
-        "dynamicTriggerPathList": [],
-        "leftColumn": 0,
-        "dynamicBindingPathList": [
-            {"key": "borderRadius"},
-            {"key": "accentColor"}
-        ],
-        "isDisabled": false,
-        "key": "24l2528nn9",
-        "isDeprecated": false,
-        "tabName": "Informations clients",
-        "rightColumn": 337.5,
-        "detachFromLayout": true,
-        "widgetId": "pajhr8gnpm",
-        "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-        "isVisible": true,
-        "version": 1,
-        "parentId": "4n9a3rq8zg",
-        "renderMode": "CANVAS",
-        "isLoading": false,
-        "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}"
-    }],
-    "key": "ntmdsysplj",
-    "isDeprecated": false,
-    "rightColumn": 64,
-    "dynamicHeight": "FIXED",
-    "widgetId": "4n9a3rq8zg",
-    "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-    "defaultTab": "Informations clients",
-    "shouldShowTabs": true,
-    "tabsObj": {"tab1": {
-        "widgetId": "pajhr8gnpm",
-        "index": 0,
-        "label": "Informations clients",
-        "id": "tab1",
-        "isVisible": true
-    }},
-    "isVisible": "{{Object.keys(getOneClient.data).length > 0 ? true : false}}",
-    "version": 3,
-    "parentId": "0",
-    "renderMode": "CANVAS",
-    "isLoading": false,
-    "borderRadius": "1.5rem",
-    "maxDynamicHeight": 9000,
-    "minDynamicHeight": 4
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "1.5rem",
+  "bottomRow": 96,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "children": [
+    {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "bottomRow": 880,
+      "boxShadow": "none",
+      "canExtend": true,
+      "detachFromLayout": true,
+      "displayName": "Canvas",
+      "dynamicBindingPathList": [
+        {
+          "key": "borderRadius"
+        },
+        {
+          "key": "accentColor"
+        }
+      ],
+      "dynamicTriggerPathList": [],
+      "hideCard": true,
+      "isDeprecated": false,
+      "isDisabled": false,
+      "isLoading": false,
+      "isVisible": true,
+      "key": "24l2528nn9",
+      "leftColumn": 0,
+      "minHeight": 870,
+      "parentColumnSpace": 1,
+      "parentId": "4n9a3rq8zg",
+      "parentRowSpace": 1,
+      "renderMode": "CANVAS",
+      "rightColumn": 337.5,
+      "shouldScrollContents": false,
+      "tabId": "tab1",
+      "tabName": "Informations clients",
+      "topRow": 0,
+      "type": "CANVAS_WIDGET",
+      "version": 1,
+      "widgetId": "pajhr8gnpm",
+      "widgetName": "Canvas1"
+    }
+  ],
+  "defaultTab": "Informations clients",
+  "displayName": "Tabs",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "boxShadow"
+    },
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "hideCard": false,
+  "iconSVG": "/static/media/icon.74a6d653c8201e66f1cd367a3fba2657.svg",
+  "isCanvas": true,
+  "isDeprecated": false,
+  "isLoading": false,
+  "isVisible": "{{Object.keys(getOneClient.data).length > 0 ? true : false}}",
+  "key": "ntmdsysplj",
+  "leftColumn": 0,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "parentColumnSpace": 14.0625,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "rightColumn": 64,
+  "shouldScrollContents": false,
+  "shouldShowTabs": true,
+  "tabsObj": {
+    "tab1": {
+      "id": "tab1",
+      "index": 0,
+      "isVisible": true,
+      "label": "Informations clients",
+      "widgetId": "pajhr8gnpm"
+    }
+  },
+  "topRow": 4,
+  "type": "TABS_WIDGET",
+  "version": 3,
+  "widgetId": "4n9a3rq8zg",
+  "widgetName": "Tabs1"
 }

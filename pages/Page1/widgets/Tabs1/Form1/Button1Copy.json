@@ -1,39 +1,51 @@
 {
-    "resetFormOnClick": true,
-    "boxShadow": "none",
-    "widgetName": "Button1Copy",
-    "onClick": "{{ storeValue('contactInfos',null,false).then(\nshowModal('AddCLientContact')\n\t)\n}}",
-    "buttonColor": "rgb(3, 179, 101)",
-    "dynamicPropertyPathList": [{"key": "onClick"}],
-    "displayName": "Button",
-    "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
-    "searchTags": [
-        "click",
-        "submit"
-    ],
-    "topRow": 32,
-    "bottomRow": 36,
-    "type": "BUTTON_WIDGET",
-    "hideCard": false,
-    "animateLoading": true,
-    "dynamicTriggerPathList": [{"key": "onClick"}],
-    "leftColumn": 37,
-    "dynamicBindingPathList": [{"key": "borderRadius"}],
-    "text": "Ajouter un contact",
-    "isDisabled": false,
-    "key": "i0407oftx6",
-    "isDeprecated": false,
-    "rightColumn": 63,
-    "isDefaultClickDisabled": true,
-    "widgetId": "67yyt7qhx3",
-    "isVisible": true,
-    "recaptchaType": "V3",
-    "version": 1,
-    "parentId": "g982593vs7",
-    "renderMode": "CANVAS",
-    "isLoading": false,
-    "disabledWhenInvalid": true,
-    "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-    "buttonVariant": "PRIMARY",
-    "placement": "CENTER"
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 36,
+  "boxShadow": "none",
+  "buttonColor": "rgb(3, 179, 101)",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": true,
+  "displayName": "Button",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "hideCard": false,
+  "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
+  "isDefaultClickDisabled": true,
+  "isDeprecated": false,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "i0407oftx6",
+  "leftColumn": 37,
+  "onClick": "{{ storeValue('contactInfos',null,false).then(\nshowModal('AddCLientContact')\n\t)\n}}",
+  "parentId": "g982593vs7",
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": true,
+  "rightColumn": 63,
+  "searchTags": [
+    "click",
+    "submit"
+  ],
+  "text": "Ajouter un contact",
+  "topRow": 32,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "67yyt7qhx3",
+  "widgetName": "Button1Copy"
 }

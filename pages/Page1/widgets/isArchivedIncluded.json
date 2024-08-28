@@ -1,42 +1,54 @@
 {
-    "widgetName": "isArchivedIncluded",
-    "displayName": "Checkbox",
-    "iconSVG": "/static/media/icon.aaab032b43383e4fa53ffc0ef40c90ef.svg",
-    "searchTags": ["boolean"],
-    "topRow": 0,
-    "bottomRow": 4,
-    "parentRowSpace": 10,
-    "type": "CHECKBOX_WIDGET",
-    "alignWidget": "LEFT",
-    "hideCard": false,
-    "animateLoading": true,
-    "parentColumnSpace": 23.390625,
-    "dynamicTriggerPathList": [{"key": "onCheckChange"}],
-    "leftColumn": 32,
-    "dynamicBindingPathList": [
-        {"key": "accentColor"},
-        {"key": "borderRadius"},
-        {"key": "labelTextColor"}
-    ],
-    "labelPosition": "Left",
-    "labelTextColor": "{{appsmith.theme.colors.primaryColor}}",
-    "onCheckChange": "{{Values.initApp()}}",
-    "isDisabled": false,
-    "key": "wm22u4kln3",
-    "isRequired": false,
-    "isDeprecated": false,
-    "rightColumn": 42,
-    "dynamicHeight": "FIXED",
-    "widgetId": "rx1haja9sx",
-    "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-    "isVisible": true,
-    "label": "inclure les clients archivés",
-    "version": 1,
-    "parentId": "0",
-    "renderMode": "CANVAS",
-    "isLoading": false,
-    "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-    "defaultCheckedState": false,
-    "maxDynamicHeight": 9000,
-    "minDynamicHeight": 4
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "alignWidget": "LEFT",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 4,
+  "defaultCheckedState": false,
+  "displayName": "Checkbox",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "labelTextColor"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicTriggerPathList": [
+    {
+      "key": "onCheckChange"
+    }
+  ],
+  "hideCard": false,
+  "iconSVG": "/static/media/icon.aaab032b43383e4fa53ffc0ef40c90ef.svg",
+  "isDeprecated": false,
+  "isDisabled": false,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "wm22u4kln3",
+  "label": "inclure les clients archivés",
+  "labelPosition": "Left",
+  "labelTextColor": "{{appsmith.theme.colors.primaryColor}}",
+  "leftColumn": 32,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "onCheckChange": "{{Values.initApp()}}",
+  "parentColumnSpace": 23.390625,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "rightColumn": 42,
+  "searchTags": [
+    "boolean"
+  ],
+  "topRow": 0,
+  "type": "CHECKBOX_WIDGET",
+  "version": 1,
+  "widgetId": "rx1haja9sx",
+  "widgetName": "isArchivedIncluded"
 }
